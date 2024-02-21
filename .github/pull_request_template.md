@@ -1,5 +1,5 @@
 <!---
-Pull request template for 603 Platformer Game. Feel free to remove comments as you fill out information.
+Pull request template for 603 Game 3. Feel free to remove comments as you fill out information.
 --->
 ## Summarize what is being added
 <!--- Can use bullet lists here to cover new additions, but give a bit more detail than what is given in commit messages --->
