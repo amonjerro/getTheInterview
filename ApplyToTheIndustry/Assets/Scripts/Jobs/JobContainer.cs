@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 /* CLASS: JobContainer
  * Used for holding information on any individual job
@@ -13,6 +14,7 @@ public class JobContainer : MonoBehaviour
     public TextMeshProUGUI jobTMPCompany;
     public TextMeshProUGUI jobTMPPosition;
     public TextMeshProUGUI jobTMPDescription;
+    public Image companyTMPLogo;
 
     // Storage for job posting
     public JobPosting currentPosting;
@@ -20,9 +22,10 @@ public class JobContainer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Update UI text based on first job posting
-        jobTMPCompany.text = currentPosting.companyName;
+        // Update UI text and logo based on first job posting
+        jobTMPCompany.text = currentPosting.company.compName;
         jobTMPPosition.text = currentPosting.positionName;
         jobTMPDescription.text = currentPosting.jobDescription;
+        companyTMPLogo.sprite = currentPosting.company.logo;
     }
 }

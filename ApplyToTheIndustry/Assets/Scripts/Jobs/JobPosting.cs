@@ -10,9 +10,10 @@ using UnityEngine;
 public class JobPosting : ScriptableObject
 {
     // Data that the player sees
-    public string companyName;
+    public Company company;
     public string positionName;
     public string jobDescription;
+    
 
     // TO-DO
     // Add other data here that'll be used for tracking 

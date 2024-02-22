@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
   m_Name: TestPosting1
   m_EditorClassIdentifier: 
-  companyName: AwesomeComp.
+  company: {fileID: 11400000, guid: b51f3ca240e440f4c898ed3a1daa1398, type: 2}
   positionName: AverageJobPosition
   jobDescription: This is the description for an average job position at this company.
     Have fun figuring out the requirements :)
