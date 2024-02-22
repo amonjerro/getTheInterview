@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class SkillGroup
 {
 
@@ -30,5 +32,18 @@ public class SkillGroup
 		return returnable;
 	}
 
+	public List<Skill> ListSkills()
+	{
+		List<Skill> listOfSkills = new List<Skill>
+        {
+            programming,
+            design,
+            graphic_art,
+            sound_and_music,
+            production,
+            leadership
+        };
+		return listOfSkills;
+	}
 
 }
