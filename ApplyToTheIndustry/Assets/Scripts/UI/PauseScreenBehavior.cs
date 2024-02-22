@@ -44,4 +44,9 @@ public class PauseScreenBehavior : MonoBehaviour
 
         SceneManager.LoadScene("TitleScreen");
     }
+
+    public void ExitToDesktop()
+    {
+        Application.Quit();
+    }
 }
