@@ -11,7 +11,7 @@ public class SkillContainer : MonoBehaviour
 {
     // Public fields
     public TextMeshProUGUI skillTMPTitle;
-    public string skill;
+    public Skill skill;
     public Resume currentResume;
 
     /// <summary>
@@ -20,7 +20,7 @@ public class SkillContainer : MonoBehaviour
     /// </summary>
     public void UpdateUIText()
     {
-        skillTMPTitle.text = skill;
+        skillTMPTitle.text = skill.Name;
     }
 
     /// <summary>

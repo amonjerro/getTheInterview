@@ -11,7 +11,7 @@ using UnityEngine;
 public class Resume : MonoBehaviour
 {
     // Public fields
-    public List<string> selectedSkillsList;
+    public List<Skill> selectedSkillsList;
     public TextMeshProUGUI resumeTMPSkillList;
     public string resumeMessageDefault;
 
@@ -19,7 +19,7 @@ public class Resume : MonoBehaviour
     void Start()
     {
         // Init fields here
-        selectedSkillsList = new List<string>();
+        selectedSkillsList = new List<Skill>();
 
         // Set default list message
         resumeTMPSkillList.text = resumeMessageDefault;
@@ -29,16 +29,16 @@ public class Resume : MonoBehaviour
     /// Used for adding new skills and updating UI list of skills
     /// </summary>
     /// <param name="skill">Skill being added</param>
-    public void AddSkill(string skill)
+    public void AddSkill(Skill skill)
     {
         // Add skill to the list
         selectedSkillsList.Add(skill);
 
         // Update the UI text
         string newText = "";
-        foreach(string iSkill in selectedSkillsList)
+        foreach(Skill iSkill in selectedSkillsList)
         {
-            newText += "- " + iSkill + "\n";
+            newText += "- " + iSkill.Name + "\n";
         }
         resumeTMPSkillList.text = newText;
     }
