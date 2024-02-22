@@ -9,6 +9,11 @@ public class PlayerSkillsManager : MonoBehaviour
     
     SkillGroup playerSkills;
 
+    public static void SetUpInstance(){
+        Instance = new PlayerSkillsManager();
+        Instance.playerSkills = new SkillGroup();
+    }
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
