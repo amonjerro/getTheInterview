@@ -19,6 +19,21 @@ public class JobContainer : MonoBehaviour
     // Storage for job posting
     public JobPosting currentPosting;
 
+    public static JobContainer Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("Another instance of JobContainer already exists. Destroying this one.");
+            Destroy(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,3 +44,4 @@ public class JobContainer : MonoBehaviour
         companyTMPLogo.sprite = currentPosting.company.logo;
     }
 }
+
