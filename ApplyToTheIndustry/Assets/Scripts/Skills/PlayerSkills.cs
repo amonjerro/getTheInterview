@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerSkillsManager : MonoBehaviour
 {
-    public static PlayerSkillsManager Instance;
 
     
     SkillGroup playerSkills;

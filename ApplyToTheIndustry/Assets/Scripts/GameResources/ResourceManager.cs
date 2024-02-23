@@ -3,28 +3,36 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour
 {
     public static ResourceManager Instance;
-    private Time _timeAvailable;
-    private Money _moneyAvailable;
+    private Resource _timeAvailable;
+    private Resource _moneyAvailable;
 
     [SerializeField]
-    public Money maxMoney;
+    public Resource maxMoney;
     [SerializeField]
-    public Time maxTime;
+    public Resource maxTime;
 
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this) {
-            Destroy(this);
-        } else
-        {
-            Instance = this;
-        }
-    }
-
-    void AffectMaximums(Time time, Money money)
+    public void ReduceMaximums(Resource time, Resource money)
     {
         maxTime -= time;
         maxMoney -= money;
+    }
+
+    public bool IsCostViable(Cost cost)
+    {
+        bool enoughTime = _timeAvailable.IsThereEnough(cost.time.value);
+        bool enoughMoney = _moneyAvailable.IsThereEnough(cost.money.value);
+        return enoughMoney && enoughTime;
+    }
+
+    public void ManageCost(Cost cost)
+    {
+        _timeAvailable -= cost.time;
+        _moneyAvailable -= cost.money;
+    }
+
+    public void ResetResources()
+    {
+        _timeAvailable = maxTime;
+        _moneyAvailable = maxMoney;
     }
 }

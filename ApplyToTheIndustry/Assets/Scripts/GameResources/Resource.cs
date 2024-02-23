@@ -1,17 +1,36 @@
+using UnityEngine;
+using System;
+
 public enum ResourceTypes
 {
     Time,
     Money
 }
 
-public abstract class Resource
+[Serializable]
+public class Resource
 {
-    public int Value {  get; set; }
+    [SerializeField]
+    public int value;
 
-    public abstract bool IsThereEnough(int cost);
+    public Resource(int value)
+    {
+        this.value = value;
+    }
+    public bool IsThereEnough(int cost)
+    {
+        return cost <= value;
+    }
 
-    public abstract Resource Add(Resource otherResource);
-    public abstract Resource Subtract(Resource otherResource);
+    public Resource Add(Resource otherResource) {
+        return new Resource(value + otherResource.value);
+    }
+
+    public Resource Subtract(Resource otherResource)
+    {
+
+        return new Resource(value);
+    }
 
     public static Resource operator +(Resource a, Resource b)
     {
@@ -22,63 +41,5 @@ public abstract class Resource
     {
         return a.Subtract(b);
     }
-
-}
-
-public class Time : Resource
-{
-    public override bool IsThereEnough(int cost)
-    {
-        if (cost == 0) return true;
-
-        if (cost > Value) return false;
-
-        return true;
-    }
-
-    public override Resource Add(Resource otherResource)
-    {
-        Time other = otherResource as Time;
-        Time output = new Time();
-        output.Value = Value + other.Value;
-        return output;
-    }
-
-    public override Resource Subtract(Resource otherResource)
-    {
-        Time other = otherResource as Time;
-        Time output = new Time();
-        output.Value = Value - other.Value;
-        return output;
-    }
-}
-
-public class Money : Resource
-{
-    public override bool IsThereEnough(int cost)
-    {
-        if (cost == 0) return true;
-
-        if (cost > Value) return false;
-
-        return true;
-    }
-
-    public override Resource Add(Resource otherResource)
-    {
-        Money other = otherResource as Money;
-        Money output = new Money();
-        output.Value = Value + other.Value;
-        return output;
-    }
-
-    public override Resource Subtract(Resource otherResource)
-    {
-        Money other = otherResource as Money;
-        Money output = new Money();
-        output.Value = Value - other.Value;
-        return output;
-    }
-
 
 }
