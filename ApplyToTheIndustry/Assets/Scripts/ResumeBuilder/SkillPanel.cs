@@ -13,20 +13,8 @@ public class SkillPanel : MonoBehaviour
     public float leftPadding;
     public Resume resume;
 
-    //public List<SkillContainer> skillOptions;
 
-    void Awake()
-    {
-
-    }
-    /// <summary>
-    /// Called upon activation of UI panel - should populate skill containers dynamically
-    /// </summary>
     void OnEnable()
-    {
-        Invoke("EnableCallback", 1.0f);
-    }
-    void EnableCallback()
     {
         int indexOffset = 3;
         PlayerSkillsManager psm = ServiceLocator.Instance.GetService<PlayerSkillsManager>();
