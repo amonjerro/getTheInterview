@@ -33,7 +33,7 @@ public class Grader : MonoBehaviour
     //Get the list of skills available
     public void GetListOfSkills()
     {
-        SkillGroup playerSkills = PlayerSkillsManager.Instance.GetSkills();
+        SkillGroup playerSkills = ServiceLocator.Instance.GetService<PlayerSkillsManager>().GetSkills();
 
         foreach (Skill skill in playerSkills.ListSkills())
         {
