@@ -24,11 +24,15 @@ public class SkillPanel : MonoBehaviour
     /// </summary>
     void OnEnable()
     {
+        Invoke("EnableCallback", 1.0f);
+    }
+    void EnableCallback()
+    {
         int indexOffset = 3;
         PlayerSkillsManager psm = ServiceLocator.Instance.GetService<PlayerSkillsManager>();
         SkillGroup playerSkills = psm.GetSkills();
         List<Skill> listOfPlayerSkills = playerSkills.ListSkills();
-        foreach(Skill skill in listOfPlayerSkills)
+        foreach (Skill skill in listOfPlayerSkills)
         {
             // Create the container
             GameObject container = Instantiate(skillContainerPrefab);
@@ -38,7 +42,7 @@ public class SkillPanel : MonoBehaviour
             RectTransform rt = container.GetComponent<RectTransform>();
             rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, leftPadding, rt.rect.width);
             rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, indexOffset * rt.rect.height + insetPadding, rt.rect.height);
-            
+
             // Add the skill data
             SkillContainer skillCont = container.GetComponent<SkillContainer>();
             skillCont.skill = skill;
@@ -46,6 +50,5 @@ public class SkillPanel : MonoBehaviour
             skillCont.UpdateUIText();
             indexOffset += 1;
         }
-        
     }
 }
