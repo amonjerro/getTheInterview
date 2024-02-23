@@ -1,11 +1,6 @@
 using UnityEngine;
 using System;
 
-public enum ResourceTypes
-{
-    Time,
-    Money
-}
 
 [Serializable]
 public class Resource
@@ -27,12 +22,8 @@ public class Resource
 }
 
     public Resource Subtract(Resource otherResource)
-{
-    public override bool IsThereEnough(int cost)
     {
-        if (cost == 0) return true;
-
-        return new Resource(value);
+        return new Resource(value - otherResource.value);
     }
 
     public static Resource operator +(Resource a, Resource b)
