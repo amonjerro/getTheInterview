@@ -25,10 +25,8 @@ public class SkillPanel : MonoBehaviour
     void OnEnable()
     {
         int indexOffset = 3;
-        if (PlayerSkillsManager.Instance == null){
-            PlayerSkillsManager.SetUpInstance();
-        }
-        SkillGroup playerSkills = PlayerSkillsManager.Instance.GetSkills();
+        PlayerSkillsManager psm = ServiceLocator.Instance.GetService<PlayerSkillsManager>();
+        SkillGroup playerSkills = psm.GetSkills();
         List<Skill> listOfPlayerSkills = playerSkills.ListSkills();
         foreach(Skill skill in listOfPlayerSkills)
         {
