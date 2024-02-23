@@ -15,14 +15,16 @@ public class TimeManager : MonoBehaviour
 
     // Store time as integer
     public int timeLeft = 100;
+    private int maxTime;
 
     // Used for updating timer UI
-    public TextMeshProUGUI timerTMP;
+    public Timebar timeBar;
 
     // Start is called at beginning of play
     void Start()
     {
-        timerTMP.text = timeLeft.ToString();
+        timeBar.Setup();
+        maxTime = timeLeft;
     }
 
     /// <summary>
@@ -43,7 +45,7 @@ public class TimeManager : MonoBehaviour
         }
 
         // Make updates to UI
-        timerTMP.text = timeLeft.ToString();
+        timeBar.SetWidth(timeLeft /  (float) maxTime);
     }
 
     /// <summary>
@@ -51,6 +53,11 @@ public class TimeManager : MonoBehaviour
     /// </summary>
     public void ResetTimer()
     {
-        timeLeft = 100;
+        timeLeft = maxTime;
+    }
+
+    public void SetMaxTime(int value)
+    {
+        maxTime = value;
     }
 }
