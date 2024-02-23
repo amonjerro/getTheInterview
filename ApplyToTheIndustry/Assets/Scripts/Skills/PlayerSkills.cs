@@ -1,29 +1,11 @@
 
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerSkillsManager : MonoBehaviour
 {
-
-    
     SkillGroup playerSkills;
 
-    public static void SetUpInstance(){
-        Instance = new PlayerSkillsManager();
-        Instance.playerSkills = new SkillGroup();
-    }
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        } else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
-
+    public void SetupSkills(){
         playerSkills = new SkillGroup();
     }
 
@@ -34,6 +16,10 @@ public class PlayerSkillsManager : MonoBehaviour
 
     public SkillGroup GetSkills()
     {
+        if (playerSkills == null)
+        {
+            SetupSkills();
+        }
         return playerSkills;
     }
 }
