@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CYLCOM
   m_EditorClassIdentifier: 
   compName: 
-  logo: {fileID: 0}
+  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
   m_Name: "J\u016Bkend\u014D"
   m_EditorClassIdentifier: 
-  compName: 
-  logo: {fileID: 0}
+  compName: "J\u016Bkend\u014D Co., Ltd"
+  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

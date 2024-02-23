@@ -12,6 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
   m_Name: GameDesignJunior
   m_EditorClassIdentifier: 
-  company: {fileID: 0}
-  positionName: 
-  jobDescription: 
+  company: {fileID: 11400000, guid: 4c23469047b92f048b204fc384945468, type: 2}
+  positionName: Junior Game Designer
+  jobSummaryLines:
+  - Bowie Softworksis currently looking for a
+  - 'passionate, self-motivated '
+  - junior Game Designer. Minimum
+  - 'qualifications for this position include:'
+  jobReqLines:
+  - '>Knowledge of C++/C#, as well as'
+  - experience with software development
+  - '>Experience with level and encounter'
+  - design in 3D environments
+  - '>Empathy, kindness, and compassion'
+  - '>Excellent communication skills and a'
+  - collaborative mindset
+  - '>Familiarity with Unity and/or Unreal'
+  - '>A detailed portfolio of released games'
+  - '>A passion for solutions-driven innovation'
