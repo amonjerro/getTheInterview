@@ -15,13 +15,19 @@ public class SkillPanel : MonoBehaviour
 
     //public List<SkillContainer> skillOptions;
 
+    void Awake()
+    {
 
+    }
     /// <summary>
     /// Called upon activation of UI panel - should populate skill containers dynamically
     /// </summary>
     void OnEnable()
     {
         int indexOffset = 3;
+        if (PlayerSkillsManager.Instance == null){
+            PlayerSkillsManager.SetUpInstance();
+        }
         SkillGroup playerSkills = PlayerSkillsManager.Instance.GetSkills();
         List<Skill> listOfPlayerSkills = playerSkills.ListSkills();
         foreach(Skill skill in listOfPlayerSkills)
