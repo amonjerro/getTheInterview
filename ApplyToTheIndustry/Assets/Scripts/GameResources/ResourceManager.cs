@@ -25,7 +25,7 @@ public class ResourceManager : MonoBehaviour
     }
 
     public void ManageCost(Cost cost)
-    {
+        {
         _timeAvailable -= cost.time;
         _moneyAvailable -= cost.money;
     }

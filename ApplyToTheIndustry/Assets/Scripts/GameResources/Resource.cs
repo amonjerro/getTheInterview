@@ -24,10 +24,13 @@ public class Resource
 
     public Resource Add(Resource otherResource) {
         return new Resource(value + otherResource.value);
-    }
+}
 
     public Resource Subtract(Resource otherResource)
+{
+    public override bool IsThereEnough(int cost)
     {
+        if (cost == 0) return true;
 
         return new Resource(value);
     }
@@ -41,5 +44,6 @@ public class Resource
     {
         return a.Subtract(b);
     }
+
 
 }
