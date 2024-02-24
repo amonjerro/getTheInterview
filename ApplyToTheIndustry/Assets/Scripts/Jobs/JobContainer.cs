@@ -40,7 +40,17 @@ public class JobContainer : MonoBehaviour
         // Update UI text and logo based on first job posting
         jobTMPCompany.text = currentPosting.company.compName;
         jobTMPPosition.text = currentPosting.positionName;
-        jobTMPDescription.text = currentPosting.jobDescription;
+        jobTMPDescription.text = "";
+        foreach (string j in currentPosting.jobSummaryLines)
+        {
+            jobTMPDescription.text += j + "\n";
+        }
+        jobTMPDescription.text += "\n";
+        foreach (string j in currentPosting.jobReqLines)
+        {
+            jobTMPDescription.text += j + "\n";
+        }
+        //jobTMPDescription.text = currentPosting.jobDescription;
         companyTMPLogo.sprite = currentPosting.company.logo;
     }
 }

@@ -12,8 +12,8 @@ public class JobPosting : ScriptableObject
     // Data that the player sees
     public Company company;
     public string positionName;
-    public string jobDescription;
-    
+    public string[] jobSummaryLines;
+    public string[] jobReqLines;
 
     // TO-DO
     // Add other data here that'll be used for tracking 
