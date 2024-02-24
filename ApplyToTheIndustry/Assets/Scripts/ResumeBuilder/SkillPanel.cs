@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/* CLASS: SkillPanel
+ * Used for managing pool of options for Resume Builder
+ */
+public class SkillPanel : MonoBehaviour
+{
+    // Public fields
+    public GameObject skillContainerPrefab;
+    public float insetPadding;
+    public float leftPadding;
+    public Resume resume;
+
+
+    void OnEnable()
+    {
+        int indexOffset = 3;
+        PlayerSkillsManager psm = ServiceLocator.Instance.GetService<PlayerSkillsManager>();
+        SkillGroup playerSkills = psm.GetSkills();
+        List<Skill> listOfPlayerSkills = playerSkills.ListSkills();
+        foreach (Skill skill in listOfPlayerSkills)
+        {
+            // Create the container
+            GameObject container = Instantiate(skillContainerPrefab);
+            // Set it to be a child of this panel
+            container.transform.SetParent(transform);
+            // Move it to the right place
+            RectTransform rt = container.GetComponent<RectTransform>();
+            rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, leftPadding, rt.rect.width);
+            rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, indexOffset * rt.rect.height + insetPadding, rt.rect.height);
+
+            // Add the skill data
+            SkillContainer skillCont = container.GetComponent<SkillContainer>();
+            skillCont.skill = skill;
+            skillCont.currentResume = resume;
+            skillCont.UpdateUIText();
+            indexOffset += 1;
+        }
+    }
+}
