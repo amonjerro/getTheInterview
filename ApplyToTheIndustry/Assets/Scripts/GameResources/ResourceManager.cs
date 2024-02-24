@@ -16,6 +16,12 @@ public class ResourceManager : MonoBehaviour
     [SerializeField]
     public Resource maxTime;
 
+    private void Awake()
+    {
+        _timeAvailable = new Resource(maxTime.value);
+        _moneyAvailable = new Resource(maxMoney.value);
+    }
+
     // Support function - if we ever want to bind the maximums players can reset to,
     // this would be the way to do it.
     public void ReduceMaximums(Resource time, Resource money)
@@ -27,7 +33,7 @@ public class ResourceManager : MonoBehaviour
 
     // Test function for UI and other processes that need to know whether
     // a cost can be met with the available resources
-    public bool IsCostViable(Cost cost)
+    public bool IsCostViable(ActionCost cost)
     {
         bool enoughTime = _timeAvailable.IsThereEnough(cost.time.value);
         bool enoughMoney = _moneyAvailable.IsThereEnough(cost.money.value);
@@ -35,7 +41,7 @@ public class ResourceManager : MonoBehaviour
     }
 
     // Handle expending some cost
-    public void ManageCost(Cost cost)
+    public void ManageCost(ActionCost cost)
     {
         _timeAvailable -= cost.time;
         ServiceLocator.Instance.GetService<TimeManager>().ExpendTime(cost.time.value);

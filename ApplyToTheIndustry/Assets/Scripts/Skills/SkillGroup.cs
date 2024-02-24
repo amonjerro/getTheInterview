@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using UnityEngine;
 
-public class SkillGroup: MonoBehaviour
+public class SkillGroup
 {
 
     public Skill programming;
@@ -11,21 +10,6 @@ public class SkillGroup: MonoBehaviour
     public Skill sound_and_music;
     public Skill leadership;
     public static SkillGroup Instance;
-
-
-private void Awake()
-    {
-        // Ensure there is only one instance of JobContainer
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Debug.LogWarning("Another instance of SkillGroup already exists. Destroying this one.");
-            Destroy(gameObject);
-        }
-    }
 
     public SkillGroup()
     {
