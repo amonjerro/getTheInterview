@@ -15,7 +15,7 @@ MonoBehaviour:
   posts:
   - {fileID: 11400000, guid: 06f371b6ebac044efa7812d9a16126e1, type: 2}
   - {fileID: 11400000, guid: e0c62d9ff31f0184aa7faecefef9d669, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 31569790ce6e6ef4f9741721955013a8, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

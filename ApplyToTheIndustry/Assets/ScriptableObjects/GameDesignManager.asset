@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: GameDesignManager
   m_EditorClassIdentifier: 
   company: {fileID: 11400000, guid: f5a83ab8c1e97474c9c9b0add9fe3c3f, type: 2}
-  positionName: 
-  jobDescription: 
+  positionName: Game Design Manager
+  jobSummaryLines: []
+  jobReqLines: []

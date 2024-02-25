@@ -19,39 +19,40 @@ public class JobContainer : MonoBehaviour
     // Storage for job posting
     public JobPosting currentPosting;
 
-    public static JobContainer Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Debug.LogWarning("Another instance of JobContainer already exists. Destroying this one.");
-            Destroy(gameObject);
-        }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        // Update UI text and logo based on first job posting
-        jobTMPCompany.text = currentPosting.company.compName;
-        jobTMPPosition.text = currentPosting.positionName;
-        jobTMPDescription.text = "";
-        foreach (string j in currentPosting.jobSummaryLines)
+        UpdateUI();
+    }
+
+    // Method for updating UI
+    public void UpdateUI()
+    {
+        // Update UI text and logo based on current job posting
+        if(currentPosting != null)
         {
-            jobTMPDescription.text += j + "\n";
+            jobTMPCompany.text = currentPosting.company.compName;
+            jobTMPPosition.text = currentPosting.positionName;
         }
-        jobTMPDescription.text += "\n";
-        foreach (string j in currentPosting.jobReqLines)
+
+        // Update the job description
+        if (jobTMPDescription != null)
         {
-            jobTMPDescription.text += j + "\n";
+            jobTMPDescription.text = "";
+            foreach (string j in currentPosting.jobSummaryLines)
+            {
+                jobTMPDescription.text += j + "\n";
+            }
+            jobTMPDescription.text += "\n";
+            foreach (string j in currentPosting.jobReqLines)
+            {
+                jobTMPDescription.text += j + "\n";
+            }
         }
-        //jobTMPDescription.text = currentPosting.jobDescription;
-        companyTMPLogo.sprite = currentPosting.company.logo;
+
+        // Update the company logo
+        if (companyTMPLogo != null)
+            companyTMPLogo.sprite = currentPosting.company.logo;
     }
 }
 
