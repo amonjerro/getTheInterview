@@ -6,7 +6,7 @@ public class Grader : MonoBehaviour
 {
      Dictionary<string, int> skillPoints = new Dictionary<string, int>();
      HashSet<string> countedSkills = new HashSet<string>();
-     int Totalpoints =0;
+     int Totalpoints = 0;
 
     void Start()
     {
@@ -17,8 +17,8 @@ public class Grader : MonoBehaviour
 
     void Update()
     {
-        //Checking the job type
-        if (JobContainer.Instance.currentPosting.name == "Job Posting for Programmer")
+        // Checking the job type
+        if (ServiceLocator.Instance.GetService<JobManager>().builderPosting.currentPosting.name == "Job Posting for Programmer")
         {
             PointSystemForJobType1();
 

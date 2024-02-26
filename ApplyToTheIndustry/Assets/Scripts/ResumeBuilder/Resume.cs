@@ -52,5 +52,15 @@ public class Resume : MonoBehaviour
         }
         resumeTMPSkillList.text = newText;
     }
+
+    /// <summary>
+    /// Resets builder resume
+    /// </summary>
+    public void ResetResume()
+    {
+        // Clear list and update UI
+        selectedSkillsList.Clear();
+        resumeTMPSkillList.text = "";
+    }
 }
 
