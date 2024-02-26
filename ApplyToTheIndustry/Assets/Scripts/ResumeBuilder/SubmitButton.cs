@@ -6,6 +6,7 @@ public class SubmitButton : MonoBehaviour
 {
     // Public fields
     public Resume resumeRef;
+    public GameObject wastedTimePopup;
 
     /// <summary>
     /// Submits application to grader and resets
@@ -13,7 +14,23 @@ public class SubmitButton : MonoBehaviour
     /// </summary>
     public void OnClick()
     {
-        // Submit this application to the grader
+        // Add current posting to list of applied positions
+        JobManager jobMngr = ServiceLocator.Instance.GetService<JobManager>();
+        jobMngr.TryAddAppliedPosition(jobMngr.builderPosting.currentPosting);
+
+        // Check if time was wasted on the application
+        // and if so then show popup
+        if (jobMngr.playerWastedTime)
+        {
+            wastedTimePopup.SetActive(true);
+
+            // Reset wasted time status
+            jobMngr.playerWastedTime = false;
+        }
+        else
+        {
+            // Submit this application to the grader
+        }
 
         // Reset resume
         resumeRef.ResetResume();
