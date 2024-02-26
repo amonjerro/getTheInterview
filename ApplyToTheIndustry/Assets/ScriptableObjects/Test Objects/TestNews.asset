@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b2d7a7e81e5684abe5973421aa2393, type: 3}
+  m_Name: TestNews
+  m_EditorClassIdentifier: 
+  headlines:
+  - CEO receives record bonus
+  - Thousand laid off in most recent right-sizing efforts
+  - RTO now government-enforced mandate
+  - Espouser Group disbanding yet another studio they purchased last year
