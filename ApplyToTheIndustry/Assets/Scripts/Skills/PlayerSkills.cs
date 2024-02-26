@@ -16,10 +16,6 @@ public class PlayerSkillsManager : MonoBehaviour
 
     public SkillGroup GetSkills()
     {
-        if (playerSkills == null)
-        {
-            SetupSkills();
-        }
         return playerSkills;
     }
 }

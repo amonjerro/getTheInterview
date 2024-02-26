@@ -48,7 +48,7 @@ public class Resume : MonoBehaviour
         string newText = "";
         foreach(Skill iSkill in selectedSkillsList)
         {
-            newText += "- " + iSkill.Name + "\n";
+            newText += "- " + iSkill.name + "\n";
         }
         resumeTMPSkillList.text = newText;
     }

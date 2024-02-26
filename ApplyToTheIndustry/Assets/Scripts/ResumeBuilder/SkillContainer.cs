@@ -20,7 +20,7 @@ public class SkillContainer : MonoBehaviour
     /// </summary>
     public void UpdateUIText()
     {
-        skillTMPTitle.text = skill.Name;
+        skillTMPTitle.text = skill.name;
     }
 
     /// <summary>
