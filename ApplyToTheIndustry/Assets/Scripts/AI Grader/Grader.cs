@@ -6,7 +6,7 @@ public class Grader : MonoBehaviour
 {
      Dictionary<string, int> skillPoints = new Dictionary<string, int>();
      HashSet<string> countedSkills = new HashSet<string>();
-     int Totalpoints = 0;
+     int Totalpoints =0;
 
     void Start()
     {
@@ -17,8 +17,8 @@ public class Grader : MonoBehaviour
 
     void Update()
     {
-        // Checking the job type
-        if (ServiceLocator.Instance.GetService<JobManager>().builderPosting.currentPosting.name == "Job Posting for Programmer")
+        //Checking the job type
+        if (ServiceLocator.Instance.GetService<JobContainer>().currentPosting.name == "Job Posting for Programmer")
         {
             PointSystemForJobType1();
 
@@ -26,7 +26,7 @@ public class Grader : MonoBehaviour
 
         CalculateTotalPoints();
 
-        GetFeedback();
+        //GetFeedback();
 
     }
 
@@ -81,25 +81,26 @@ public class Grader : MonoBehaviour
         }
     }
 
-    public void GetFeedback()
+    public string GetFeedback()
     {
         if (Totalpoints < 15)
         {
-            Debug.Log("Better luck next time");
+            return "Better luck next time";
         }
         else if (Totalpoints >= 15 && Totalpoints <= 25)
         {
-            Debug.Log("Please Improve your Skills");
+            return "Please Improve your Skills";
         }
         else if (Totalpoints >= 25 && Totalpoints <= 35)
         {
-            Debug.Log("Please learn new skills as well");
+            return "Please learn new skills as well";
         }
         else
         {
-            Debug.Log("Lets discuss the next steps");
+            return "Lets discuss the next steps";
         }
     }
 
 }
+
 
