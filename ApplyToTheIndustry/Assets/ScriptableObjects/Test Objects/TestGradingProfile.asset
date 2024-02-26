@@ -12,3 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3adb723caae138c40ac5a94647fc8f89, type: 3}
   m_Name: TestGradingProfile
   m_EditorClassIdentifier: 
+  skillGroup:
+    programming:
+      name: Programming
+      value: 0
+      skillType: 0
+    design:
+      name: Design
+      value: 0
+      skillType: 1
+    graphic_art:
+      name: Graphics and Art
+      value: 0
+      skillType: 2
+    production:
+      name: Production
+      value: 0
+      skillType: 5
+    sound_and_music:
+      name: Sound and Music
+      value: 0
+      skillType: 4
+    leadership:
+      name: Leadership
+      value: 0
+      skillType: 3
+  expectedSkillOrdering: 000000000100000004000000
