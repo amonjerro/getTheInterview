@@ -22,6 +22,11 @@ public class JobManager : MonoBehaviour
         builderPosting.UpdateUI();
     }
 
+    /// <summary>
+    /// Attempt to add a given posting to the list of applications
+    /// and if it already exists then mark player as wasting their time
+    /// </summary>
+    /// <param name="posting">Posting trying to be added</param>
     public void TryAddAppliedPosition(JobPosting posting)
     {
         // Check if posting is already in list of applied positions
