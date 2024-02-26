@@ -37,9 +37,9 @@ public class Grader : MonoBehaviour
 
         foreach (Skill skill in playerSkills.ListSkills())
         {
-            if (!skillPoints.ContainsKey(skill.Name))
+            if (!skillPoints.ContainsKey(skill.name))
             {
-                skillPoints.Add(skill.Name, 0); // Default points are 0
+                skillPoints.Add(skill.name, 0); // Default points are 0
             }
         }
     }
@@ -64,16 +64,16 @@ public class Grader : MonoBehaviour
             
             foreach (Skill skill in selectedSkills)
             {
-                if (!countedSkills.Contains(skill.Name))
+                if (!countedSkills.Contains(skill.name))
                 {
-                    if (skillPoints.ContainsKey(skill.Name))
+                    if (skillPoints.ContainsKey(skill.name))
                     {
-                        Totalpoints += skillPoints[skill.Name];
-                        countedSkills.Add(skill.Name); // Add skill name to the set of counted skills
+                        Totalpoints += skillPoints[skill.name];
+                        countedSkills.Add(skill.name); // Add skill name to the set of counted skills
                     }
                     else
                     {
-                        Debug.LogError("Skill not found in skillPoints dictionary: " + skill.Name);
+                        Debug.LogError("Skill not found in skillPoints dictionary: " + skill.name);
                     }
                 }
             }

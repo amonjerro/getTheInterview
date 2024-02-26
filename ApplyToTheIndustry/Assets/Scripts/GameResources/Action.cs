@@ -19,7 +19,7 @@ public class Action : MonoBehaviour
 
     public void DoAction()
     {
-        Debug.Log(cost.time.value);
+
         if(rm.IsCostViable(cost))
         {
             rm.ManageCost(cost);
