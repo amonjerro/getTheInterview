@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
   m_Name: "J\u016Bkend\u014DOfAmerica"
   m_EditorClassIdentifier: 
-  compName: "J\u016Bkend\u014D of America"
+  compName: Juukendou of America
   logo: {fileID: 0}
