@@ -2252,6 +2252,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 427726119}
     - target: {fileID: 3203118160797080778, guid: 6c06d1e0ad557f14081764f43e325672, type: 3}
+      propertyPath: weeklyCosts
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203118160797080778, guid: 6c06d1e0ad557f14081764f43e325672, type: 3}
       propertyPath: maxTime.value
       value: 100
       objectReference: {fileID: 0}
