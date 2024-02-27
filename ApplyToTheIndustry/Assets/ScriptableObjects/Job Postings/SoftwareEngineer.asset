@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
+  m_Name: SoftwareEngineer
+  m_EditorClassIdentifier: 
+  company: {fileID: 11400000, guid: 861cb506ee7d6d24da3756585d004572, type: 2}
+  positionName: Software Engineer
+  jobSummaryLines:
+  - Cylcom Co., Ltd. is looking for a
+  - 'Software Engineer. Requirements:'
+  jobReqLines:
+  - '>Experience with Java, C++, C#, or some'
+  - other modern object-oriented
+  - programming language.
+  - '>Github version control expertise'
+  - '>Innovative problem-solving capability'
+  - '>Familiarity with Agile practices'
+  - '>Ability to adapt on the fly to a dynamic'
+  - work environment
+  - '>Basic fluency in Japanese and/or Chinese'
+  - is strongly preferred
+  gradingProfile: {fileID: 0}
