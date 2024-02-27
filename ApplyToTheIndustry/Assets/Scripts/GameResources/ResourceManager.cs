@@ -15,6 +15,8 @@ public class ResourceManager : MonoBehaviour
     public Resource maxMoney;
     [SerializeField]
     public Resource maxTime;
+    [SerializeField]
+    public int weeklyCosts;
     public MoneyUI moneyUI;
     private TimeManager _timeManager;
 
@@ -59,6 +61,12 @@ public class ResourceManager : MonoBehaviour
         _timeAvailable = maxTime;
         _timeManager.ResetTimer();
         _moneyAvailable = maxMoney;
+        moneyUI.UpdateMoneyText(_moneyAvailable.value);
+    }
+
+    public void EndOfTheWeek()
+    {
+        _moneyAvailable.value -= weeklyCosts;
         moneyUI.UpdateMoneyText(_moneyAvailable.value);
     }
 }

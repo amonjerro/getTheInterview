@@ -33,9 +33,4 @@ public class Action : MonoBehaviour
         gameObject.GetComponentInParent<InterfaceGroup>().gameObject.SetActive(false);
     }
 
-    public void OpenFeedbackScene()
-    {
-        SceneManager.LoadScene("FeedbackScene");
-        feedback.GetFeedback();
-    }
 }

@@ -53,6 +53,10 @@ public class NewsTicker : MonoBehaviour
         // Destroy any news children in the ticker;
         ClearNewsItems();
 
+        if (currentNewsDay >= news.Count)
+        {
+            return;
+        }
         // Load the current active object;
         _activeObject = news[currentNewsDay];
         string fullHeadline = "";
