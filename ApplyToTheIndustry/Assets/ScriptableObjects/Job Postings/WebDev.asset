@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
-  m_Name: Ubihard
+  m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
+  m_Name: WebDev
   m_EditorClassIdentifier: 
-  compName: Ubihard
-  logo: {fileID: 0}
+  company: {fileID: 11400000, guid: 7d9a6e18d1146e0409ea71d0d33ece53, type: 2}
+  positionName: Web Developer
+  jobSummaryLines: []
+  jobReqLines: []

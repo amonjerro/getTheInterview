@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
+  m_Name: TechArtistJunior
+  m_EditorClassIdentifier: 
+  company: {fileID: 11400000, guid: 14a62760017ea4e42986961ac58e935b, type: 2}
+  positionName: Tech Artist
+  jobSummaryLines:
+  - is seeking a a passionate, self-motivated
+  - junior Technical Artist. Minimum
+  - 'qualifications for this position include:'
+  jobReqLines:
+  - Intimate knowledge of
+  - art tool creation techniques
+  - 'Experience with Python, C#, and/or C++ '
+  - Understanding of SQL and other
+  - database management systems
+  - Familiarity with Agile methodologies
+  - Ability to communicate effectively
+  - in a dynamic environment
+  - 'Experience using modeling tools such '
+  - Capacity to create amazing,
+  - imaginative visuals
+  - Solid knowledge of rigging best practices

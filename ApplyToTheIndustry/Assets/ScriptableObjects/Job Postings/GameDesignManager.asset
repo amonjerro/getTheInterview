@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
   m_Name: GameDesignManager
   m_EditorClassIdentifier: 
-  company: {fileID: 11400000, guid: f5a83ab8c1e97474c9c9b0add9fe3c3f, type: 2}
+  company: {fileID: 11400000, guid: ef474ca3902deb44bb53c15b6fadb008, type: 2}
   positionName: Game Design Manager
   jobSummaryLines: []
   jobReqLines: []
