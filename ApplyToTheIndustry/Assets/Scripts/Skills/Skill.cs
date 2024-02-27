@@ -14,10 +14,10 @@ public enum SkillType
 public struct Skill
 {
     public string name;
-    public float value;
+    public int value;
     public SkillType skillType;
 
-    public Skill(string nm, float val, SkillType type)
+    public Skill(string nm, int val, SkillType type)
     {
         name = nm;
         value = val;

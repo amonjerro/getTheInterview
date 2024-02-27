@@ -30,6 +30,7 @@ public class SubmitButton : MonoBehaviour
         else
         {
             // Submit this application to the grader
+            ServiceLocator.Instance.GetService<Grader>().OnSubmit(resumeRef, jobMngr.builderPosting.currentPosting);
         }
 
         // Reset resume

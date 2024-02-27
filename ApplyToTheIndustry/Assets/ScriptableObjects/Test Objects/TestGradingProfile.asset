@@ -15,7 +15,7 @@ MonoBehaviour:
   skillGroup:
     programming:
       name: Programming
-      value: 0
+      value: 15
       skillType: 0
     design:
       name: Design
@@ -27,14 +27,14 @@ MonoBehaviour:
       skillType: 2
     production:
       name: Production
-      value: 0
+      value: 5
       skillType: 5
     sound_and_music:
       name: Sound and Music
-      value: 0
+      value: 10
       skillType: 4
     leadership:
       name: Leadership
-      value: 0
+      value: 10
       skillType: 3
-  expectedSkillOrdering: 000000000100000004000000
+  expectedSkillOrdering: 00000000040000000300000005000000

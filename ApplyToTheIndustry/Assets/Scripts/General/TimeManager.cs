@@ -54,10 +54,21 @@ public class TimeManager : MonoBehaviour
     public void ResetTimer()
     {
         timeLeft = maxTime;
+
+        // Make updates to UI
+        timeBar.SetWidth(timeLeft / (float)maxTime);
     }
 
     public void SetMaxTime(int value)
     {
         maxTime = value;
+    }
+
+    public void EndWeek()
+    {
+        // Call tick event
+        D_timeout?.Invoke();
+
+        
     }
 }

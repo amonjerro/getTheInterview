@@ -15,16 +15,8 @@ public class Resume : MonoBehaviour
     public TextMeshProUGUI resumeTMPSkillList;
     public string resumeMessageDefault;
 
-   public static Resume Instance;
 
-    // Awake is called when the script instance is being loaded
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
+
     // Start is called before the first frame update
     void Start()
     {

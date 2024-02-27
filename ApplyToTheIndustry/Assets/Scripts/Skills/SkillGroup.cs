@@ -11,7 +11,7 @@ public struct SkillGroup
     public Skill sound_and_music;
     public Skill leadership;
 
-    public SkillGroup(float p, float d, float ga, float pr, float s, float ld)
+    public SkillGroup(int p, int d, int ga, int pr, int s, int ld)
     {
         programming = new Skill("Programming", p, SkillType.Programming);
         design = new Skill("Design", d, SkillType.Design);
