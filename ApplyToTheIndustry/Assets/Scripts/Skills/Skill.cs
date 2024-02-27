@@ -1,22 +1,35 @@
 using System;
 
-public class Skill
+public enum SkillType
 {
-    public string Name { get; protected set; }
-    public float Value { get; set; }
+    Programming,
+    Design,
+    Graphics,
+    Leadership,
+    Sound,
+    Production,
+}
 
-    public Skill(string name, float value)
+[Serializable]
+public struct Skill
+{
+    public string name;
+    public int value;
+    public SkillType skillType;
+
+    public Skill(string nm, int val, SkillType type)
     {
-        Name = name;
-        Value = value;
+        name = nm;
+        value = val;
+        skillType = type;
     }
 
     public static Skill operator +(Skill a, Skill b)
     {
-        if (a.Name != b.Name)
+        if (a.name != b.name)
         {
             throw new ArgumentException("The two skills being added are not of the same type");
         }
-        return new Skill(a.Name, a.Value + b.Value);
+        return new Skill(a.name, a.value + b.value, a.skillType);
     }
 }

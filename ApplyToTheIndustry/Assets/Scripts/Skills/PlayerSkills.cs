@@ -5,6 +5,11 @@ public class PlayerSkillsManager : MonoBehaviour
 {
     SkillGroup playerSkills;
 
+    private void Awake()
+    {
+        playerSkills = new SkillGroup(0,0,0,0,0,0);
+    }
+
     public void SetupSkills(){
         playerSkills = new SkillGroup();
     }
@@ -16,10 +21,6 @@ public class PlayerSkillsManager : MonoBehaviour
 
     public SkillGroup GetSkills()
     {
-        if (playerSkills == null)
-        {
-            SetupSkills();
-        }
         return playerSkills;
     }
 }

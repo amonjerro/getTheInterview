@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Jam
   m_EditorClassIdentifier: 
   time:
-    value: 0
+    value: 36
   money:
     value: 0

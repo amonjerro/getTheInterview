@@ -14,6 +14,7 @@ public class JobPosting : ScriptableObject
     public string positionName;
     public string[] jobSummaryLines;
     public string[] jobReqLines;
+    public GradingProfile gradingProfile;
 
     // TO-DO
     // Add other data here that'll be used for tracking 

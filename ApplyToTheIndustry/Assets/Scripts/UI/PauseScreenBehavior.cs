@@ -22,8 +22,10 @@ public class PauseScreenBehavior : MonoBehaviour
     public void PauseGame()
     {
         isPaused = !isPaused;
+        
         if (isPaused)
         {
+            ServiceLocator.Instance.GetService<UIGeneralManager>().MoveToPauseScreen();
             //Toggle pause UI on and game UI off
             pauseScreen.gameObject.SetActive(true);
             Time.timeScale = 0.0f;
@@ -31,6 +33,7 @@ public class PauseScreenBehavior : MonoBehaviour
 
         else
         {
+            ServiceLocator.Instance.GetService<UIGeneralManager>().MoveAwayFromPauseScreen();
             //Toggle pause UI off and game UI on
             pauseScreen.gameObject.SetActive(false);
             Time.timeScale = 1.0f;

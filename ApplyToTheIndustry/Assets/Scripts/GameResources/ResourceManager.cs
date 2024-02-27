@@ -15,11 +15,17 @@ public class ResourceManager : MonoBehaviour
     public Resource maxMoney;
     [SerializeField]
     public Resource maxTime;
+    [SerializeField]
+    public int weeklyCosts;
+    public MoneyUI moneyUI;
+    private TimeManager _timeManager;
 
     private void Awake()
     {
         _timeAvailable = new Resource(maxTime.value);
         _moneyAvailable = new Resource(maxMoney.value);
+        _timeManager = ServiceLocator.Instance.GetService<TimeManager>();
+        moneyUI.UpdateMoneyText(_moneyAvailable.value);
     }
 
     // Support function - if we ever want to bind the maximums players can reset to,
@@ -27,7 +33,7 @@ public class ResourceManager : MonoBehaviour
     public void ReduceMaximums(Resource time, Resource money)
     {
         maxTime -= time;
-        ServiceLocator.Instance.GetService<TimeManager>().SetMaxTime(maxTime.value);
+        _timeManager.SetMaxTime(maxTime.value);
         maxMoney -= money;
     }
 
@@ -44,15 +50,23 @@ public class ResourceManager : MonoBehaviour
     public void ManageCost(ActionCost cost)
     {
         _timeAvailable -= cost.time;
-        ServiceLocator.Instance.GetService<TimeManager>().ExpendTime(cost.time.value);
+        _timeManager.ExpendTime(cost.time.value);
         _moneyAvailable -= cost.money;
+        moneyUI.UpdateMoneyText(_moneyAvailable.value);
     }
 
     // Reset the status of resources
     public void ResetResources()
     {
         _timeAvailable = maxTime;
-        ServiceLocator.Instance.GetService<TimeManager>().ResetTimer();
+        _timeManager.ResetTimer();
         _moneyAvailable = maxMoney;
+        moneyUI.UpdateMoneyText(_moneyAvailable.value);
+    }
+
+    public void EndOfTheWeek()
+    {
+        _moneyAvailable.value -= weeklyCosts;
+        moneyUI.UpdateMoneyText(_moneyAvailable.value);
     }
 }
