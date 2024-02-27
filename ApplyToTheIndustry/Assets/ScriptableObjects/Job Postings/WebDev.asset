@@ -14,5 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   company: {fileID: 11400000, guid: 7d9a6e18d1146e0409ea71d0d33ece53, type: 2}
   positionName: Web Developer
-  jobSummaryLines: []
-  jobReqLines: []
+  jobSummaryLines:
+  - Kvarlingvoj has recently opened a Web
+  - Developer position. Requirements are
+  - 'as follows:'
+  jobReqLines:
+  - '>Expert knowledge of JavaScript'
+  - '>Familiarity with Node.js and other such'
+  - server-side scripting frameworks
+  - '>(MORE REQS GO HERE)'

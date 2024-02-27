@@ -20,13 +20,16 @@ MonoBehaviour:
   - main headquarters. All potential applicants
   - 'must have:'
   jobReqLines:
-  - An outstanding portfolio of published titles
-  - Knowledge in C++, C#, and/or Python
-  - Experience working with proprietary
+  - '>An outstanding portfolio of'
+  - published titles
+  - '>Knowledge in Python, plus'
+  - C++ and/or C#
+  - '>Experience working with proprietary'
   - software and development tools
-  - Minimum 2 years industry experience
-  - Strong grasp of Scrum and associated
+  - '>Minimum 2 years industry experience'
+  - or a relevant Graduate Degree
+  - '>Strong grasp of Scrum and associated'
   - methodologies
-  - Expertise in object-oriented design
-  - 
-  - 
+  - '>Expertise in object-oriented design'
+  - '>Native proficiency in Japanese is'
+  - highly preferred
