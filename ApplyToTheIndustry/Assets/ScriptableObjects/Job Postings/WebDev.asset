@@ -19,7 +19,19 @@ MonoBehaviour:
   - Developer position. Requirements are
   - 'as follows:'
   jobReqLines:
-  - '>Expert knowledge of JavaScript'
-  - '>Familiarity with Node.js and other such'
-  - server-side scripting frameworks
-  - '>(MORE REQS GO HERE)'
+  - '>Expert knowledge of both JavaScript'
+  - and Python
+  - '>Experience working with Node.js,'
+  - React.js, etc.
+  - '>Portfolio of web development projects'
+  - '>Experience with Azure or other cloud'
+  - computing platforms
+  - '>Excellent communication and'
+  - collaboration skills
+  - '>Familiarity with generative AI and'
+  - language models
+  - '>Significant experience with Git-based'
+  - version control
+  - '>Passion and attention to detail'
+  - '>Experience with UI/UX beneficial'
+  gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

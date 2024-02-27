@@ -33,3 +33,4 @@ MonoBehaviour:
   - '>Expertise in object-oriented design'
   - '>Native proficiency in Japanese is'
   - highly preferred
+  gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}
