@@ -30,5 +30,27 @@ public class SkillContainer : MonoBehaviour
     {
         // Add skill to player resume
         currentResume.AddSkill(skill);
+
+        // Update onboarding manager
+        // Get onboarding manager
+        OnboardingManager onboardingMngr = ServiceLocator.Instance.GetService<OnboardingManager>();
+
+        // If the tutorial is still active then proceed with the next tutorial step
+        if(onboardingMngr != null)
+        {
+            if (onboardingMngr.tutorialActive)
+            {
+                // Disable instructions to let multiple clicks
+                onboardingMngr.DisableInstructions();
+
+                // Increase click counter and advance tutorial when ready
+                currentResume.tutorialClicks++;
+                if (currentResume.tutorialClicks == currentResume.neededClicks)
+                {
+                    onboardingMngr.readyProceed = true;
+                    onboardingMngr.AdvanceTutorial();
+                }
+            }
+        }
     }
 }

@@ -15,7 +15,9 @@ public class Resume : MonoBehaviour
     public TextMeshProUGUI resumeTMPSkillList;
     public string resumeMessageDefault;
 
-
+    // Onboarding fields
+    public int neededClicks = 3;
+    public int tutorialClicks = 0;
 
     // Start is called before the first frame update
     void Start()

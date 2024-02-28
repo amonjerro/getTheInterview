@@ -11,6 +11,9 @@ public class OnboardingButton : MonoBehaviour
         gameObject.GetComponent<Button>().onClick.AddListener(OnClick);
     }
 
+    /// <summary>
+    /// Handles click events for proceeding with onboarding tutorial
+    /// </summary>
     public void OnClick()
     {
         // Get the onboarding manager
