@@ -32,15 +32,9 @@ public class Action : MonoBehaviour
         dependentUI.gameObject.SetActive(true);
         gameObject.GetComponentInParent<InterfaceGroup>().gameObject.SetActive(false);
 
-        // Get the popup panel and disable if changing interfaces
-        HideMenu hiddenPanel = FindObjectOfType<HideMenu>();
-        if(hiddenPanel != null)
-        {
-            // Get job manager to check if time was wasted before disabling
-            JobManager jobMngr = ServiceLocator.Instance.GetService<JobManager>();
-            if(!jobMngr.playerWastedTime)
-                hiddenPanel.DisableObject();
-        }
+        // Get UI general manager and call close popup
+        UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
+        uiMngr.ClosePopup();
     }
 
 }
