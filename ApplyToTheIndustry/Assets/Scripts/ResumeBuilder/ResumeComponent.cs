@@ -9,4 +9,5 @@ public abstract class ResumeComponent : MonoBehaviour
     public int tutorialClicks;
     public abstract void AddSkill(Skill skill);
     public abstract void PopSkill(int index);
+    public abstract void Reset();
 }

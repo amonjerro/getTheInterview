@@ -31,6 +31,13 @@ public class SkillPanel : ResumeComponent
     public override void PopSkill(int index)
     {
         indexOffset = 3;
+        if (index >= skillContainers.Count)
+        {
+            Debug.Log("An index lookup is out of range in the Skill Panel");
+            Debug.Log(skillContainers.Count);
+            Debug.Log(index);
+            return;
+        }
         SkillContainer skillCont = skillContainers[index];
         skillContainers.RemoveAt(index);
         Destroy(skillCont.gameObject);
@@ -67,6 +74,11 @@ public class SkillPanel : ResumeComponent
         skillCont.UpdateUIText();
         skillContainers.Add(skillCont);
         indexOffset += 1;
+    }
+
+    public override void Reset()
+    {
+        skillContainers.Clear();
     }
 
 }

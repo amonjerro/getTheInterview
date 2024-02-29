@@ -1510,7 +1510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f61dead75ce6664b9bbd0c0f877b525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resumeRef: {fileID: 225259306303945261}
+  resume: {fileID: 225259306303945261}
+  skillPanel: {fileID: 4908526326388394196}
   wastedTimePopup: {fileID: 0}
 --- !u!114 &7474999118882819423
 MonoBehaviour:

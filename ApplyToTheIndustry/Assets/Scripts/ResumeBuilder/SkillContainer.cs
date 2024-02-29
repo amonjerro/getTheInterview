@@ -14,7 +14,7 @@ public class SkillContainer : MonoBehaviour
     public Skill skill;
     private ResumeComponent target;
     private ResumeComponent parent;
-    private int index;
+    public int index;
 
     /// <summary>
     /// Used for updating UI text with

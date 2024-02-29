@@ -91,11 +91,17 @@ public class Resume : ResumeComponent
     /// <summary>
     /// Resets builder resume
     /// </summary>
-    public void ResetResume()
+    public override void Reset()
     {
         // Clear list and update UI
         selectedSkillsList.Clear();
-        resumeTMPSkillList.text = "";
+        foreach(SkillContainer container in containers)
+        {
+            Destroy(container.gameObject);
+        }
+        containers.Clear();
+        indexOffset = 3;
+        resumeTMPSkillList.text = resumeMessageDefault;
     }
 }
 

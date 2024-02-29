@@ -5,7 +5,8 @@ using UnityEngine;
 public class SubmitButton : MonoBehaviour
 {
     // Public fields
-    public Resume resumeRef;
+    public ResumeComponent resume;
+    public ResumeComponent skillPanel;
     public GameObject wastedTimePopup;
 
     /// <summary>
@@ -30,10 +31,11 @@ public class SubmitButton : MonoBehaviour
         else
         {
             // Submit this application to the grader
-            ServiceLocator.Instance.GetService<Grader>().OnSubmit(resumeRef, jobMngr.builderPosting.currentPosting);
+            ServiceLocator.Instance.GetService<Grader>().OnSubmit(resume as Resume, jobMngr.builderPosting.currentPosting);
         }
 
         // Reset resume
-        resumeRef.ResetResume();
+        resume.Reset();
+        skillPanel.Reset();
     }
 }
