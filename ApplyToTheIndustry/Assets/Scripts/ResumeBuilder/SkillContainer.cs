@@ -12,7 +12,9 @@ public class SkillContainer : MonoBehaviour
     // Public fields
     public TextMeshProUGUI skillTMPTitle;
     public Skill skill;
-    public Resume currentResume;
+    private ResumeComponent target;
+    private ResumeComponent parent;
+    public int index;
 
     /// <summary>
     /// Used for updating UI text with
@@ -29,8 +31,9 @@ public class SkillContainer : MonoBehaviour
     public void OnChoose()
     {
         // Add skill to player resume
-        currentResume.AddSkill(skill);
-
+        target.AddSkill(skill);
+        parent.PopSkill(index);
+        
         // Update onboarding manager
         // Get onboarding manager
         OnboardingManager onboardingMngr = ServiceLocator.Instance.GetService<OnboardingManager>();
@@ -44,13 +47,27 @@ public class SkillContainer : MonoBehaviour
                 onboardingMngr.DisableInstructions();
 
                 // Increase click counter and advance tutorial when ready
-                currentResume.tutorialClicks++;
-                if (currentResume.tutorialClicks == currentResume.neededClicks)
+                target.tutorialClicks++;
+                if (target.tutorialClicks == target.neededClicks)
                 {
                     onboardingMngr.readyProceed = true;
                     onboardingMngr.AdvanceTutorial();
                 }
             }
         }
+    }
+
+    public void SetTarget(ResumeComponent component)
+    {
+        target = component;
+    }
+    public void SetParent(ResumeComponent papa)
+    {
+        parent = papa;
+    }
+
+    public void SetIndex(int value)
+    {
+        index = value;
     }
 }
