@@ -39,6 +39,7 @@ public class Action : MonoBehaviour
         if(onboardingMngr != null)
             if (onboardingMngr.tutorialActive)
                 onboardingMngr.readyProceed = true;
+                
         
         // Get UI general manager and call close popup
         UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
