@@ -7,7 +7,7 @@ public class PlayerSkillsManager : MonoBehaviour
 
     private void Awake()
     {
-        playerSkills = new SkillGroup(0,0,0,0,0,0);
+        playerSkills = new SkillGroup(0,0,0,0,0,0,0);
     }
 
     public void SetupSkills(){

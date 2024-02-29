@@ -8,6 +8,7 @@ public enum SkillType
     Leadership,
     Sound,
     Production,
+    ForeignLang
 }
 
 [Serializable]
