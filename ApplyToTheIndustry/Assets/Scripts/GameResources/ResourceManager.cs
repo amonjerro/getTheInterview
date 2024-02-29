@@ -68,5 +68,10 @@ public class ResourceManager : MonoBehaviour
     {
         _moneyAvailable.value -= weeklyCosts;
         moneyUI.UpdateMoneyText(_moneyAvailable.value);
+
+        if(_moneyAvailable.value <= 0.0f)
+        {
+            ServiceLocator.Instance.GetService<UIGeneralManager>().MoveToGameOverScreen();
+        }
     }
 }

@@ -7,6 +7,7 @@ public class UIGeneralManager : MonoBehaviour
     public List<InterfaceGroup> interfaceGroups;
     public InterfaceGroup feedbackScreen;
     public InterfaceGroup timerPanel;
+    public InterfaceGroup gameOverScreen;
     private InterfaceGroup wasActive;
 
     private void Start()
@@ -49,6 +50,16 @@ public class UIGeneralManager : MonoBehaviour
     public void MoveAwayFromPauseScreen()
     {
         wasActive.gameObject.SetActive(true);
+    }
+
+    public void MoveToGameOverScreen()
+    {
+        foreach (InterfaceGroup ig in interfaceGroups)
+        {
+            ig.gameObject.SetActive(false);
+        }
+
+        gameOverScreen.gameObject.SetActive(true);
     }
 
 }
