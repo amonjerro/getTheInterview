@@ -36,7 +36,6 @@ public class NewsTicker : MonoBehaviour
 
         newX = newX - (tickerSpeed * Time.deltaTime);
         childTransform.localPosition = new Vector3(newX, 0, 0);
-        Debug.Log(childTransform.localPosition);
         if (childTransform.localPosition.x < -6 * originalTickerHolderPosition.x)
         {
             childTransform.localPosition = originalTickerHolderPosition;
