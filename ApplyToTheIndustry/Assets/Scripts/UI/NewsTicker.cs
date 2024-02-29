@@ -20,7 +20,7 @@ public class NewsTicker : MonoBehaviour
 
     public void Awake()
     {
-        Debug.Log(tickerSpeed);
+
         LoadTicker();
         currentNewsDay = 0;
         TimeManager tmManager = ServiceLocator.Instance.GetService<TimeManager>();
