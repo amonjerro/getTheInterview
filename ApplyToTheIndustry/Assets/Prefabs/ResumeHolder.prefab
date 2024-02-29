@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b162cc06504afb48b4266bde99fa145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  neededClicks: 3
+  tutorialClicks: 0
   selectedSkillsList: []
   skillContainerPrefab: {fileID: 4101682849604088539, guid: 134663556fb029947ada5b84e274b789, type: 3}
   leftPadding: 0
@@ -590,6 +592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0f2d60855445044adada7ce49280aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  neededClicks: 0
+  tutorialClicks: 0
   skillContainerPrefab: {fileID: 4101682849604088539, guid: 134663556fb029947ada5b84e274b789, type: 3}
   insetPadding: 10
   leftPadding: 10

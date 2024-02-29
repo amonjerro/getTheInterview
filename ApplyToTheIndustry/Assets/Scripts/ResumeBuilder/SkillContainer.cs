@@ -47,8 +47,8 @@ public class SkillContainer : MonoBehaviour
                 onboardingMngr.DisableInstructions();
 
                 // Increase click counter and advance tutorial when ready
-                currentResume.tutorialClicks++;
-                if (currentResume.tutorialClicks == currentResume.neededClicks)
+                target.tutorialClicks++;
+                if (target.tutorialClicks == target.neededClicks)
                 {
                     onboardingMngr.readyProceed = true;
                     onboardingMngr.AdvanceTutorial();

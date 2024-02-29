@@ -23,12 +23,6 @@ public class Resume : ResumeComponent
     private List<SkillContainer> containers;
 
 
-
-    // Onboarding fields
-    public int neededClicks = 3;
-    public int tutorialClicks = 0;
-
-
     // Start is called before the first frame update
     void Start()
     {
