@@ -17,9 +17,16 @@ public class Resume : ResumeComponent
     public float insetPadding;
     public TextMeshProUGUI resumeTMPSkillList;
     public string resumeMessageDefault;
+
     public ResumeComponent target;
     public int indexOffset;
     private List<SkillContainer> containers;
+
+
+
+    // Onboarding fields
+    public int neededClicks = 3;
+    public int tutorialClicks = 0;
 
 
     // Start is called before the first frame update
