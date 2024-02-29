@@ -31,6 +31,14 @@ public class Action : MonoBehaviour
         DoAction();
         dependentUI.gameObject.SetActive(true);
         gameObject.GetComponentInParent<InterfaceGroup>().gameObject.SetActive(false);
+
+        // Get onboarding manager
+        OnboardingManager onboardingMngr = ServiceLocator.Instance.GetService<OnboardingManager>();
+
+        // If the tutorial is still active then proceed with the next tutorial step
+        if(onboardingMngr != null)
+            if (onboardingMngr.tutorialActive)
+                onboardingMngr.readyProceed = true;
     }
 
 }
