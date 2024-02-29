@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
+  m_Name: WebDev
+  m_EditorClassIdentifier: 
+  company: {fileID: 11400000, guid: 7d9a6e18d1146e0409ea71d0d33ece53, type: 2}
+  positionName: Web Developer
+  jobSummaryLines:
+  - Our office has recently opened a Web
+  - Developer position. Requirements are
+  - 'as follows:'
+  jobReqLines:
+  - '>Expert knowledge of programming'
+  - '>Portfolio of web development projects'
+  - '>Experience with Azure or other cloud'
+  - computing platforms
+  - '>Excellent leadership skills'
+  - '>Familiarity with generative AI and'
+  - language models
+  - '>Passion and attention to detail'
+  gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

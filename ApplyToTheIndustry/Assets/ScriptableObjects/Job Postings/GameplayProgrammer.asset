@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
-  m_Name: GameDesignManager
+  m_Name: GameplayProgrammer
   m_EditorClassIdentifier: 
-  company: {fileID: 11400000, guid: ef474ca3902deb44bb53c15b6fadb008, type: 2}
-  positionName: Game Design Manager
+  company: {fileID: 11400000, guid: 767ac96fd5784e2438df8b3aca9a28f3, type: 2}
+  positionName: Gameplay Programmer
   jobSummaryLines:
-  - Our company requires a motivated Game
-  - 'Design Manager. Qualifications:'
+  - We are now hiring for a Gameplay
+  - 'Programmer position. We require:'
   jobReqLines:
-  - '>Significant leadership expertise'
-  - '>Coding knowledge'
-  - '>A detailed portfolio of released'
-  - games (preferably AAA titles)
-  - '>Experience working in a fast-paced'
-  - Agile environment
-  - '>Basic foreign language skill preferred'
+  - '>An outstanding portfolio of'
+  - published titles
+  - '>Excellent programming knowledge'
+  - '>Experience working with proprietary'
+  - software and development tools
+  - '>Basic knowledge of game design'
+  - '>Native proficiency in foreign languages is'
+  - preferred
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}
