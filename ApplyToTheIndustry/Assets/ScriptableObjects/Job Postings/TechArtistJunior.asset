@@ -15,21 +15,15 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 14a62760017ea4e42986961ac58e935b, type: 2}
   positionName: Junior Technical Artist
   jobSummaryLines:
-  - Fatidic Systems is seeking a
-  - Junior Technical Artist.
+  - We are seeking a Junior Technical Artist.
   - Minimum qualifications for this position
   - 'include the following:'
   jobReqLines:
-  - '>Intimate knowledge of art tool'
-  - creation techniques
-  - '>Experience with Python, C#, and/or C++ '
-  - '>Understanding of SQL and other'
-  - database management systems
-  - '>Familiarity with Agile methodologies'
+  - '>Intimate knowledge of programming'
+  - and graphic design
+  - '>Familiarity with Scrum methodologies'
   - '>Ability to communicate effectively'
   - in a dynamic environment
-  - '>Experience using modeling tools such '
   - '>Capacity to create amazing,'
   - imaginative visuals
-  - '>Solid knowledge of rigging best practices'
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

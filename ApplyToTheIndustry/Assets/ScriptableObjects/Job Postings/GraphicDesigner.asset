@@ -16,21 +16,15 @@ MonoBehaviour:
   positionName: Graphic Designer
   jobSummaryLines:
   - A Graphic Designer position has opened
-  - at The Bill Dursley Company's main studio
-  - 'branch. Applicants are expected to have:'
+  - at our main studio branch. Applicants
+  - 'are expected to have:'
   jobReqLines:
   - '>Expert knowledge of UI/UX design'
   - best practices
-  - '>Familiarity with Adobe creative suite'
-  - '>Portfolio demonstrating creativity and'
-  - understanding of graphic design principles
-  - '>Strong sense of independence and a'
-  - capacity for self-motivation
-  - '>Experience working with HTML/CSS'
+  - '>Portfolio demonstrating ample creativity'
+  - '>Strong sense of leadership'
   - '>Exemplary time management skills'
-  - '>Experience working with Microsoft Office'
-  - '>In-depth knowledge of color theory, '
-  - typography, and layout design
-  - '>Python and/or Java experience would'
-  - be beneficial
+  - '>In-depth knowledge of graphic design'
+  - principles
+  - '>Some programming skill preferred'
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

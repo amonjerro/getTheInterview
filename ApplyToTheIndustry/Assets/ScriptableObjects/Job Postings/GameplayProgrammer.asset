@@ -15,22 +15,15 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 767ac96fd5784e2438df8b3aca9a28f3, type: 2}
   positionName: Gameplay Programmer
   jobSummaryLines:
-  - "J\u016Bkend\u014D Co., Ltd. is now hiring for a"
-  - Gameplay programmer position at our
-  - main headquarters. All potential applicants
-  - 'must have:'
+  - We are now hiring for a Gameplay
+  - 'Programmer position. We require:'
   jobReqLines:
   - '>An outstanding portfolio of'
   - published titles
-  - '>Knowledge in Python, plus'
-  - C++ and/or C#
+  - '>Excellent programming knowledge'
   - '>Experience working with proprietary'
   - software and development tools
-  - '>Minimum 2 years industry experience'
-  - or a relevant Graduate Degree
-  - '>Strong grasp of Scrum and associated'
-  - methodologies
-  - '>Expertise in object-oriented design'
-  - '>Native proficiency in Japanese is'
-  - highly preferred
+  - '>Basic knowledge of game design'
+  - '>Native proficiency in foreign languages is'
+  - preferred
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}
