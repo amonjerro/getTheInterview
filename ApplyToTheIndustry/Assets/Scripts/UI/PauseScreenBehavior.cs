@@ -44,7 +44,12 @@ public class PauseScreenBehavior : MonoBehaviour
     public void BackToMainMenu()
     {
         // To do: Need to add some sort of reset functionality here
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("IntroScene");
+    }
 
-        SceneManager.LoadScene("TitleScreen");
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
