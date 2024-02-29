@@ -27,5 +27,8 @@ public class GradingProfile : ScriptableObject
 
         skillGroup.leadership.name = "Leadership";
         skillGroup.leadership.skillType = SkillType.Leadership;
+
+        skillGroup.foreign_lang.name = "Foreign Lang";
+        skillGroup.foreign_lang.skillType = SkillType.ForeignLang;
     }
 }
