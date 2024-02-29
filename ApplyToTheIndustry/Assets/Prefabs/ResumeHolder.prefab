@@ -93,7 +93,7 @@ MonoBehaviour:
   tutorialClicks: 0
   selectedSkillsList: []
   skillContainerPrefab: {fileID: 4101682849604088539, guid: 134663556fb029947ada5b84e274b789, type: 3}
-  leftPadding: 0
+  leftPadding: 250
   insetPadding: 0
   resumeTMPSkillList: {fileID: 3862070603718420672}
   resumeMessageDefault: No skills listed.. choose some!
