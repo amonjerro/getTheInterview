@@ -68,5 +68,12 @@ public class ResourceManager : MonoBehaviour
     {
         _moneyAvailable.value -= weeklyCosts;
         moneyUI.UpdateMoneyText(_moneyAvailable.value);
+
+        // Trigger the game over screen as soon as 
+        // the player runs out of money
+        if(_moneyAvailable.value <= 0.0f)
+        {
+            ServiceLocator.Instance.GetService<UIGeneralManager>().MoveToGameOverScreen();
+        }
     }
 }

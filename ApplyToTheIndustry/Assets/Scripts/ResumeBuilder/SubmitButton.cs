@@ -34,6 +34,27 @@ public class SubmitButton : MonoBehaviour
             ServiceLocator.Instance.GetService<Grader>().OnSubmit(resume as Resume, jobMngr.builderPosting.currentPosting);
         }
 
+        // Get onboarding manager
+        OnboardingManager onboardingMngr = ServiceLocator.Instance.GetService<OnboardingManager>();
+        if(onboardingMngr != null)
+        {
+            // Only proceed if currently in tutorial
+            if(onboardingMngr.tutorialActive)
+            {
+                // If current step in onboarding wasnt this then skip
+                // the submit instructions
+                if (onboardingMngr.buttons[onboardingMngr.currentStepIndex] != gameObject)
+                {
+                    onboardingMngr.readyProceed = true;
+                    onboardingMngr.currentStepIndex++;
+                    onboardingMngr.AdvanceTutorial();
+
+                    // Also set resume clicks to whats needed
+                    resume.tutorialClicks = resume.neededClicks;
+                }
+            }
+        }
+
         // Reset resume
         resume.Reset();
         skillPanel.Reset();
