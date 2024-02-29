@@ -22,6 +22,7 @@ public class UIGeneralManager : MonoBehaviour
         }
 
         feedbackScreen.gameObject.SetActive(true);
+        ClosePopup();
     }
 
     public void MoveToMainScreen()
@@ -33,6 +34,7 @@ public class UIGeneralManager : MonoBehaviour
 
         timerPanel.gameObject.SetActive(true);
         ServiceLocator.Instance.GetService<TimeManager>().ResetTimer();
+        ClosePopup();
     }
     
     public void MoveToPauseScreen()
@@ -45,11 +47,13 @@ public class UIGeneralManager : MonoBehaviour
             }
             ig.gameObject.SetActive(false);
         }
+        ClosePopup();
     }
 
     public void MoveAwayFromPauseScreen()
     {
         wasActive.gameObject.SetActive(true);
+        ClosePopup();
     }
 
     public void MoveToGameOverScreen()
@@ -60,6 +64,20 @@ public class UIGeneralManager : MonoBehaviour
         }
 
         gameOverScreen.gameObject.SetActive(true);
+        ClosePopup();
+    }
+
+    public void ClosePopup()
+    {
+        // Get the popup panel and disable if changing interfaces
+        HideMenu hiddenPanel = FindObjectOfType<HideMenu>();
+        if (hiddenPanel != null)
+        {
+            // Get job manager to check if time was wasted before disabling
+            JobManager jobMngr = ServiceLocator.Instance.GetService<JobManager>();
+            if (!jobMngr.playerWastedTime)
+                hiddenPanel.DisableObject();
+        }
     }
 
 }
