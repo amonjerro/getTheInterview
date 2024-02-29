@@ -32,6 +32,14 @@ public class Action : MonoBehaviour
         dependentUI.gameObject.SetActive(true);
         gameObject.GetComponentInParent<InterfaceGroup>().gameObject.SetActive(false);
 
+        // Get onboarding manager
+        OnboardingManager onboardingMngr = ServiceLocator.Instance.GetService<OnboardingManager>();
+
+        // If the tutorial is still active then proceed with the next tutorial step
+        if(onboardingMngr != null)
+            if (onboardingMngr.tutorialActive)
+                onboardingMngr.readyProceed = true;
+        
         // Get UI general manager and call close popup
         UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
         uiMngr.ClosePopup();

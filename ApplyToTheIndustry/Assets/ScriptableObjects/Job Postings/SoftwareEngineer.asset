@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
-  m_Name: GameDesignManager
+  m_Name: SoftwareEngineer
   m_EditorClassIdentifier: 
-  company: {fileID: 11400000, guid: ef474ca3902deb44bb53c15b6fadb008, type: 2}
-  positionName: Game Design Manager
+  company: {fileID: 11400000, guid: 861cb506ee7d6d24da3756585d004572, type: 2}
+  positionName: Software Engineer
   jobSummaryLines:
-  - Our company requires a motivated Game
-  - 'Design Manager. Qualifications:'
+  - Our corporation is looking for a
+  - 'Software Engineer. Requirements:'
   jobReqLines:
-  - '>Significant leadership expertise'
-  - '>Coding knowledge'
-  - '>A detailed portfolio of released'
-  - games (preferably AAA titles)
-  - '>Experience working in a fast-paced'
-  - Agile environment
-  - '>Basic foreign language skill preferred'
+  - '>In-depth programming knowledge'
+  - '>Innovative problem-solving capability'
+  - '>Familiarity with Agile practices'
+  - '>Ability to adapt on the fly to a dynamic'
+  - work environment
+  - '>Basic proficiency in foreign languages'
+  - is strongly preferred
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}
