@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Kvarlingvoj
   m_EditorClassIdentifier: 
   compName: Kvarlingvoj
-  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  logo: {fileID: 21300000, guid: fe0412d328a1c9b49b914732d9d07e26, type: 3}

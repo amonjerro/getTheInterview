@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TechnologicArts
   m_EditorClassIdentifier: 
   compName: Technologic Arts
-  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  logo: {fileID: 21300000, guid: 4d11b8d8691ad1045a17e01f87abc9d4, type: 3}

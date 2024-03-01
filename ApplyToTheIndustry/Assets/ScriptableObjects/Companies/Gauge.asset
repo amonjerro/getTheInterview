@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Gauge
   m_EditorClassIdentifier: 
   compName: Gauge
-  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  logo: {fileID: 21300000, guid: 35f86ed5eb51aef41b6c2ccc29a522db, type: 3}
