@@ -10,6 +10,8 @@ public class Grader : MonoBehaviour
     public List<string> companiesAppliedTo = new List<string>();
     public List<string> positionsAppliedTo = new List<string>();
     int Totalpoints = 0;
+    public int connectionBonusMin;
+    public int connectionBonusMax;
     public int prioritizationMismatchPenalty;
 
     public void OnSubmit(Resume resume, JobPosting posting)
@@ -54,6 +56,20 @@ public class Grader : MonoBehaviour
         {
             Totalpoints += EvaluateThreshold(type, posting);
         }
+
+        Debug.Log(Totalpoints);
+
+        ResourceManager rm = ServiceLocator.Instance.GetService<ResourceManager>();
+        foreach(Connections connection in rm.connectionList)
+        {
+            if(connection.companyName == posting.company.name)
+            {
+                int chance = Random.Range(connectionBonusMin, connectionBonusMax);
+                Totalpoints = Totalpoints + chance;
+                Debug.Log(Totalpoints);
+            }
+        }
+
         SetFeedback();
     }
 
