@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIGeneralManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class UIGeneralManager : MonoBehaviour
     private void Start()
     {
         ServiceLocator.Instance.GetService<TimeManager>().D_timeout += MoveToFeedbackScreen;
+        UpdateButtonUsability();
     }
     public void MoveToFeedbackScreen()
     {
@@ -77,6 +79,26 @@ public class UIGeneralManager : MonoBehaviour
             JobManager jobMngr = ServiceLocator.Instance.GetService<JobManager>();
             if (!jobMngr.playerWastedTime)
                 hiddenPanel.DisableObject();
+        }
+    }
+
+    public void UpdateButtonUsability()
+    {
+        // Get the resource manager
+        ResourceManager rsrcMngr = ServiceLocator.Instance.GetService<ResourceManager>();
+
+        // Iterate through timer panel buttons
+        foreach(Action action in timerPanel.GetComponentsInChildren<Action>())
+        {
+            // Get game object's button component
+            Button btn = action.gameObject.GetComponent<Button>();
+
+            // Check if player can use buttons
+            // and disable interactions if they cant
+            if (rsrcMngr.IsCostViable(action.cost))
+                btn.interactable = true;
+            else
+                btn.interactable = false;
         }
     }
 
