@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: "J\u016Bkend\u014DOfAmerica"
   m_EditorClassIdentifier: 
   compName: Juukendou of America
-  logo: {fileID: 0}
+  logo: {fileID: 21300000, guid: a645c83183418734d8ba19600f0ea6ca, type: 3}
