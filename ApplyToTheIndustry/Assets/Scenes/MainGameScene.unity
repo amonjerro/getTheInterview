@@ -4626,6 +4626,10 @@ PrefabInstance:
       value: SubmitButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8923075231760930295, guid: 19f9e12b6933ab848a93674565f562f0, type: 3}
+      propertyPath: popup
+      value: 
+      objectReference: {fileID: 1618726046}
+    - target: {fileID: 8923075231760930295, guid: 19f9e12b6933ab848a93674565f562f0, type: 3}
       propertyPath: wastedTimePopup
       value: 
       objectReference: {fileID: 1618726046}
