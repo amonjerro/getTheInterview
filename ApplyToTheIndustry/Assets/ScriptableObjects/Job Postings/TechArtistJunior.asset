@@ -16,14 +16,10 @@ MonoBehaviour:
   positionName: Junior Technical Artist
   jobSummaryLines:
   - We are seeking a Junior Technical Artist.
-  - Minimum qualifications for this position
-  - 'include the following:'
+  - 'Minimum qualifications for this position include the following:'
   jobReqLines:
-  - '>Intimate knowledge of programming'
-  - and graphic design
+  - '>Intimate knowledge of programming and graphic design'
   - '>Familiarity with Scrum methodologies'
-  - '>Ability to communicate effectively'
-  - in a dynamic environment
-  - '>Capacity to create amazing,'
-  - imaginative visuals
+  - '>Ability to communicate effectively in a dynamic environment'
+  - '>Capacity to create amazing, imaginative visuals'
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

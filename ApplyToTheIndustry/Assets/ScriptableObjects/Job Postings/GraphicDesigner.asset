@@ -15,16 +15,13 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 79c8ef906c16a5248a9cd6a94a962aef, type: 2}
   positionName: Graphic Designer
   jobSummaryLines:
-  - A Graphic Designer position has opened
-  - at our main studio branch. Applicants
-  - 'are expected to have:'
+  - A Graphic Designer position has opened at our main studio branch.
+  - 'Applicants are expected to have:'
   jobReqLines:
-  - '>Expert knowledge of UI/UX design'
-  - best practices
+  - '>Expert knowledge of UI/UX design best practices'
   - '>Portfolio demonstrating ample creativity'
   - '>Strong sense of leadership'
   - '>Exemplary time management skills'
-  - '>In-depth knowledge of graphic design'
-  - principles
+  - '>In-depth knowledge of graphic design principles'
   - '>Some programming skill preferred'
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

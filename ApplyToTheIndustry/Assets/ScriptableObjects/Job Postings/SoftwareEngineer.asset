@@ -15,14 +15,12 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 861cb506ee7d6d24da3756585d004572, type: 2}
   positionName: Software Engineer
   jobSummaryLines:
-  - Our corporation is looking for a
-  - 'Software Engineer. Requirements:'
+  - Our corporation is looking for a Software Engineer.
+  - 'Requirements:'
   jobReqLines:
   - '>In-depth programming knowledge'
   - '>Innovative problem-solving capability'
   - '>Familiarity with Agile practices'
-  - '>Ability to adapt on the fly to a dynamic'
-  - work environment
-  - '>Basic proficiency in foreign languages'
-  - is strongly preferred
+  - '>Ability to adapt on the fly to a dynamic work environment'
+  - '>Basic proficiency in foreign languages is strongly preferred'
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

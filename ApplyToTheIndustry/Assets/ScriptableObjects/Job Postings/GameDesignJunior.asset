@@ -15,14 +15,12 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 4c23469047b92f048b204fc384945468, type: 2}
   positionName: Junior Game Designer
   jobSummaryLines:
-  - We are currently looking for a passionate,
-  - self-motivated junior Game Designer.
+  - We are currently looking for a passionate, self-motivated junior Game Designer.
   - 'Minimum qualifications for this position:'
   jobReqLines:
   - '>Adequate programming skill'
   - '>Experience with game design'
-  - '>Excellent leadership skills and a'
-  - collaborative mindset
+  - '>Excellent leadership skills and a collaborative mindset'
   - '>A detailed portfolio of released games'
   - '>A passion for solutions-driven innovation'
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}
