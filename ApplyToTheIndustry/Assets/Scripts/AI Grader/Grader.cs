@@ -13,6 +13,12 @@ public class Grader : MonoBehaviour
     public int prioritizationMismatchPenalty;
     Resume currentResume;
     JobPosting currentPosting;
+    bool isGhosted;
+    bool canGhost;
+    float randomGhosting;
+    float ghostingRange;
+    public int companiesAppliedCount;
+
 
     public void OnSubmit(Resume resume, JobPosting posting)
     {
@@ -25,6 +31,7 @@ public class Grader : MonoBehaviour
         skillPoints.Clear();
         prioritization.Clear();
         Totalpoints = 0;
+        companiesAppliedCount +=1;
 
         // Access the selected skill list from the Resume instance
         List<Skill> selectedSkills = resume.selectedSkillsList;
@@ -33,6 +40,7 @@ public class Grader : MonoBehaviour
             skillPoints[skill.skillType] = skill.value;
             prioritization.Add(skill.skillType);
         }
+        Debug.Log(companiesAppliedCount);
         CalculateTotalPoints(posting);
     }
 
@@ -145,25 +153,69 @@ public class Grader : MonoBehaviour
         if (Totalpoints < 15)
         {
             message = "THIS IS AN AUTOMATED RESPONSE. YOUR RESUME FAILED TO MEET MINIMUM EXPECTATIONS AND HAS BEEN REJECTED AUTOMATICALLY BY OUR AI REVIEWER.";
+            canGhost = true;
+            ghostingRange = 0.6f;
+            Debug.Log("Range = "+ ghostingRange);
 
         }
         else if (Totalpoints >= 15 && Totalpoints <= 25)
         {
             message = "We have reviewed your application and regret to inform you that you have not been selected for the position. We wish you the best of luck in your professional career.";
+            canGhost = true;
+            ghostingRange = 0.4f;
+            Debug.Log("Range = "+ ghostingRange);        
         }
         else if (Totalpoints >= 25 && Totalpoints <= 35)
         {
             message = "Your application has been reviwed by our Human Resources team but due to the competitive nature of this position, we are unable to proceed in this process with you. Thank you for considering applying to our company.";
+            canGhost = true;
+            ghostingRange = 0.2f;
+            Debug.Log("Range = "+ ghostingRange);
         }
         else
         {
             message = "Let's discuss the next steps";
+            canGhost = false;
+            ghostingRange = 0.0f;
+            Debug.Log("Range = "+ ghostingRange);
+
         }
 
-        feedback.Add(message);
+        Debug.Log("Total points: "+Totalpoints);
+        Debug.Log("Can Ghost="+canGhost);
+        bool ghosted = toGhost(canGhost, ghostingRange);
+        if(ghosted == false)
+        {
+            feedback.Add(message);
+        }
 
         // Construct and save data
         ConstructAndSaveData();
+    }
+
+    public bool toGhost(bool ghosting, float range){
+        if(ghosting == true)
+        {
+            randomGhosting = Mathf.Round(Random.Range(0.0f, 1.0f) * 100f) / 100f;
+            Debug.Log("Randomness:"+randomGhosting);
+            if(randomGhosting <= range)
+            {
+                isGhosted = true;
+            }
+            else
+            {
+                isGhosted = false;
+            }
+        }
+        else
+        {
+            isGhosted = false;
+        }
+
+        
+        Debug.Log("Ghosted: "+isGhosted);
+        return isGhosted;
+
     }
 
     public void ResetFeedback()
@@ -196,8 +248,11 @@ public class Grader : MonoBehaviour
         // Get results data
         ResultsData resultsData = new ResultsData();
         resultsData.totalPoints = Totalpoints;
-        resultsData.ghosted = true;
-        resultsData.returnMessage = feedback[feedback.Count - 1];
+        //resultsData.ghosted = true;
+        if(feedback.Count>1)
+        {
+            resultsData.returnMessage = feedback[feedback.Count - 1];
+        }
 
         // Save the data
         SaveData dataToSave = new SaveData();

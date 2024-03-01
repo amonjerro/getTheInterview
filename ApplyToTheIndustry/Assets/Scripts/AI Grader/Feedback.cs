@@ -18,7 +18,7 @@ public class Feedback : MonoBehaviour
         messageIndex = 0;
         companyName.text = "";
         positionName.text = "";
-        if (grader.feedback.Count == 0)
+        if (grader.companiesAppliedCount == 0)
         {
             
             positionName.text = "You have not applied to any positions, you have no pending messages.";
@@ -26,7 +26,16 @@ public class Feedback : MonoBehaviour
             feedbackMessage.text = "You have been charged for your weekly costs of rent, food and utilities.";
             buttonText.text = "Move on to next week";
             messageIndex = 1;
-        } else
+        } 
+        else if(grader.feedback.Count == 0)
+        {
+            positionName.text = "You have not received any responses from your applications.";
+            ServiceLocator.Instance.GetService<ResourceManager>().EndOfTheWeek();
+            feedbackMessage.text = "You have been charged for your weekly costs of rent, food and utilities.";
+            buttonText.text = "Move on to next week";
+            messageIndex = 2;
+        }
+        else
         {
             feedbackMessage.text = "You have pending responses from your applications";
             buttonText.text = "Next Message";
