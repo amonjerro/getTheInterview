@@ -1,4 +1,5 @@
 
+using System.Transactions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,8 +17,9 @@ public class ChoosePanel : MonoBehaviour
     /// </summary>
     void OnEnable()
     {
+        int currentWeek = ServiceLocator.Instance.GetService<TimeManager>().GetCurrentWeek();
         panelDataStrategy = ChoosePanelStrategyFactory.MakeStrategy(panelType);
-        panelDataStrategy.LoadData(1);
+        panelDataStrategy.LoadData(currentWeek);
         // Get the grid layout group element and add all job buttons to it
         GridLayoutGroup layout = GetComponentInChildren<GridLayoutGroup>();
         panelDataStrategy.DisplayData(layout, buttonPrefab, dependentUI);
