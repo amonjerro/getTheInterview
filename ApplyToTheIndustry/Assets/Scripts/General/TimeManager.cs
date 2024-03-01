@@ -18,12 +18,12 @@ public class TimeManager : MonoBehaviour
     private int maxTime;
 
     // Used for updating timer UI
-    public Timebar timeBar;
+    public UIBar UIBar;
 
     // Start is called at beginning of play
     void Start()
     {
-        timeBar.Setup();
+        UIBar.Setup();
         maxTime = timeLeft;
     }
 
@@ -45,7 +45,7 @@ public class TimeManager : MonoBehaviour
         }
 
         // Make updates to UI
-        timeBar.SetWidth(timeLeft /  (float) maxTime);
+        UIBar.SetFullness(timeLeft /  (float) maxTime);
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public class TimeManager : MonoBehaviour
         timeLeft = maxTime;
 
         // Make updates to UI
-        timeBar.SetWidth(timeLeft / (float)maxTime);
+        UIBar.SetFullness(timeLeft / (float)maxTime);
     }
 
     public void SetMaxTime(int value)

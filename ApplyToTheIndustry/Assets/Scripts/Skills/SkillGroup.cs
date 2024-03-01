@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime;
 
 [Serializable]
 public struct SkillGroup
@@ -49,6 +50,27 @@ public struct SkillGroup
             foreign_lang,
         };
         return listOfSkills;
+    }
+
+    public Skill GetSkill(SkillType type)
+    {
+        switch (type)
+        {
+            case SkillType.Design:
+                return design;
+            case SkillType.Graphics:
+                return graphic_art;
+            case SkillType.Sound:
+                return sound_and_music;
+            case SkillType.Production:
+                return production;
+            case SkillType.Leadership:
+                return leadership;
+            case SkillType.ForeignLang:
+                return foreign_lang;
+            default:
+                return programming;
+        }
     }
 
 }

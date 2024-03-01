@@ -33,4 +33,10 @@ public struct Skill
         }
         return new Skill(a.name, a.value + b.value, a.skillType);
     }
+
+    public override string ToString()
+    {
+
+        return "Name: " + name + ", Value: " + value.ToString();
+    }
 }
