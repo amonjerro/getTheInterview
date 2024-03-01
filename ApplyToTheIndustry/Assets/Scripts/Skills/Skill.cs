@@ -34,6 +34,11 @@ public struct Skill
         return new Skill(a.name, a.value + b.value, a.skillType);
     }
 
+    public static Skill operator *(Skill a, int b)
+    {
+        return new Skill(a.name, a.value * b, a.skillType);
+    }
+
     public override string ToString()
     {
 

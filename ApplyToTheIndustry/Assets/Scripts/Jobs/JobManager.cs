@@ -5,7 +5,7 @@ using UnityEngine;
 public class JobManager : MonoBehaviour
 {
     // Public fields
-    public PostingsByDay postingDay1;
+    public PostingsByDay[] postingsByDayContainer;
     public JobContainer builderPosting;
     public bool playerWastedTime = false;
 
@@ -39,5 +39,10 @@ public class JobManager : MonoBehaviour
 
         // Otherwise add to list of applied positions
         appliedPositions.Add(posting);
+    }
+
+    public PostingsByDay GetByDay(int i)
+    {
+        return postingsByDayContainer[i];
     }
 }

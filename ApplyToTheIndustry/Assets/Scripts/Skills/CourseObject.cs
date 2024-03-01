@@ -4,6 +4,9 @@
 public class CourseObject : ScriptableObject
 {
 	public CourseData data;
+    public string courseName;
+    [TextArea]
+    public string description;
 
     private void Reset()
     {
@@ -20,4 +23,10 @@ public class CourseObject : ScriptableObject
         data.reward.leadership.name = "Leadership";
         data.reward.leadership.skillType = SkillType.Leadership;
     }
+}
+
+[CreateAssetMenu(menuName = "ScriptableObject/CourseGrouping")]
+public class CourseGroupingByDay : ScriptableObject
+{
+    public CourseObject[] courses;
 }
