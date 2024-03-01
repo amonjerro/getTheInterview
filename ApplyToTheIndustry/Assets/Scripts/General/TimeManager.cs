@@ -14,6 +14,7 @@ public class TimeManager : MonoBehaviour
     public D_Timeout D_timeout;
 
     // Store time as integer
+    private int currentWeek = 0;
     public int timeLeft = 100;
     private int maxTime;
 
@@ -68,7 +69,11 @@ public class TimeManager : MonoBehaviour
     {
         // Call tick event
         D_timeout?.Invoke();
+        currentWeek += 1;
+    }
 
-        
+    public int GetCurrentWeek()
+    {
+        return currentWeek;
     }
 }

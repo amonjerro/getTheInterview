@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerSkillsManager : MonoBehaviour
 {
     public CourseGroupingByDay[] courseGroupings;
-    public int studyRate;
+    [SerializeField]
+    private int studyRate =  10;
     CourseData bookedCourse;
     SkillGroup playerSkills;
 
@@ -47,5 +48,10 @@ public class PlayerSkillsManager : MonoBehaviour
     public Skill GetSkillByType(SkillType type)
     {
         return playerSkills.GetSkill(type);
+    }
+
+    public int GetStudyRate()
+    {
+        return studyRate;
     }
 }

@@ -59,6 +59,7 @@ public class CoursePanelData : IPanelDataStrategy{
 
     public void DisplayData(GridLayoutGroup group, GameObject prefab, InterfaceGroup dependentUI)
     {
+        CourseDetailUI finalUI = dependentUI.gameObject.GetComponent<CourseDetailUI>();
         foreach (CourseObject course in data)
         {
             // Create the button
@@ -67,12 +68,19 @@ public class CoursePanelData : IPanelDataStrategy{
             // Set it to be a child of the grid layout
             courseButton.transform.SetParent(group.transform);
 
+            // Set Button Data
+            CourseButton cbComponent = courseButton.GetComponent<CourseButton>();
+            cbComponent.data = course;
+            cbComponent.SetCourseDetailUI(finalUI);
+            cbComponent.UpdateUI();
+
             // Set action UI
             Action action = courseButton.GetComponent<Action>();
             action.dependentUI = dependentUI;
         }
     }
 }
+
 
 public static class ChoosePanelStrategyFactory
 {

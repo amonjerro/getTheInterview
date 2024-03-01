@@ -226,8 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b726989d331be68479d60fb681092b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jobButtonPrefab: {fileID: 7331942638947793236, guid: 17e3251738649644296bc321d2ec1d88, type: 3}
+  buttonPrefab: {fileID: 7331942638947793236, guid: 17e3251738649644296bc321d2ec1d88, type: 3}
   dependentUI: {fileID: 0}
+  panelType: 0
 --- !u!1 &6622166222710308720
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +260,7 @@ Transform:
   m_Children:
   - {fileID: 7399992650340319660}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8033128068006592622
 MonoBehaviour:

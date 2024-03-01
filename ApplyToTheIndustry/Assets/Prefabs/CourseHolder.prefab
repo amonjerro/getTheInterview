@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b726989d331be68479d60fb681092b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPrefab: {fileID: 0}
+  buttonPrefab: {fileID: 7331942638947793236, guid: 61fca23c10e65db44b1f773218215012, type: 3}
   dependentUI: {fileID: 0}
   panelType: 1
 --- !u!1 &5385112262249324038
@@ -126,7 +126,7 @@ Transform:
   - {fileID: 1104342201830026882}
   - {fileID: 3081195253669045156}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1337607326598717030
 MonoBehaviour:

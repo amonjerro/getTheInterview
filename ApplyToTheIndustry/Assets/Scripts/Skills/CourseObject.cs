@@ -24,9 +24,3 @@ public class CourseObject : ScriptableObject
         data.reward.leadership.skillType = SkillType.Leadership;
     }
 }
-
-[CreateAssetMenu(menuName = "ScriptableObject/CourseGrouping")]
-public class CourseGroupingByDay : ScriptableObject
-{
-    public CourseObject[] courses;
-}
