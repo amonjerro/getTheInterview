@@ -696,6 +696,8 @@ MonoBehaviour:
   companyName:
   - {fileID: 11400000, guid: ef474ca3902deb44bb53c15b6fadb008, type: 2}
   - {fileID: 11400000, guid: 4c23469047b92f048b204fc384945468, type: 2}
+  chanceMin: 15
+  chanceMax: 30
 --- !u!1 &427726115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 167369143020854574, guid: 54754537adfa3e845aedd7ce24842624, type: 3}

@@ -5,8 +5,8 @@ using UnityEngine;
 public class ConnectionMaker : MonoBehaviour
 {
     public List<Company> companyName;
-    //public int chanceMin;
-    //public int chanceMax; //Add score to the skills
+    public int chanceMin;
+    public int chanceMax; //Add score to the skills
 
     string PickCompanyName()
     {
@@ -18,10 +18,11 @@ public class ConnectionMaker : MonoBehaviour
     public Connections CreateConnection()
     {
         string result = PickCompanyName();
-        //int chance = Random.Range(chanceMin, chanceMax);
+        int chance = Random.Range(chanceMin, chanceMax);
 
-        Connections con = new Connections(result);
+        Connections con = new Connections(result, chance);
         Debug.Log(result);
+        Debug.Log(chance);
 
         return con;
     }
