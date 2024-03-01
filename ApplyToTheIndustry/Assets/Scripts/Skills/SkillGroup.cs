@@ -37,6 +37,19 @@ public struct SkillGroup
         return returnable;
     }
 
+    public static SkillGroup operator *(SkillGroup a, int b)
+    {
+        SkillGroup returnable = new SkillGroup();
+        returnable.programming = a.programming * b;
+        returnable.graphic_art = a.graphic_art * b;
+        returnable.design = a.design * b;
+        returnable.sound_and_music = a.sound_and_music * b;
+        returnable.production = a.production * b;
+        returnable.leadership = a.leadership * b;
+        returnable.foreign_lang = a.foreign_lang * b;
+        return returnable;
+    }
+
     public List<Skill> ListSkills()
     {
         List<Skill> listOfSkills = new List<Skill>

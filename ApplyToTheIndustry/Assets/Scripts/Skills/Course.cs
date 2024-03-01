@@ -3,10 +3,19 @@ using System;
 [Serializable]
 public struct CourseData
 {
-    public string courseName;
     public SkillType typeFilter;
     public SkillGroup reward;
-    public Resource moneyCost;
     public Resource timeCost;
     public bool certification;
+    private int progress;
+
+    public void AddProgress(int value)
+    {
+        progress += value;
+    }
+
+    public bool isComplete()
+    {
+        return progress >= timeCost.value;
+    }
 }
