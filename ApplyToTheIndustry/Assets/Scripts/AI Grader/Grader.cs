@@ -11,9 +11,14 @@ public class Grader : MonoBehaviour
     public List<string> positionsAppliedTo = new List<string>();
     int Totalpoints = 0;
     public int prioritizationMismatchPenalty;
+    Resume currentResume;
+    JobPosting currentPosting;
 
     public void OnSubmit(Resume resume, JobPosting posting)
     {
+        currentResume = resume;
+        currentPosting = posting;
+
         positionsAppliedTo.Add(posting.positionName);
         companiesAppliedTo.Add(posting.company.name);
         // Clear all previous calculations and data structures
@@ -143,6 +148,9 @@ public class Grader : MonoBehaviour
         }
 
         feedback.Add(message);
+
+        // Construct and save data
+        ConstructAndSaveData();
     }
 
     public void ResetFeedback()
@@ -152,6 +160,40 @@ public class Grader : MonoBehaviour
         feedback.Clear();
     }
 
+    public void ConstructAndSaveData()
+    {
+        // Get job posting data
+        JobData jobData = new JobData();
+        jobData.companyName = companiesAppliedTo[companiesAppliedTo.Count - 1];
+        jobData.positionName = positionsAppliedTo[positionsAppliedTo.Count - 1];
+
+        // Get Resume data
+        ResumeData resumeData = new ResumeData();
+        List<SkillType> resumeOrder = new List<SkillType>();
+        foreach (Skill skill in currentResume.selectedSkillsList)
+        {
+            resumeOrder.Add(skill.skillType);
+        }
+        resumeData.selectedOrder = resumeOrder.ToArray();
+
+        // Get rubric data
+        RubricData rubricData = new RubricData();
+        rubricData.expectedOrder = currentPosting.gradingProfile.expectedSkillOrdering;
+
+        // Get results data
+        ResultsData resultsData = new ResultsData();
+        resultsData.totalPoints = Totalpoints;
+        resultsData.ghosted = true;
+        resultsData.returnMessage = feedback[feedback.Count - 1];
+
+        // Save the data
+        SaveData dataToSave = new SaveData();
+        dataToSave.jobData = jobData;
+        dataToSave.resumeData = resumeData;
+        dataToSave.rubricData = rubricData;
+        dataToSave.resultsData = resultsData;
+        ServiceLocator.Instance.GetService<DataSaver>().SaveData(dataToSave);
+    }
 }
 
 

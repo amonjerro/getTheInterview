@@ -1,0 +1,27 @@
+{
+    "jobData": {
+        "companyName": "TestCompany",
+        "positionName": "Programmer"
+    },
+    "resumeData": {
+        "selectedOrder": [
+            0,
+            1,
+            2
+        ]
+    },
+    "rubricData": {
+        "expectedOrder": [
+            0,
+            4,
+            6,
+            3,
+            5
+        ]
+    },
+    "resultsData": {
+        "totalPoints": -250,
+        "ghosted": true,
+        "returnMessage": "THIS IS AN AUTOMATED RESPONSE. YOUR RESUME FAILED TO MEET MINIMUM EXPECTATIONS AND HAS BEEN REJECTED AUTOMATICALLY BY OUR AI REVIEWER."
+    }
+}
