@@ -7,6 +7,7 @@ public class CourseObject : ScriptableObject
 
     private void Reset()
     {
+        //Default all values on new ScriptableObject
         data.reward.programming.name = "Programming";
         data.reward.programming.skillType = SkillType.Programming;
         data.reward.design.name = "Design";

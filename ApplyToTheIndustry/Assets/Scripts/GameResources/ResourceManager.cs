@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+
 
 // Class in charge of managing the data for resources
 // It sends messages to the TimeManager class as it has some additional time-related
@@ -9,6 +11,7 @@ public class ResourceManager : MonoBehaviour
     // Game resources
     private Resource _timeAvailable;
     private Resource _moneyAvailable;
+    public List<Connections> connectionList = new List<Connections>();
 
     // Configurable parameters that set the limit of the game;
     [SerializeField]

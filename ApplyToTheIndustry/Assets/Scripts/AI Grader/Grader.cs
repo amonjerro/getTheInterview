@@ -59,6 +59,19 @@ public class Grader : MonoBehaviour
         {
             Totalpoints += EvaluateThreshold(type, posting);
         }
+
+        Debug.Log(Totalpoints);
+
+        ResourceManager rm = ServiceLocator.Instance.GetService<ResourceManager>();
+        foreach(Connections connection in rm.connectionList)
+        {
+            if(connection.companyName == posting.company.name)
+            {
+                Totalpoints = Totalpoints + connection.connectionBonus;
+                Debug.Log(Totalpoints);
+            }
+        }
+
         SetFeedback();
     }
 
