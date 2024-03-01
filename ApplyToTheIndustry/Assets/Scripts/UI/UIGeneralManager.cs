@@ -10,11 +10,14 @@ public class UIGeneralManager : MonoBehaviour
     public InterfaceGroup timerPanel;
     public InterfaceGroup gameOverScreen;
     private InterfaceGroup wasActive;
+    public InterfaceGroup progressPanel;
+    public ConfirmationPopup popUp;
 
     private void Start()
     {
         ServiceLocator.Instance.GetService<TimeManager>().D_timeout += MoveToFeedbackScreen;
         UpdateButtonUsability();
+
     }
     public void MoveToFeedbackScreen()
     {
@@ -35,6 +38,10 @@ public class UIGeneralManager : MonoBehaviour
         }
 
         timerPanel.gameObject.SetActive(true);
+        if (!ServiceLocator.Instance.GetService<PlayerSkillsManager>().isCourseBooked())
+        {
+            progressPanel.gameObject.SetActive(false);
+        }
         ServiceLocator.Instance.GetService<TimeManager>().ResetTimer();
         ClosePopup();
     }
@@ -55,6 +62,13 @@ public class UIGeneralManager : MonoBehaviour
     public void MoveAwayFromPauseScreen()
     {
         wasActive.gameObject.SetActive(true);
+        if (wasActive == timerPanel)
+        {
+            if (!ServiceLocator.Instance.GetService<PlayerSkillsManager>().isCourseBooked())
+            {
+                progressPanel.gameObject.SetActive(false);
+            }
+        }
         ClosePopup();
     }
 
@@ -80,6 +94,21 @@ public class UIGeneralManager : MonoBehaviour
             if (!jobMngr.playerWastedTime)
                 hiddenPanel.DisableObject();
         }
+    }
+
+    public void SetProgressPanelStatus(bool status)
+    {
+        progressPanel.gameObject.SetActive(status);
+    }
+
+    public void UpdatePopUp(string message)
+    {
+        popUp.SetConfirmationText(message);
+    }
+
+    public void ShowPopUp()
+    {
+        popUp.gameObject.transform.parent.parent.gameObject.SetActive(true);
     }
 
     public void UpdateButtonUsability()

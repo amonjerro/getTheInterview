@@ -4,6 +4,9 @@
 public class CourseObject : ScriptableObject
 {
 	public CourseData data;
+    public string courseName;
+    [TextArea]
+    public string description;
 
     private void Reset()
     {
@@ -20,5 +23,7 @@ public class CourseObject : ScriptableObject
         data.reward.production.skillType = SkillType.Production;
         data.reward.leadership.name = "Leadership";
         data.reward.leadership.skillType = SkillType.Leadership;
+        data.reward.foreign_lang.name = "Foreign Lang";
+        data.reward.foreign_lang.skillType = SkillType.ForeignLang;
     }
 }

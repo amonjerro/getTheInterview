@@ -17,9 +17,9 @@ public struct SkillGroup
     {
         programming = new Skill("Programming", p, SkillType.Programming);
         design = new Skill("Design", d, SkillType.Design);
-        graphic_art = new Skill("Aesthetics & Art", ga, SkillType.Graphics);
+        graphic_art = new Skill("Graphics and Art", ga, SkillType.Graphics);
         production = new Skill("Production", pr, SkillType.Production);
-        sound_and_music = new Skill("Sound & Music", s, SkillType.Sound);
+        sound_and_music = new Skill("Sound and Music", s, SkillType.Sound);
         leadership = new Skill("Leadership", ld, SkillType.Leadership);
         foreign_lang = new Skill("Foreign Lang", fl, SkillType.ForeignLang);
     }
@@ -34,6 +34,19 @@ public struct SkillGroup
         returnable.production = a.production + b.production;
         returnable.leadership = a.leadership + b.leadership;
         returnable.foreign_lang = a.foreign_lang + b.foreign_lang;
+        return returnable;
+    }
+
+    public static SkillGroup operator *(SkillGroup a, int b)
+    {
+        SkillGroup returnable = new SkillGroup();
+        returnable.programming = a.programming * b;
+        returnable.graphic_art = a.graphic_art * b;
+        returnable.design = a.design * b;
+        returnable.sound_and_music = a.sound_and_music * b;
+        returnable.production = a.production * b;
+        returnable.leadership = a.leadership * b;
+        returnable.foreign_lang = a.foreign_lang * b;
         return returnable;
     }
 
