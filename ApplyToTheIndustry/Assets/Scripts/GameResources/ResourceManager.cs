@@ -69,12 +69,21 @@ public class ResourceManager : MonoBehaviour
 
     public void EndOfTheWeek()
     {
+        // Reset time resource and manager
+        _timeAvailable = maxTime;
+        _timeManager.ResetTimer();
+
+        // Update money with negation by weekly costs
         _moneyAvailable.value -= weeklyCosts;
         moneyUI.UpdateMoneyText(_moneyAvailable.value);
 
+        // Get general UI manager and update button usability
+        UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
+        uiMngr.UpdateButtonUsability();
+
         // Trigger the game over screen as soon as 
         // the player runs out of money
-        if(_moneyAvailable.value <= 0.0f)
+        if (_moneyAvailable.value <= 0.0f)
         {
             ServiceLocator.Instance.GetService<UIGeneralManager>().MoveToGameOverScreen();
         }

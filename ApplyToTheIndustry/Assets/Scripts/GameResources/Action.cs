@@ -19,11 +19,17 @@ public class Action : MonoBehaviour
 
     public void DoAction()
     {
-
+        // Check if cost is viable before doing action
         if(rm.IsCostViable(cost))
         {
             rm.ManageCost(cost);
         }
+
+        // Get the general UI manager
+        UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
+
+        // Update button usability
+        uiMngr.UpdateButtonUsability();
     }
 
     public void OpenInterface()
