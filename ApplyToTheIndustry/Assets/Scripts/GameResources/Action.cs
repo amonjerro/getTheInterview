@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Action : MonoBehaviour
 {
+    public ActionType type;
+    private IActionStrategy action;
     ResourceManager rm;
     public InterfaceGroup dependentUI;
     public ActionCost cost;
-    Grader feedback;
 
     // Start is called before the first frame update
     void Start()
     {
+        action = ActionFactory.MakeAction(type);
         rm = ServiceLocator.Instance.GetService<ResourceManager>();
-        feedback = ServiceLocator.Instance.GetService<Grader>();
     }
 
     public void DoAction()
@@ -23,6 +23,7 @@ public class Action : MonoBehaviour
         if(rm.IsCostViable(cost))
         {
             rm.ManageCost(cost);
+            action.Perform();
         }
 
         // Get the general UI manager

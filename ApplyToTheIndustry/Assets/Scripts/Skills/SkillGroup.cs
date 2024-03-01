@@ -17,9 +17,9 @@ public struct SkillGroup
     {
         programming = new Skill("Programming", p, SkillType.Programming);
         design = new Skill("Design", d, SkillType.Design);
-        graphic_art = new Skill("Aesthetics & Art", ga, SkillType.Graphics);
+        graphic_art = new Skill("Graphics and Art", ga, SkillType.Graphics);
         production = new Skill("Production", pr, SkillType.Production);
-        sound_and_music = new Skill("Sound & Music", s, SkillType.Sound);
+        sound_and_music = new Skill("Sound and Music", s, SkillType.Sound);
         leadership = new Skill("Leadership", ld, SkillType.Leadership);
         foreign_lang = new Skill("Foreign Lang", fl, SkillType.ForeignLang);
     }

@@ -40,9 +40,9 @@ MonoBehaviour:
         value: 0
         skillType: 3
       foreign_lang:
-        name: 
+        name: Foreign Lang
         value: 0
-        skillType: 0
+        skillType: 6
     timeCost:
       value: 10
     certification: 0

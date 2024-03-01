@@ -18,16 +18,16 @@ public class SubmitButton : MonoBehaviour
         // Add current posting to list of applied positions
         JobManager jobMngr = ServiceLocator.Instance.GetService<JobManager>();
         jobMngr.TryAddAppliedPosition(jobMngr.builderPosting.currentPosting);
-
+        UIGeneralManager ugm = ServiceLocator.Instance.GetService<UIGeneralManager>();
         // Enable the popup
-        popup.SetActive(true);
+        ugm.ShowPopUp();
 
         // Check if time was wasted on the application
         // and if so then change popup text
         if (jobMngr.playerWastedTime)
         {
             // Set popup text
-            popup.GetComponentInChildren<ConfirmationPopup>().SetConfirmationText("Sorry! You have already applied here. We only allow one application per person.");
+            ugm.UpdatePopUp("Sorry! You have already applied here. We only allow one application per person.");
 
             // Reset wasted time status
             jobMngr.playerWastedTime = false;
@@ -35,7 +35,7 @@ public class SubmitButton : MonoBehaviour
         else
         {
             // Set popup text
-            popup.GetComponentInChildren<ConfirmationPopup>().SetConfirmationText("Your application has been sent!");
+            ugm.UpdatePopUp("Your application has been sent!");
 
             // Submit this application to the grader
             ServiceLocator.Instance.GetService<Grader>().OnSubmit(resume as Resume, jobMngr.builderPosting.currentPosting);
