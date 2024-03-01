@@ -7,7 +7,7 @@ public class SubmitButton : MonoBehaviour
     // Public fields
     public ResumeComponent resume;
     public ResumeComponent skillPanel;
-    public GameObject wastedTimePopup;
+    public GameObject popup;
 
     /// <summary>
     /// Submits application to grader and resets
@@ -19,17 +19,24 @@ public class SubmitButton : MonoBehaviour
         JobManager jobMngr = ServiceLocator.Instance.GetService<JobManager>();
         jobMngr.TryAddAppliedPosition(jobMngr.builderPosting.currentPosting);
 
+        // Enable the popup
+        popup.SetActive(true);
+
         // Check if time was wasted on the application
-        // and if so then show popup
+        // and if so then change popup text
         if (jobMngr.playerWastedTime)
         {
-            wastedTimePopup.SetActive(true);
+            // Set popup text
+            popup.GetComponentInChildren<ConfirmationPopup>().SetConfirmationText("Sorry! You have already applied here. We only allow one application per person.");
 
             // Reset wasted time status
             jobMngr.playerWastedTime = false;
         }
         else
         {
+            // Set popup text
+            popup.GetComponentInChildren<ConfirmationPopup>().SetConfirmationText("Your application has been sent!");
+
             // Submit this application to the grader
             ServiceLocator.Instance.GetService<Grader>().OnSubmit(resume as Resume, jobMngr.builderPosting.currentPosting);
         }
