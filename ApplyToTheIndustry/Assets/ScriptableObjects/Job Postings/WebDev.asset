@@ -15,16 +15,13 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 7d9a6e18d1146e0409ea71d0d33ece53, type: 2}
   positionName: Web Developer
   jobSummaryLines:
-  - Our office has recently opened a Web
-  - Developer position. Requirements are
-  - 'as follows:'
+  - Our office has recently opened a Web Developer position.
+  - 'Requirements are as follows:'
   jobReqLines:
   - '>Expert knowledge of programming'
   - '>Portfolio of web development projects'
-  - '>Experience with Azure or other cloud'
-  - computing platforms
+  - '>Experience with Azure or other cloud computing platforms'
   - '>Excellent leadership skills'
-  - '>Familiarity with generative AI and'
-  - language models
+  - '>Familiarity with generative AI and language models'
   - '>Passion and attention to detail'
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}
