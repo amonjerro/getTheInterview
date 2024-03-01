@@ -10,6 +10,6 @@ public class HideMenu : MonoBehaviour
     /// </summary>
     public void DisableObject()
     {
-        transform.parent.gameObject.SetActive(false);
+        transform.parent.parent.gameObject.SetActive(false);
     }
 }

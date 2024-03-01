@@ -7,7 +7,6 @@ public class SubmitButton : MonoBehaviour
     // Public fields
     public ResumeComponent resume;
     public ResumeComponent skillPanel;
-    public GameObject popup;
 
     /// <summary>
     /// Submits application to grader and resets
