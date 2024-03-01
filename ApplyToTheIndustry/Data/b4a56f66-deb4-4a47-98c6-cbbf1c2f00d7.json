@@ -1,0 +1,54 @@
+{
+    "jobData": {
+        "companyName": "TestCompany",
+        "positionName": "Programmer"
+    },
+    "resumeData": {
+        "selectedOrder": [
+            0,
+            2,
+            3
+        ]
+    },
+    "rubricData": {
+        "expectedOrder": [
+            0,
+            4,
+            6,
+            3,
+            5
+        ]
+    },
+    "resultsData": {
+        "totalPoints": -260,
+        "ghosted": true,
+        "returnMessage": "THIS IS AN AUTOMATED RESPONSE. YOUR RESUME FAILED TO MEET MINIMUM EXPECTATIONS AND HAS BEEN REJECTED AUTOMATICALLY BY OUR AI REVIEWER."
+    }
+}
+{
+    "jobData": {
+        "companyName": "Jūkendō",
+        "positionName": "Gameplay Programmer"
+    },
+    "resumeData": {
+        "selectedOrder": [
+            4,
+            1,
+            5
+        ]
+    },
+    "rubricData": {
+        "expectedOrder": [
+            0,
+            4,
+            6,
+            3,
+            5
+        ]
+    },
+    "resultsData": {
+        "totalPoints": -280,
+        "ghosted": true,
+        "returnMessage": "THIS IS AN AUTOMATED RESPONSE. YOUR RESUME FAILED TO MEET MINIMUM EXPECTATIONS AND HAS BEEN REJECTED AUTOMATICALLY BY OUR AI REVIEWER."
+    }
+}
