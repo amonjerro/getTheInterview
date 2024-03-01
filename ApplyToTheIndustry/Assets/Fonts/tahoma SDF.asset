@@ -121,9 +121,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -168,9 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: tahoma SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 849340751
   material: {fileID: -4840554189284872877}
-  materialHashCode: 0
+  materialHashCode: 276072975
   m_Version: 1.1.0
   m_SourceFontFileGUID: 8879d28da8ed724498e775b42ea818cf
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 8879d28da8ed724498e775b42ea818cf, type: 3}
