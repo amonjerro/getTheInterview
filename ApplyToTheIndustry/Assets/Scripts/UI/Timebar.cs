@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timebar : MonoBehaviour
+public class UIBar : MonoBehaviour
 {
     public Image backgroundImage;
     public Image barImage;
@@ -19,7 +16,7 @@ public class Timebar : MonoBehaviour
         originalXPosition = rt.anchoredPosition.x;
     }
 
-    public void SetWidth(float proportion)
+    public void SetFullness(float proportion)
     {
         float inverseProportion = 1 - proportion;
         float stepSize = _width / 100f;

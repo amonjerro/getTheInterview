@@ -10,10 +10,6 @@ public class PlayerSkillsManager : MonoBehaviour
         playerSkills = new SkillGroup(0,0,0,0,0,0,0);
     }
 
-    public void SetupSkills(){
-        playerSkills = new SkillGroup();
-    }
-
     public void AddToSkills(SkillGroup trainingReward)
     {
         playerSkills += trainingReward;
@@ -22,5 +18,10 @@ public class PlayerSkillsManager : MonoBehaviour
     public SkillGroup GetSkills()
     {
         return playerSkills;
+    }
+
+    public Skill GetSkillByType(SkillType type)
+    {
+        return playerSkills.GetSkill(type);
     }
 }
