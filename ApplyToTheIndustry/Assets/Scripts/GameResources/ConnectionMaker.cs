@@ -29,8 +29,11 @@ public class ConnectionMaker : MonoBehaviour
 
     public void AddConnectionToPool()
     {
+        Connections connection = CreateConnection();
         ResourceManager rm = ServiceLocator.Instance.GetService<ResourceManager>();
-
-        rm.connectionList.Add(CreateConnection());
+        UIGeneralManager uigm = ServiceLocator.Instance.GetService<UIGeneralManager>();
+        uigm.UpdatePopUp("You have made a connection with a person from " + connection.companyName);
+        uigm.ShowPopUp();
+        rm.connectionList.Add(connection);
     }
 }

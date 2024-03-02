@@ -34,8 +34,15 @@ public class DataSaver : MonoBehaviour
         dataSaves.Add(jsonData);
 
         // Get file path and push all content to json file
-        string filePath = Application.dataPath + "/../Data/" + hashID + ".json";
-        System.IO.File.WriteAllLines(filePath, dataSaves);
+        string filePath = Application.dataPath + "/Data/" + hashID + ".json";
+        try
+        {
+            System.IO.File.WriteAllLines(filePath, dataSaves);
+        } catch(System.Exception ex)
+        {
+            Debug.Log(ex.Message);
+        }
+        
     }
 
     /// <summary>

@@ -43,6 +43,11 @@ public class JobManager : MonoBehaviour
 
     public PostingsByDay GetByDay(int i)
     {
-        return postingsByDayContainer[i];
+        int index = i;
+        if (i >= postingsByDayContainer.Length)
+        {
+            index = 0;
+        }
+        return postingsByDayContainer[index];
     }
 }
