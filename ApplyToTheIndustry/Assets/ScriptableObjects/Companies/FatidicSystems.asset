@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FatidicSystems
   m_EditorClassIdentifier: 
   compName: Fatidic Systems
-  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  logo: {fileID: 21300000, guid: bcfbec105320a2640b0817162c4ee6d3, type: 3}

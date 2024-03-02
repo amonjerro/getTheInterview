@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+
+using System.Transactions;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class JobPostingDayPanel : MonoBehaviour
+public class ChoosePanel : MonoBehaviour
 {
     // Public fields
-    public GameObject jobButtonPrefab;
+    public GameObject buttonPrefab;
     public InterfaceGroup dependentUI;
+    public PanelTypes panelType;
+    private IPanelDataStrategy panelDataStrategy;
 
     /// <summary>
     /// Once enabled take all of the current day job postings
@@ -15,30 +17,13 @@ public class JobPostingDayPanel : MonoBehaviour
     /// </summary>
     void OnEnable()
     {
-        // Get the job manager and all job postings from current day
-        JobManager jobMngr = ServiceLocator.Instance.GetService<JobManager>();
-        PostingsByDay currentDayJobs = jobMngr.postingDay1;
-        JobPosting[] listOfJobs = currentDayJobs.posts;
-
+        int currentWeek = ServiceLocator.Instance.GetService<TimeManager>().GetCurrentWeek();
+        panelDataStrategy = ChoosePanelStrategyFactory.MakeStrategy(panelType);
+        panelDataStrategy.LoadData(currentWeek);
         // Get the grid layout group element and add all job buttons to it
         GridLayoutGroup layout = GetComponentInChildren<GridLayoutGroup>();
-        foreach (JobPosting job in listOfJobs)
-        {
-            // Create the button
-            GameObject jobButton = Instantiate(jobButtonPrefab);
-
-            // Set it to be a child of the grid layout
-            jobButton.transform.SetParent(layout.transform);
-
-            // Add the job data
-            JobContainer jobCont = jobButton.GetComponent<JobContainer>();
-            jobCont.currentPosting = job;
-            jobCont.UpdateUI();
-
-            // Set action UI
-            Action action = jobButton.GetComponent<Action>();
-            action.dependentUI = dependentUI;
-        }
+        panelDataStrategy.DisplayData(layout, buttonPrefab, dependentUI);
+        
     }
 
     /// <summary>

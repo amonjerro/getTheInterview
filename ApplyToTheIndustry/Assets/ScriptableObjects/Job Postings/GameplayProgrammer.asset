@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
+  m_Name: GameplayProgrammer
+  m_EditorClassIdentifier: 
+  company: {fileID: 11400000, guid: 767ac96fd5784e2438df8b3aca9a28f3, type: 2}
+  positionName: Gameplay Programmer
+  jobSummaryLines:
+  - We are now hiring for a Gameplay Programmer position.
+  - 'We require the following from our new hires:'
+  jobReqLines:
+  - '>An outstanding portfolio of published titles'
+  - '>Excellent programming knowledge'
+  - '>Experience working with proprietary software and development tools'
+  - '>Basic knowledge of game design'
+  - '>Native proficiency in foreign languages is preferred'
+  gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

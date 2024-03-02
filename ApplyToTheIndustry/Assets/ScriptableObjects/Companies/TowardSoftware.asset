@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TowardSoftware
   m_EditorClassIdentifier: 
   compName: TowardSoftware
-  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  logo: {fileID: 21300000, guid: f168b90a55943374a8a0ad03ec7f47cd, type: 3}

@@ -2,6 +2,7 @@ Shader "Unlit/TimebarShader"
 {
     Properties
     {
+        _BarColor ("Color", Color) = (1,1,1,1)
     }
     SubShader
     {
@@ -14,6 +15,7 @@ Shader "Unlit/TimebarShader"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+            float4 _BarColor;
 
             struct appdata
             {
@@ -39,8 +41,8 @@ Shader "Unlit/TimebarShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = float4(i.uv.y, 0,0,1);
-                return col;
+                fixed3 col = i.uv.y * _BarColor.rgb;
+                return fixed4(col, 1);
             }
             ENDCG
         }

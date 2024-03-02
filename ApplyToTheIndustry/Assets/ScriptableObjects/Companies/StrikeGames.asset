@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: StrikeGames
   m_EditorClassIdentifier: 
   compName: Freezerburn Entertainment
-  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  logo: {fileID: 21300000, guid: c3cad3fa1fa3e1f47b07ddb16c4be7ee, type: 3}

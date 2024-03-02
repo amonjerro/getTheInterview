@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Lariat Studios
   m_EditorClassIdentifier: 
   compName: Lariat Studios
-  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  logo: {fileID: 21300000, guid: adb87c03a68462440b86587d0f73704d, type: 3}

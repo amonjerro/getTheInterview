@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
-  m_Name: Ubihard
+  m_Name: "J\u016Bkend\u014DOfAmerica"
   m_EditorClassIdentifier: 
-  compName: Ubihard
-  logo: {fileID: 0}
+  compName: Juukendou of America
+  logo: {fileID: 21300000, guid: a645c83183418734d8ba19600f0ea6ca, type: 3}

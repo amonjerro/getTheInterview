@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DogeggLaboratory
   m_EditorClassIdentifier: 
   compName: Dogegg Laboratory, Inc.
-  logo: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  logo: {fileID: 21300000, guid: 111f7358214cd9d47b28250c72f34236, type: 3}

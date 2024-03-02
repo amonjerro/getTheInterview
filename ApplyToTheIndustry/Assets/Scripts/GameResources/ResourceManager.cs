@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+
 
 // Class in charge of managing the data for resources
 // It sends messages to the TimeManager class as it has some additional time-related
@@ -9,6 +11,7 @@ public class ResourceManager : MonoBehaviour
     // Game resources
     private Resource _timeAvailable;
     private Resource _moneyAvailable;
+    public List<Connections> connectionList = new List<Connections>();
 
     // Configurable parameters that set the limit of the game;
     [SerializeField]
@@ -66,7 +69,23 @@ public class ResourceManager : MonoBehaviour
 
     public void EndOfTheWeek()
     {
+        // Reset time resource and manager
+        _timeAvailable = maxTime;
+        _timeManager.ResetTimer();
+
+        // Update money with negation by weekly costs
         _moneyAvailable.value -= weeklyCosts;
         moneyUI.UpdateMoneyText(_moneyAvailable.value);
+
+        // Get general UI manager and update button usability
+        UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
+        uiMngr.UpdateButtonUsability();
+
+        // Trigger the game over screen as soon as 
+        // the player runs out of money
+        if (_moneyAvailable.value <= 0.0f)
+        {
+            ServiceLocator.Instance.GetService<UIGeneralManager>().MoveToGameOverScreen();
+        }
     }
 }

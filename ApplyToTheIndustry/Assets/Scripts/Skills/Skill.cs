@@ -1,5 +1,5 @@
 using System;
-
+using UnityEngine;
 public enum SkillType
 {
     Programming,
@@ -8,6 +8,7 @@ public enum SkillType
     Leadership,
     Sound,
     Production,
+    ForeignLang
 }
 
 [Serializable]
@@ -28,8 +29,21 @@ public struct Skill
     {
         if (a.name != b.name)
         {
+            Debug.Log(a.name);
+            Debug.Log(b.name);
             throw new ArgumentException("The two skills being added are not of the same type");
         }
         return new Skill(a.name, a.value + b.value, a.skillType);
+    }
+
+    public static Skill operator *(Skill a, int b)
+    {
+        return new Skill(a.name, a.value * b, a.skillType);
+    }
+
+    public override string ToString()
+    {
+
+        return "Name: " + name + ", Value: " + value.ToString();
     }
 }

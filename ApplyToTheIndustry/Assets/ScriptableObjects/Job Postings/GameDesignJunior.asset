@@ -15,19 +15,12 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 4c23469047b92f048b204fc384945468, type: 2}
   positionName: Junior Game Designer
   jobSummaryLines:
-  - Bowie Softworksis currently looking for a
-  - 'passionate, self-motivated '
-  - junior Game Designer. Minimum
-  - 'qualifications for this position include:'
+  - We are currently looking for a passionate, self-motivated junior Game Designer.
+  - 'Minimum qualifications for this position:'
   jobReqLines:
-  - '>Knowledge of C++/C#, as well as'
-  - experience with software development
-  - '>Experience with level and encounter'
-  - design in 3D environments
-  - '>Empathy, kindness, and compassion'
-  - '>Excellent communication skills and a'
-  - collaborative mindset
-  - '>Familiarity with Unity and/or Unreal'
+  - '>Adequate programming skill'
+  - '>Experience with game design'
+  - '>Excellent leadership skills and a collaborative mindset'
   - '>A detailed portfolio of released games'
   - '>A passion for solutions-driven innovation'
   gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}

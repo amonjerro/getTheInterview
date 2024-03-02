@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
+  m_Name: Basic Graphics Course
+  m_EditorClassIdentifier: 
+  data:
+    typeFilter: 2
+    reward:
+      programming:
+        name: Programming
+        value: 0
+        skillType: 0
+      design:
+        name: Design
+        value: 0
+        skillType: 1
+      graphic_art:
+        name: Graphics and Art
+        value: 10
+        skillType: 2
+      production:
+        name: Production
+        value: 0
+        skillType: 5
+      sound_and_music:
+        name: Sound and Music
+        value: 0
+        skillType: 4
+      leadership:
+        name: Leadership
+        value: 0
+        skillType: 3
+      foreign_lang:
+        name: Foreign Lang
+        value: 0
+        skillType: 6
+    timeCost:
+      value: 10
+    certification: 0
+  courseName: Intro to Art
+  description: Everyone needs to start somewhere and this course offers you entry
+    level knowledge into the world of graphic design and art. After this course,
+    you'll be able to convey your ideas with images and express yourself.
