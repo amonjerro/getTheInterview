@@ -22,8 +22,7 @@ public class Action : MonoBehaviour
         // Check if cost is viable before doing action
         if(rm.IsCostViable(cost))
         {
-            rm.ManageCost(cost);
-            action.Perform();
+            action.Perform(cost);
         }
 
         // Get the general UI manager

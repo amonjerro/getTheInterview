@@ -30,7 +30,12 @@ public class PlayerSkillsManager : MonoBehaviour
 
     public CourseGroupingByDay GetCoursesByDay(int day)
     {
-        return courseGroupings[day];
+        int index = day;
+        if (day >= courseGroupings.Length)
+        {
+            index = 0;
+        }
+        return courseGroupings[index];
     }
 
     public void SetBookedCourse(CourseData data)
