@@ -11,5 +11,6 @@ public class HideMenu : MonoBehaviour
     public void DisableObject()
     {
         transform.parent.parent.gameObject.SetActive(false);
+        ServiceLocator.Instance.GetService<UIGeneralManager>().UpdateErrorStatus(false);
     }
 }

@@ -48,9 +48,9 @@ public class DataSaver : MonoBehaviour
         try
         {
             System.IO.File.WriteAllLines(filePath, dataSaves);
-        } catch(System.Exception ex)
+        } catch(System.IO.IOException ex)
         {
-            Debug.Log(ex.Message);
+            Logger.Log(ex.Message);
         }
         
     }
