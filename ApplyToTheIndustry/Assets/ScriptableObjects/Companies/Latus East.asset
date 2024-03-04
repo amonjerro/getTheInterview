@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
-  m_Name: BowieSoftworks
+  m_Name: Latus East
   m_EditorClassIdentifier: 
-  compName: Bowie Softworks
-  logo: {fileID: 21300000, guid: d5cfb4876ba52954687aec2c5218f2a1, type: 3}
+  compName: Latus East
+  logo: {fileID: 21300000, guid: 017396962210e8e4d87e5e58c081fdde, type: 3}

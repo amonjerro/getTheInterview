@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
-  m_Name: CYLCOM
+  m_Name: Strike Games
   m_EditorClassIdentifier: 
-  compName: CYLCOM Co., Ltd
-  logo: {fileID: 21300000, guid: ea25c8c96e0fa804bb89539b39649034, type: 3}
+  compName: Strike Games
+  logo: {fileID: 21300000, guid: c3cad3fa1fa3e1f47b07ddb16c4be7ee, type: 3}

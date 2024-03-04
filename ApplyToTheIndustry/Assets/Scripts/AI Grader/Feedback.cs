@@ -9,6 +9,7 @@ public class Feedback : MonoBehaviour
     public TextMeshProUGUI companyName;
     public TextMeshProUGUI positionName;
     public TextMeshProUGUI buttonText;
+    public TextMeshProUGUI connectionFeedback;
     public Grader grader;
     private int messageIndex = 0;
 
@@ -24,6 +25,7 @@ public class Feedback : MonoBehaviour
             positionName.text = "You have not applied to any positions, you have no pending messages.";
             ServiceLocator.Instance.GetService<ResourceManager>().EndOfTheWeek();
             feedbackMessage.text = "You have been charged for your weekly costs of rent, food and utilities.";
+            connectionFeedback.text = "";
             buttonText.text = "Move on to next week";
             messageIndex = 1;
         } 
@@ -32,12 +34,14 @@ public class Feedback : MonoBehaviour
             positionName.text = "You have not received any responses from your applications.";
             ServiceLocator.Instance.GetService<ResourceManager>().EndOfTheWeek();
             feedbackMessage.text = "You have been charged for your weekly costs of rent, food and utilities.";
+            connectionFeedback.text = "";
             buttonText.text = "Move on to next week";
             messageIndex = 2;
         }
         else
         {
             feedbackMessage.text = "You have pending responses from your applications";
+            connectionFeedback.text = "";
             buttonText.text = "Next Message";
         }
         
@@ -45,23 +49,58 @@ public class Feedback : MonoBehaviour
 
     public void NextMessage()
     {
-        if (messageIndex > grader.feedback.Count) {
-            grader.ResetFeedback();
-            ServiceLocator.Instance.GetService<UIGeneralManager>().MoveToMainScreen();
-        } else if (messageIndex == grader.feedback.Count)
+        if (messageIndex >= grader.feedback.Count) 
         {
+            int connectionFeedbackIndex = messageIndex - grader.feedback.Count;
+            if (grader.connectionFeedback.Count > 0)
+            {
+                if (connectionFeedbackIndex == grader.connectionFeedback.Count)
+                {
+                    ServiceLocator.Instance.GetService<ResourceManager>().EndOfTheWeek();
+                    companyName.text = "";
+                    positionName.text = "";
+                    feedbackMessage.text = "You have been charged for your weekly costs of rent, food and utilities.";
+                    connectionFeedback.text = "";
+                    buttonText.text = "Move on to next week";
+                }
+                else if (messageIndex > grader.feedback.Count + grader.connectionFeedback.Count)
+                {
+                    grader.ResetFeedback();
+                    ServiceLocator.Instance.GetService<UIGeneralManager>().MoveToMainScreen();
+                }
+                else
+                {
+                    connectionFeedback.text = grader.connectionFeedback[connectionFeedbackIndex];
+                    feedbackMessage.text = "";
+                    companyName.text = "";
+                    positionName.text = "";
+                }
+            }
+        } 
+        else if (messageIndex == grader.feedback.Count && grader.connectionFeedback.Count == 0)
+        {
+            
+
             ServiceLocator.Instance.GetService<ResourceManager>().EndOfTheWeek();
             companyName.text = "";
             positionName.text = "";
             feedbackMessage.text = "You have been charged for your weekly costs of rent, food and utilities.";
+            connectionFeedback.text = "";
             buttonText.text = "Move on to next week";
-        } else 
+        } 
+        else 
         {
             feedbackMessage.text = grader.feedback[messageIndex];
-            companyName.text = grader.companiesAppliedTo[messageIndex];
-            positionName.text = grader.positionsAppliedTo[messageIndex];
+            connectionFeedback.text = "";
+            companyName.text = grader.companiesReceivedFeedback[messageIndex];
+            positionName.text = grader.positionsReceivedFeedback[messageIndex];
         }
+
+        
         messageIndex++;
+
+
+        
     }
 
 }

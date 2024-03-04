@@ -31,9 +31,12 @@ public class ConnectionMaker : MonoBehaviour
     {
         Connections connection = CreateConnection();
         ResourceManager rm = ServiceLocator.Instance.GetService<ResourceManager>();
+        Grader grader = ServiceLocator.Instance.GetService<Grader>();
+
         UIGeneralManager uigm = ServiceLocator.Instance.GetService<UIGeneralManager>();
         uigm.UpdatePopUp("You have made a connection with a person from " + connection.companyName);
         uigm.ShowPopUp();
         rm.connectionList.Add(connection);
+        grader.AddConnectionFeedback();
     }
 }

@@ -19,6 +19,16 @@ public class Grader : MonoBehaviour
     float ghostingRange;
     public int companiesAppliedCount;
 
+    public List<string> companiesReceivedFeedback = new List<string>();
+    public List<string> positionsReceivedFeedback = new List<string>();
+    public List<string> connectionFeedback = new List<string>();
+    public List<SkillType> companiesGradingFeedback = new List<SkillType>();
+
+    private bool provideGradingFeedback;
+
+
+
+
 
     public void OnSubmit(Resume resume, JobPosting posting)
     {
@@ -80,7 +90,7 @@ public class Grader : MonoBehaviour
             }
         }
 
-        SetFeedback();
+        SetFeedback(posting);
     }
 
     public int EvaluateThreshold(SkillType type, JobPosting posting)
@@ -147,7 +157,7 @@ public class Grader : MonoBehaviour
         }
     }
 
-    public void SetFeedback()
+    public void SetFeedback(JobPosting posting)
     {
         string message = "";
         if (Totalpoints < 15)
@@ -156,6 +166,7 @@ public class Grader : MonoBehaviour
             canGhost = true;
             ghostingRange = 0.6f;
             Debug.Log("Range = "+ ghostingRange);
+            provideGradingFeedback = true;
 
         }
         else if (Totalpoints >= 15 && Totalpoints <= 25)
@@ -163,7 +174,8 @@ public class Grader : MonoBehaviour
             message = "We have reviewed your application and regret to inform you that you have not been selected for the position. We wish you the best of luck in your professional career.";
             canGhost = true;
             ghostingRange = 0.4f;
-            Debug.Log("Range = "+ ghostingRange);        
+            Debug.Log("Range = "+ ghostingRange);  
+            provideGradingFeedback = true;      
         }
         else if (Totalpoints >= 25 && Totalpoints <= 35)
         {
@@ -171,6 +183,7 @@ public class Grader : MonoBehaviour
             canGhost = true;
             ghostingRange = 0.2f;
             Debug.Log("Range = "+ ghostingRange);
+            provideGradingFeedback = true;
         }
         else
         {
@@ -178,6 +191,7 @@ public class Grader : MonoBehaviour
             canGhost = false;
             ghostingRange = 0.0f;
             Debug.Log("Range = "+ ghostingRange);
+            provideGradingFeedback = false;
 
         }
 
@@ -187,10 +201,54 @@ public class Grader : MonoBehaviour
         if(ghosted == false)
         {
             feedback.Add(message);
+            companiesReceivedFeedback.Add(posting.company.name);
+            positionsReceivedFeedback.Add(posting.positionName);
+            companiesGradingFeedback.AddRange(posting.gradingProfile.expectedSkillOrdering);
         }
+
+        AddConnectionFeedback();
+
 
         // Construct and save data
         ConstructAndSaveData();
+    }
+
+    public void AddConnectionFeedback()
+    {
+        string connectionMessage = "";
+        ResourceManager rm = ServiceLocator.Instance.GetService<ResourceManager>();
+        foreach(Connections connection in rm.connectionList)
+        {
+            foreach(var i in companiesReceivedFeedback)
+            {
+                if(connection.companyName == i)
+                {
+                    if (provideGradingFeedback == true)
+                    {
+                        connectionMessage = $@"You are receiving this mail as you have a connection with one of the member of the company {connection.companyName}.
+
+Message from your connection:
+
+Unfortunately, your application was not successful this time. However, don't be discouraged! You can always try again, and we encourage you to enhance your skills in this order
+
+1. {companiesGradingFeedback[0]}
+2. {companiesGradingFeedback[1]}
+3. {companiesGradingFeedback[2]}
+4. {companiesGradingFeedback[3]}
+5. {companiesGradingFeedback[4]}";
+                    }
+                    else
+                    {
+                        connectionMessage = $@"You are receiving this mail as you have a connection with one of the member of the company {connection.companyName}.
+                                    Message from your connection:
+                                    
+                                    Congratulations on moving to the next round.";
+                    }
+
+                    connectionFeedback.Add(connectionMessage);
+                }
+            }
+        }
     }
 
     public bool toGhost(bool ghosting, float range){
@@ -223,6 +281,10 @@ public class Grader : MonoBehaviour
         companiesAppliedTo.Clear();
         positionsAppliedTo.Clear();
         feedback.Clear();
+        companiesGradingFeedback.Clear();
+        connectionFeedback.Clear();
+        positionsReceivedFeedback.Clear();
+        companiesReceivedFeedback.Clear();
     }
 
     public void ConstructAndSaveData()
