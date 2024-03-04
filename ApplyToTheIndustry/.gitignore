@@ -6,7 +6,7 @@
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
-/[Dd]ata/
+**/[Dd]ata/
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
