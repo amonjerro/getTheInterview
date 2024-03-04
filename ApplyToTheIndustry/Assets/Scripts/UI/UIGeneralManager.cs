@@ -12,6 +12,7 @@ public class UIGeneralManager : MonoBehaviour
     private InterfaceGroup wasActive;
     public InterfaceGroup progressPanel;
     public ConfirmationPopup popUp;
+    private bool isErrorShowing = false;
 
     private void Start()
     {
@@ -103,6 +104,10 @@ public class UIGeneralManager : MonoBehaviour
 
     public void UpdatePopUp(string message)
     {
+        if (isErrorShowing)
+        {
+            return;
+        }
         popUp.SetConfirmationText(message);
     }
 
@@ -129,6 +134,11 @@ public class UIGeneralManager : MonoBehaviour
             else
                 btn.interactable = false;
         }
+    }
+
+    public void UpdateErrorStatus(bool status)
+    {
+        isErrorShowing = status;
     }
 
 }
