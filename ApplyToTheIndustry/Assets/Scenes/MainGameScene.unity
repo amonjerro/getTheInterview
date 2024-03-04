@@ -2255,7 +2255,7 @@ MonoBehaviour:
   - {fileID: 1974400320}
   currentStepIndex: 0
   blackOutPanel: {fileID: 542449954}
-  tutorialActive: 1
+  tutorialActive: 0
   readyProceed: 0
 --- !u!1001 &1267231366
 PrefabInstance:
@@ -2431,6 +2431,8 @@ MonoBehaviour:
   - {fileID: 1743424193}
   - {fileID: 1758036460}
   - {fileID: 1569107314}
+  - {fileID: 1267231369}
+  - {fileID: 2035725670}
   feedbackScreen: {fileID: 1569107314}
   timerPanel: {fileID: 1743424193}
   gameOverScreen: {fileID: 172867076}

@@ -34,7 +34,9 @@ public class CourseDetailUI : MonoBehaviour
             int studyRate = ServiceLocator.Instance.GetService<PlayerSkillsManager>().GetStudyRate();
             UpdateTextWithChild(courseTitle, currentCourse.courseName);
             UpdateTextWithChild(courseDescription, currentCourse.description);
-            UpdateTextWithChild(duration, (currentCourse.data.timeCost.value / studyRate).ToString() + " weeks");
+            int sessions = (currentCourse.data.timeCost.value / studyRate);
+            string session_string = sessions == 1 ? " session" : " sessions";
+            UpdateTextWithChild(duration, sessions.ToString() + session_string);
             
             // Update the skill bars
             for (int i = 0; i < skillBarOrder.Count; i++)
