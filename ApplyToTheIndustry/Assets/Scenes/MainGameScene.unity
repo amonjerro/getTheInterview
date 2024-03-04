@@ -2255,7 +2255,7 @@ MonoBehaviour:
   - {fileID: 1974400320}
   currentStepIndex: 0
   blackOutPanel: {fileID: 542449954}
-  tutorialActive: 0
+  tutorialActive: 1
   readyProceed: 0
 --- !u!1001 &1267231366
 PrefabInstance:
