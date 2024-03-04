@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8253014927543654021
 MonoBehaviour:
@@ -44,3 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b7965aea33bb549b0ad7a5aab76092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  courseGroupings:
+  - {fileID: 11400000, guid: 7a31ee4b64f6bca4793d1869a05e02e9, type: 2}
+  - {fileID: 11400000, guid: a384a04a8e78dba4faff9f28aea8b854, type: 2}
+  - {fileID: 11400000, guid: 06a938768122a0f4983ec8f16dcc13b7, type: 2}
+  studyRate: 10
+  progressBar: {fileID: 0}

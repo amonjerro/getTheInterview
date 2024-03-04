@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
+  m_Name: Sound I
+  m_EditorClassIdentifier: 
+  data:
+    typeFilter: 4
+    reward:
+      programming:
+        name: Programming
+        value: 0
+        skillType: 0
+      design:
+        name: Design
+        value: 0
+        skillType: 1
+      graphic_art:
+        name: Graphics and Art
+        value: 0
+        skillType: 2
+      production:
+        name: Production
+        value: 0
+        skillType: 5
+      sound_and_music:
+        name: Sound and Music
+        value: 10
+        skillType: 4
+      leadership:
+        name: Leadership
+        value: 0
+        skillType: 3
+      foreign_lang:
+        name: Foreign Lang
+        value: 0
+        skillType: 6
+    timeCost:
+      value: 10
+    certification: 0
+  courseName: Sound Design Fundamentals
+  description: Games go a long way when they get added some bleeps and bloops to
+    provide feedback to players. This course will go over some tools you might want
+    to become familiar with along with how to integrate them with your engine of
+    choice

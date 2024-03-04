@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
-  m_Name: New Course Object
+  m_Name: Art & Sound
   m_EditorClassIdentifier: 
   data:
     typeFilter: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
         skillType: 1
       graphic_art:
         name: Graphics and Art
-        value: 0
+        value: 5
         skillType: 2
       production:
         name: Production
@@ -33,7 +33,7 @@ MonoBehaviour:
         skillType: 5
       sound_and_music:
         name: Sound and Music
-        value: 0
+        value: 15
         skillType: 4
       leadership:
         name: Leadership
@@ -44,7 +44,10 @@ MonoBehaviour:
         value: 0
         skillType: 6
     timeCost:
-      value: 0
+      value: 25
     certification: 0
-  courseName: 
-  description: 
+  courseName: To Sound Like You Look
+  description: What do sharp things sound like? Is a laser blaster noise the correct
+    SFX for a creature roaring? Marrying visual identity to its audio counterpart
+    is a skill that requires intense study and, in this course, we look at several
+    case studies to understand their merits and shortfalls.
