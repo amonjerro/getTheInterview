@@ -15,11 +15,11 @@ MonoBehaviour:
   skillGroup:
     programming:
       name: Programming
-      value: 15
+      value: 50
       skillType: 0
     design:
       name: Design
-      value: 25
+      value: 60
       skillType: 1
     graphic_art:
       name: Graphics and Art
@@ -27,7 +27,7 @@ MonoBehaviour:
       skillType: 2
     production:
       name: Production
-      value: 25
+      value: 60
       skillType: 5
     sound_and_music:
       name: Sound and Music
@@ -35,7 +35,7 @@ MonoBehaviour:
       skillType: 4
     leadership:
       name: Leadership
-      value: 40
+      value: 50
       skillType: 3
     foreign_lang:
       name: Foreign Lang

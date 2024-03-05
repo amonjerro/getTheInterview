@@ -15,15 +15,15 @@ MonoBehaviour:
   skillGroup:
     programming:
       name: Programming
-      value: 20
+      value: 30
       skillType: 0
     design:
       name: Design
-      value: 0
+      value: 20
       skillType: 1
     graphic_art:
       name: Graphics and Art
-      value: 20
+      value: 45
       skillType: 2
     production:
       name: Production

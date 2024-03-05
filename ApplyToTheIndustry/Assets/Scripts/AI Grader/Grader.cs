@@ -33,7 +33,7 @@ public class Grader : MonoBehaviour
     bool isGhosted;
     bool canGhost;
     float randomGhosting;
-    float ghostingRange;
+    public float ghostingRange;
     public int companiesAppliedCount;
 
     public List<string> companiesReceivedFeedback = new List<string>();
@@ -81,7 +81,7 @@ public class Grader : MonoBehaviour
                 }
             }
             // No match has been found
-            Totalpoints -= 50;
+            Totalpoints -= prioritizationMismatchPenalty*3;
         }
 
         // Evaluate skill thresholds
@@ -109,7 +109,7 @@ public class Grader : MonoBehaviour
         switch (type)
         {
             case SkillType.Programming:
-                if (skillPoints[type] >= postSkillRequirements.programming.value)
+                if (skillPoints[type] >= postSkillRequirements.programming.value && postSkillRequirements.programming.value > 0)
                 {
                     return skillPoints[type];
                 }
@@ -118,7 +118,7 @@ public class Grader : MonoBehaviour
                     return 0;
                 }
             case SkillType.Design:
-                if (skillPoints[type] >= postSkillRequirements.design.value)
+                if (skillPoints[type] >= postSkillRequirements.design.value && postSkillRequirements.design.value > 0)
                 {
                     return skillPoints[type];
                 }
@@ -127,7 +127,7 @@ public class Grader : MonoBehaviour
                     return 0;
                 }
             case SkillType.Graphics:
-                if (skillPoints[type] >= postSkillRequirements.graphic_art.value)
+                if (skillPoints[type] >= postSkillRequirements.graphic_art.value && postSkillRequirements.graphic_art.value > 0)
                 {
                     return skillPoints[type];
                 }
@@ -136,7 +136,7 @@ public class Grader : MonoBehaviour
                     return 0;
                 }
             case SkillType.Leadership:
-                if (skillPoints[type] >= postSkillRequirements.leadership.value)
+                if (skillPoints[type] >= postSkillRequirements.leadership.value && postSkillRequirements.leadership.value > 0)
                 {
                     return skillPoints[type];
                 }
@@ -145,7 +145,7 @@ public class Grader : MonoBehaviour
                     return 0;
                 }
             case SkillType.Sound:
-                if (skillPoints[type] >= postSkillRequirements.sound_and_music.value)
+                if (skillPoints[type] >= postSkillRequirements.sound_and_music.value && postSkillRequirements.sound_and_music.value > 0)
                 {
                     return skillPoints[type];
                 }
@@ -154,7 +154,16 @@ public class Grader : MonoBehaviour
                     return 0;
                 }
             case SkillType.Production:
-                if (skillPoints[type] >= postSkillRequirements.production.value)
+                if (skillPoints[type] >= postSkillRequirements.production.value && postSkillRequirements.production.value > 0)
+                {
+                    return skillPoints[type];
+                }
+                else
+                {
+                    return 0;
+                }
+            case SkillType.ForeignLang:
+                if (skillPoints[type] >= postSkillRequirements.foreign_lang.value && postSkillRequirements.foreign_lang.value > 0)
                 {
                     return skillPoints[type];
                 }
@@ -169,12 +178,12 @@ public class Grader : MonoBehaviour
 
     public void SetFeedback(JobPosting posting)
     {
+        float chanceToGetGhosted = ghostingRange;
         string message = "";
         if (Totalpoints < 15)
         {
             message = "Thank you for interest in this position. After careful consideration, we will not be moving forward with your candidacy for this position.";
             canGhost = true;
-            ghostingRange = 0.6f;
             provideGradingFeedback = true;
 
         }
@@ -182,26 +191,26 @@ public class Grader : MonoBehaviour
         {
             message = "We have reviewed your application and regret to inform you that you have not been selected for the position. We wish you the best of luck in your professional career.";
             canGhost = true;
-            ghostingRange = 0.4f;  
+            chanceToGetGhosted = ghostingRange * 0.5f;
             provideGradingFeedback = true;      
         }
         else if (Totalpoints >= 25 && Totalpoints <= 35)
         {
             message = "Your application has been reviwed by our Human Resources team but due to the competitive nature of this position, we are unable to proceed in this process with you. Thank you for considering applying to our company.";
             canGhost = true;
-            ghostingRange = 0.2f;
+            chanceToGetGhosted = ghostingRange * 0.25f;
             provideGradingFeedback = true;
         }
         else
         {
-            message = "Let's discuss the next steps";
+            message = "Congratulations! Our team is impressed with your work and skills, and would like to discuss the next steps. \n\n You have achieved the main objective in this build";
             canGhost = false;
-            ghostingRange = 0.0f;
+            chanceToGetGhosted = 0.0f;
             provideGradingFeedback = false;
 
         }
 
-        bool ghosted = toGhost(canGhost, ghostingRange);
+        bool ghosted = toGhost(canGhost, chanceToGetGhosted);
         if(ghosted == false)
         {
             feedback.Add(message);

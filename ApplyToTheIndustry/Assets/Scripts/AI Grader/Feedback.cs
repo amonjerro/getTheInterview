@@ -54,11 +54,16 @@ public class Feedback : MonoBehaviour
         } 
         else if(feedbackData.validApplications.Count >= 0 && !feedbackData.validApplications.ContainsValue(true))
         {
-            feedbackMessage.text = "You have been charged for your weekly costs of rent, food and utilities.";
+            feedbackMessage.text = "You have not received any responses from your applications.";
             companyName.text = "";
-            positionName.text = "You have not received any responses from your applications.";
-            buttonText.text = "Move on to next week";
+            positionName.text = "";
+            buttonText.text = "Next Message";
             connectionFeedback.text = "";
+            feedbackItems.Add(new FeedbackTexts(
+            "", "",
+            "You have been charged for your weekly costs of rent, food and utilities.",
+            "", "Move on to next week"
+            ));
         }
         else
         {
