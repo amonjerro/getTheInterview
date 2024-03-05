@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b2d7a7e81e5684abe5973421aa2393, type: 3}
+  m_Name: Day2 News
+  m_EditorClassIdentifier: 
+  headlines:
+  - '"The current generation is too entitled" says prominent CEO'
+  - Quad Plexus COO claims "NFTs are the future," intends to add crypto miners to
+    all future live service games
+  - 'War of Duty: Modern Call VI Remastered ~Definitive Edition~ is being re-released
+    for the PlayCabinet 6'

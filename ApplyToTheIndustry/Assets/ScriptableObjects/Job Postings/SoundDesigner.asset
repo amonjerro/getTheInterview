@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
+  m_Name: SoundDesigner
+  m_EditorClassIdentifier: 
+  company: {fileID: 11400000, guid: 875a72e0fa3a3de4e826b7cd44da9c19, type: 2}
+  positionName: Sound Designer
+  jobSummaryLines:
+  - Our company is looking for a motivated Narrative Designer.
+  - 'Applicants must demonstrate the following qualities:'
+  jobReqLines:
+  - '>Exceptional knowledge of sound design principles'
+  - '>A portfolio of released games'
+  - '>A firm grasp of programming best practices'
+  - '>A strong moral compass and a collaborative mindset'
+  - '>Native proficiency in foreign lang is a plus'
+  gradingProfile: {fileID: 11400000, guid: c293c9d4184fe2043ad286825cc328a2, type: 2}
