@@ -33,9 +33,6 @@ public class SkillPanel : ResumeComponent
         indexOffset = 3;
         if (index >= skillContainers.Count)
         {
-            Debug.Log("An index lookup is out of range in the Skill Panel");
-            Debug.Log(skillContainers.Count);
-            Debug.Log(index);
             return;
         }
         SkillContainer skillCont = skillContainers[index];
@@ -78,6 +75,10 @@ public class SkillPanel : ResumeComponent
 
     public override void Reset()
     {
+        foreach(SkillContainer cont in skillContainers)
+        {
+            Destroy(cont.gameObject);
+        }
         skillContainers.Clear();
     }
 

@@ -1650,6 +1650,7 @@ MonoBehaviour:
   type: 0
   dependentUI: {fileID: 0}
   cost: {fileID: 11400000, guid: a488529c1f15d7a40b5e5e7a4a6ca604, type: 2}
+  undoCost: {fileID: 0}
 --- !u!1 &7714368764909076940
 GameObject:
   m_ObjectHideFlags: 0
