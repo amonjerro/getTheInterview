@@ -58,6 +58,15 @@ public class ResourceManager : MonoBehaviour
         moneyUI.UpdateMoneyText(_moneyAvailable.value);
     }
 
+    // Handle refund of costs
+    public void UndoCost(ActionCost cost)
+    {
+        _timeAvailable += cost.time;
+        _timeManager.AddTime(cost.time.value);
+        _moneyAvailable += cost.money;
+        moneyUI.UpdateMoneyText(_moneyAvailable.value);
+    }
+
     // Reset the status of resources
     public void ResetResources()
     {
