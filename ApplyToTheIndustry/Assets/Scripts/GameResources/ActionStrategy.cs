@@ -2,7 +2,8 @@ public enum ActionType
 {
     Nothing,
     Study,
-    Connection
+    Connection,
+    ReturnToTimer
 }
 
 public static class ActionFactory
@@ -15,6 +16,8 @@ public static class ActionFactory
                 return new StudyAction();
             case ActionType.Connection:
                 return new ConnectionAction();
+            case ActionType.ReturnToTimer:
+                return new ReturnToTimerAction();
             default:
                 return new NullAction();
         }
@@ -57,6 +60,16 @@ public class ConnectionAction : IActionStrategy
     {
         ResourceManager rm = ServiceLocator.Instance.GetService<ResourceManager>();
         ServiceLocator.Instance.GetService<ConnectionMaker>().AddConnectionToPool();
+        rm.ManageCost(cost);
+    }
+}
+
+public class ReturnToTimerAction : IActionStrategy
+{
+    public void Perform(ActionCost cost)
+    {
+        ResourceManager rm = ServiceLocator.Instance.GetService<ResourceManager>();
+        ServiceLocator.Instance.GetService<UIGeneralManager>().UpdateCourseUI();
         rm.ManageCost(cost);
     }
 }

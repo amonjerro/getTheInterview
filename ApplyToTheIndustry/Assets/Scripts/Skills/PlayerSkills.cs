@@ -44,6 +44,7 @@ public class PlayerSkillsManager : MonoBehaviour
         courseIsBooked = true;
         progressBar.SetFullness(0);
         ServiceLocator.Instance.GetService<UIGeneralManager>().SetProgressPanelStatus(courseIsBooked);
+        ServiceLocator.Instance.GetService<UIGeneralManager>().UpdateCourseUI();
     }
 
     public bool isCourseBooked()
@@ -70,6 +71,7 @@ public class PlayerSkillsManager : MonoBehaviour
             uigm.SetProgressPanelStatus(courseIsBooked);
             uigm.ShowPopUp();
             uigm.UpdatePopUp("You have finished studying your course! Check your profile to see how stats have updated!");
+            ServiceLocator.Instance.GetService<UIGeneralManager>().UpdateCourseUI();
         }
     }
 
