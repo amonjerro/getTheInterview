@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
-  m_Name: FatidicSystems
+  m_Name: Game Fork
   m_EditorClassIdentifier: 
-  compName: Fatidic Systems
-  logo: {fileID: 21300000, guid: bcfbec105320a2640b0817162c4ee6d3, type: 3}
+  compName: Game Fork
+  logo: {fileID: 21300000, guid: 3f155201795551145b70f3f5ae4f6052, type: 3}

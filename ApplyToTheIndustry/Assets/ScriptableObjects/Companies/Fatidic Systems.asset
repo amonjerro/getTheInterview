@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
-  m_Name: StrikeGames
+  m_Name: Fatidic Systems
   m_EditorClassIdentifier: 
-  compName: Freezerburn Entertainment
-  logo: {fileID: 21300000, guid: c3cad3fa1fa3e1f47b07ddb16c4be7ee, type: 3}
+  compName: Fatidic Systems
+  logo: {fileID: 21300000, guid: bcfbec105320a2640b0817162c4ee6d3, type: 3}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2f415ac0df6c81478e558ec708d658e, type: 3}
-  m_Name: SutherinGrommet
+  m_Name: Dogegg Laboratory, Inc.
   m_EditorClassIdentifier: 
-  compName: Sutherin Grommet
-  logo: {fileID: 21300000, guid: 8977f10e9730a93409a4bca9285f9289, type: 3}
+  compName: Dogegg Laboratory, Inc.
+  logo: {fileID: 21300000, guid: 111f7358214cd9d47b28250c72f34236, type: 3}
