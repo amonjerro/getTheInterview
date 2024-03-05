@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
+  m_Name: Programming II
+  m_EditorClassIdentifier: 
+  data:
+    typeFilter: 0
+    reward:
+      programming:
+        name: Programming
+        value: 10
+        skillType: 0
+      design:
+        name: Design
+        value: 10
+        skillType: 1
+      graphic_art:
+        name: Graphics and Art
+        value: 0
+        skillType: 2
+      production:
+        name: Production
+        value: 0
+        skillType: 5
+      sound_and_music:
+        name: Sound and Music
+        value: 0
+        skillType: 4
+      leadership:
+        name: Leadership
+        value: 0
+        skillType: 3
+      foreign_lang:
+        name: Foreign Lang
+        value: 0
+        skillType: 6
+    timeCost:
+      value: 20
+    certification: 1
+  courseName: Videogame Software Patterns
+  description: 'Making good videogames is hard. Allegedly, others have succeeded
+    in this endeavour in the past. In their efforts to do so, they have written down
+    solutions to common technical problems faced by all developers in the field.
+    This course will lay at your feet the collective wisdom of these daring pioneers
+    and help you tread the narrow path to gloriously performant games.
+
+
+    This
+    course is certified.'

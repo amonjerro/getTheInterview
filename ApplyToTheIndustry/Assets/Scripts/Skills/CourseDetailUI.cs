@@ -34,7 +34,7 @@ public class CourseDetailUI : MonoBehaviour
             int studyRate = ServiceLocator.Instance.GetService<PlayerSkillsManager>().GetStudyRate();
             UpdateTextWithChild(courseTitle, currentCourse.courseName);
             UpdateTextWithChild(courseDescription, currentCourse.description);
-            int sessions = (currentCourse.data.timeCost.value / studyRate);
+            float sessions = Mathf.Ceil(currentCourse.data.timeCost.value / (float) studyRate);
             string session_string = sessions == 1 ? " session" : " sessions";
             UpdateTextWithChild(duration, sessions.ToString() + session_string);
             

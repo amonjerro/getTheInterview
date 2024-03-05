@@ -3823,12 +3823,20 @@ PrefabInstance:
       objectReference: {fileID: 1743424195}
     - target: {fileID: 8253014927543654021, guid: 13275ed9f593bac43a63fd8c39720af4, type: 3}
       propertyPath: courseGroupings.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8253014927543654021, guid: 13275ed9f593bac43a63fd8c39720af4, type: 3}
       propertyPath: courseGroupings.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 7a31ee4b64f6bca4793d1869a05e02e9, type: 2}
+    - target: {fileID: 8253014927543654021, guid: 13275ed9f593bac43a63fd8c39720af4, type: 3}
+      propertyPath: courseGroupings.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a384a04a8e78dba4faff9f28aea8b854, type: 2}
+    - target: {fileID: 8253014927543654021, guid: 13275ed9f593bac43a63fd8c39720af4, type: 3}
+      propertyPath: courseGroupings.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 06a938768122a0f4983ec8f16dcc13b7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
