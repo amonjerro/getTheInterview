@@ -95,14 +95,6 @@ public class Feedback : MonoBehaviour
         {   
             if (!kvp.Value)
             {
-                Debug.Log(kvp.Key);
-
-                // You have been ghosted by this company
-                if (feedbackData.connectionFeedback.ContainsKey(kvp.Key))
-                {
-                    // But your connection did send some feedback
-                    feedbackItems.Add(new FeedbackTexts("", "", "", feedbackData.connectionFeedback[kvp.Key], "Next Message"));
-                }
                 continue;
             }
 
