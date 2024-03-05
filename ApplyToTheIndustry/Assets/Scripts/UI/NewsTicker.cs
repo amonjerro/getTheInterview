@@ -57,7 +57,7 @@ public class NewsTicker : MonoBehaviour
 
         if (currentNewsDay >= news.Count)
         {
-            return;
+            currentNewsDay = 0;
         }
         // Load the current active object;
         _activeObject = news[currentNewsDay];
