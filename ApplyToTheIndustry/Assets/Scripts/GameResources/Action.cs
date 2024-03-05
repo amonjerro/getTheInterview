@@ -9,6 +9,7 @@ public class Action : MonoBehaviour
     ResourceManager rm;
     public InterfaceGroup dependentUI;
     public ActionCost cost;
+    public ActionCost undoCost;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,15 @@ public class Action : MonoBehaviour
         // Get UI general manager and call close popup
         UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
         uiMngr.ClosePopup();
+    }
+
+    /// <summary>
+    /// Undoes action by returning original action cost to player
+    /// </summary>
+    public void UndoAction()
+    {
+        // Call upon resource manager to undo the cost
+        ServiceLocator.Instance.GetService<ResourceManager>().UndoCost(undoCost);
     }
 
 }

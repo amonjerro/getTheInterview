@@ -270,6 +270,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5101223385944326351}
+        m_TargetAssemblyTypeName: Action, Assembly-CSharp
+        m_MethodName: UndoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5101223385944326351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +297,7 @@ MonoBehaviour:
   type: 0
   dependentUI: {fileID: 0}
   cost: {fileID: 11400000, guid: a488529c1f15d7a40b5e5e7a4a6ca604, type: 2}
+  undoCost: {fileID: 11400000, guid: 0ab9b7a9bcb6d4d4aa0f8a3ca99535d5, type: 2}
 --- !u!1 &5468770313100357172
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +559,7 @@ Transform:
   - {fileID: 7399992650340319660}
   - {fileID: 1245760409410299126}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8033128068006592622
 MonoBehaviour:

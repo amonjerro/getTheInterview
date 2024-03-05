@@ -50,6 +50,19 @@ public class TimeManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Used for increasing timer
+    /// </summary>
+    /// <param name="timeAdded">Amount of time being added</param>
+    public void AddTime(int timeAdded)
+    {
+        // Decrease timer
+        timeLeft += timeAdded;
+
+        // Make updates to UI
+        UIBar.SetFullness(timeLeft / (float)maxTime);
+    }
+
+    /// <summary>
     /// Used for resetting time left
     /// </summary>
     public void ResetTimer()

@@ -156,7 +156,6 @@ public class UIGeneralManager : MonoBehaviour
         {
             bookCourseBtn.gameObject.SetActive(false);
             studyCourseBtn.gameObject.SetActive(true);
-            Debug.Log("Here");
         }
         else
         {

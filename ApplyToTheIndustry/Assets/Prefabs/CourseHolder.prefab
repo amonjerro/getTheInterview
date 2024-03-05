@@ -110,7 +110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4422787007295547278
 Transform:
   m_ObjectHideFlags: 0
@@ -388,6 +388,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReturnButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1888045282535249212, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888045282535249212, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888045282535249212, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3623457035169420156}
+    - target: {fileID: 1888045282535249212, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888045282535249212, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UndoAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888045282535249212, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Action, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888045282535249212, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395987216405727937, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+      propertyPath: undoCost
+      value: 
+      objectReference: {fileID: 11400000, guid: ee5c70efea0290d44bdb09694feb97a2, type: 2}
     - target: {fileID: 5938530417061689881, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -482,3 +514,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5938530417061689881, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
   m_PrefabInstance: {fileID: 8695183356117146045}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3623457035169420156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5395987216405727937, guid: aed31b0be2ff26142acca9ddc0a15064, type: 3}
+  m_PrefabInstance: {fileID: 8695183356117146045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5639586cf8653e9428fe41cc60c24233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
