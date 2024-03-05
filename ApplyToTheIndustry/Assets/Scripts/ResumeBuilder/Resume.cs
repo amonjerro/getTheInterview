@@ -41,7 +41,6 @@ public class Resume : ResumeComponent
     /// <param name="skill">Skill being added</param>
     public override void AddSkill(Skill skill)
     {
-
         GameObject container = Instantiate(skillContainerPrefab);
         // Set it to be a child of this panel
         container.transform.SetParent(transform);
@@ -63,6 +62,7 @@ public class Resume : ResumeComponent
         // Add skill to the list
         selectedSkillsList.Add(skill);
         resumeTMPSkillList.text = "";
+        resumeTMPSkillList.gameObject.SetActive(false);
     }
 
     public override void PopSkill(int index)
@@ -84,6 +84,7 @@ public class Resume : ResumeComponent
 
         if (containers.Count == 0)
         {
+            resumeTMPSkillList.gameObject.SetActive(true);
             resumeTMPSkillList.text = resumeMessageDefault;
         }
     }
