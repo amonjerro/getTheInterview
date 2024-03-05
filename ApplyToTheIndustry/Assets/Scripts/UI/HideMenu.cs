@@ -10,6 +10,7 @@ public class HideMenu : MonoBehaviour
     /// </summary>
     public void DisableObject()
     {
+        Debug.Log("closing window");
         transform.parent.parent.gameObject.SetActive(false);
         ServiceLocator.Instance.GetService<UIGeneralManager>().UpdateErrorStatus(false);
     }
