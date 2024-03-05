@@ -90,6 +90,9 @@ public class ResourceManager : MonoBehaviour
         UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
         uiMngr.UpdateButtonUsability();
 
+        // Clear applications list from job manager
+        ServiceLocator.Instance.GetService<JobManager>().ClearApplicationList();
+
         // Trigger the game over screen as soon as 
         // the player runs out of money
         if (_moneyAvailable.value <= 0.0f)

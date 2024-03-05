@@ -50,4 +50,9 @@ public class JobManager : MonoBehaviour
         }
         return postingsByDayContainer[index];
     }
+
+    public void ClearApplicationList()
+    {
+        appliedPositions = new List<JobPosting>();
+    }
 }
