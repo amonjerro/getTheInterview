@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
-  m_Name: GameplayProgrammer
+  m_Name: GameplayProgrammerJKD
   m_EditorClassIdentifier: 
   company: {fileID: 11400000, guid: 767ac96fd5784e2438df8b3aca9a28f3, type: 2}
   positionName: Gameplay Programmer
@@ -23,4 +23,4 @@ MonoBehaviour:
   - '>Experience working with proprietary software and development tools'
   - '>Basic knowledge of game design'
   - '>Native proficiency in foreign languages is preferred'
-  gradingProfile: {fileID: 11400000, guid: 83fec043510d914468eea54b5403b826, type: 2}
+  gradingProfile: {fileID: 11400000, guid: 382e1de0f15847246bf00aff0b3fecc1, type: 2}
