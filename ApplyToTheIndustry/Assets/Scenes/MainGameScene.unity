@@ -4205,6 +4205,22 @@ PrefabInstance:
       propertyPath: dependentUI
       value: 
       objectReference: {fileID: 417433141}
+    - target: {fileID: 2577774822107862829, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
+      propertyPath: news.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577774822107862829, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
+      propertyPath: news.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 06ee12f4a710bb54590b3d809010f940, type: 2}
+    - target: {fileID: 2577774822107862829, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
+      propertyPath: news.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ad979e3ea0c09d549bd568a8ae3d0aa9, type: 2}
+    - target: {fileID: 2577774822107862829, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
+      propertyPath: news.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c29aab6f077b1c4e9f0830c458249ff, type: 2}
     - target: {fileID: 3474085776265440027, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
       propertyPath: dependentUI
       value: 
