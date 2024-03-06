@@ -22,7 +22,6 @@ public class NewsTicker : MonoBehaviour
     {
 
         LoadTicker();
-        currentNewsDay = 0;
         TimeManager tmManager = ServiceLocator.Instance.GetService<TimeManager>();
         tmManager.D_timeout += LoadTicker;
         childTransform = tickerHolder.GetComponent<RectTransform>();
@@ -72,6 +71,11 @@ public class NewsTicker : MonoBehaviour
         textGameObject.GetComponent<RectTransform>().SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, 0, newWidth);
         textComponent.text = fullHeadline;
         currentNewsDay++;
+        if (childTransform == null)
+        {
+            return;
+        }
+        childTransform.localPosition = originalTickerHolderPosition;
     }
 
     private void OnDestroy()

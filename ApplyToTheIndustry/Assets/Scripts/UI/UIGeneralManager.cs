@@ -18,7 +18,6 @@ public class UIGeneralManager : MonoBehaviour
 
     private void Start()
     {
-        ServiceLocator.Instance.GetService<TimeManager>().D_timeout += MoveToFeedbackScreen;
         UpdateButtonUsability();
         UpdateCourseUI();
     }
