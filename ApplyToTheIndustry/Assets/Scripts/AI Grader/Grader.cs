@@ -70,17 +70,23 @@ public class Grader : MonoBehaviour
         // Evaluate priorities
         for (int i = 0; i < posting.gradingProfile.expectedSkillOrdering.Length; i++)
         {
+            bool matchFound = false;
             for (int j = 0; j < prioritization.Count; j++)
             {
                 // We have found a match
                 if (prioritization[j] == posting.gradingProfile.expectedSkillOrdering[i])
                 {
                     Totalpoints -= prioritizationMismatchPenalty * Mathf.Abs(i - j);
+                    matchFound = true;
                     break;
                 }
             }
-            // No match has been found
-            Totalpoints -= prioritizationMismatchPenalty*3;
+            if (!matchFound)
+            {
+                // No match has been found
+                Totalpoints -= prioritizationMismatchPenalty * 3;
+            }
+            
         }
 
         // Evaluate skill thresholds
@@ -108,63 +114,63 @@ public class Grader : MonoBehaviour
         switch (type)
         {
             case SkillType.Programming:
-                if (skillPoints[type] >= postSkillRequirements.programming.value && postSkillRequirements.programming.value > 0)
+                if (skillPoints[type] >= postSkillRequirements.programming.value)
                 {
-                    return skillPoints[type];
+                    return postSkillRequirements.programming.value;
                 }
                 else
                 {
                     return 0;
                 }
             case SkillType.Design:
-                if (skillPoints[type] >= postSkillRequirements.design.value && postSkillRequirements.design.value > 0)
+                if (skillPoints[type] >= postSkillRequirements.design.value)
                 {
-                    return skillPoints[type];
+                    return postSkillRequirements.design.value;
                 }
                 else
                 {
                     return 0;
                 }
             case SkillType.Graphics:
-                if (skillPoints[type] >= postSkillRequirements.graphic_art.value && postSkillRequirements.graphic_art.value > 0)
+                if (skillPoints[type] >= postSkillRequirements.graphic_art.value)
                 {
-                    return skillPoints[type];
+                    return postSkillRequirements.graphic_art.value;
                 }
                 else
                 {
                     return 0;
                 }
             case SkillType.Leadership:
-                if (skillPoints[type] >= postSkillRequirements.leadership.value && postSkillRequirements.leadership.value > 0)
+                if (skillPoints[type] >= postSkillRequirements.leadership.value)
                 {
-                    return skillPoints[type];
+                    return postSkillRequirements.leadership.value;
                 }
                 else
                 {
                     return 0;
                 }
             case SkillType.Sound:
-                if (skillPoints[type] >= postSkillRequirements.sound_and_music.value && postSkillRequirements.sound_and_music.value > 0)
+                if (skillPoints[type] >= postSkillRequirements.sound_and_music.value)
                 {
-                    return skillPoints[type];
+                    return postSkillRequirements.sound_and_music.value;
                 }
                 else
                 {
                     return 0;
                 }
             case SkillType.Production:
-                if (skillPoints[type] >= postSkillRequirements.production.value && postSkillRequirements.production.value > 0)
+                if (skillPoints[type] >= postSkillRequirements.production.value)
                 {
-                    return skillPoints[type];
+                    return postSkillRequirements.production.value;
                 }
                 else
                 {
                     return 0;
                 }
             case SkillType.ForeignLang:
-                if (skillPoints[type] >= postSkillRequirements.foreign_lang.value && postSkillRequirements.foreign_lang.value > 0)
+                if (skillPoints[type] >= postSkillRequirements.foreign_lang.value)
                 {
-                    return skillPoints[type];
+                    return postSkillRequirements.foreign_lang.value;
                 }
                 else
                 {
