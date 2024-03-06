@@ -1625,7 +1625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -109.59186, y: -50.2782}
+  m_AnchoredPosition: {x: -109.59186, y: 0}
   m_SizeDelta: {x: -1227.7166, y: -459.6167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &870112303
@@ -2599,6 +2599,7 @@ MonoBehaviour:
   popUp: {fileID: 496761018}
   bookCourseBtn: {fileID: 961087551}
   studyCourseBtn: {fileID: 1362379772}
+  hoverTipRef: {fileID: 2187925591170638266, guid: 35953c36706afb441b31f1b8569c3c02, type: 3}
 --- !u!114 &1362379772 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2074002635619089760, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
@@ -3393,7 +3394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -465, y: 340.84}
+  m_AnchoredPosition: {x: -465, y: 0}
   m_SizeDelta: {x: -1383.0808, y: -866.3252}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470502313
@@ -4895,7 +4896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 357, y: 341}
+  m_AnchoredPosition: {x: 357, y: 0}
   m_SizeDelta: {x: -1650.9575, y: -721.9377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1931979141
@@ -4973,7 +4974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -109.58, y: -43.986}
+  m_AnchoredPosition: {x: -109.58, y: 0}
   m_SizeDelta: {x: -1227.7, y: -472.2061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1974400322

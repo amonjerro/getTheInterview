@@ -83,6 +83,8 @@ public class TimeManager : MonoBehaviour
         // Call tick event
         D_timeout?.Invoke();
         currentWeek += 1;
+        ResetTimer();
+        ServiceLocator.Instance.GetService<UIGeneralManager>().MoveToFeedbackScreen();
     }
 
     public int GetCurrentWeek()
