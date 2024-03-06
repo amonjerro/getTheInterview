@@ -165,4 +165,13 @@ public class UIGeneralManager : MonoBehaviour
         }
         
     }
+
+    public void CloseHoverTips()
+    {
+        // Iterate through timer panel buttons
+        foreach (Action action in timerPanel.GetComponentsInChildren<Action>())
+        {
+            action.HideActionCost();
+        }
+    }
 }

@@ -54,6 +54,7 @@ public class Action : MonoBehaviour
         // Get UI general manager and call close popup
         UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
         uiMngr.ClosePopup();
+        uiMngr.CloseHoverTips();
     }
 
     /// <summary>
