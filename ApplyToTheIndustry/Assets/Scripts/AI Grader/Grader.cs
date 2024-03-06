@@ -8,13 +8,15 @@ public struct FeedbackData
     public Dictionary<string, bool> validApplications;
     public Dictionary<string, string> positionByCompany;
     public Dictionary<string, string> connectionFeedback;
+    public Dictionary<string, bool> acceptedTo;
 
-    public FeedbackData(Dictionary<string, string> companies, Dictionary<string, bool> application, Dictionary<string, string> positions, Dictionary<string, string> connection)
+    public FeedbackData(Dictionary<string, string> companies, Dictionary<string, bool> application, Dictionary<string, string> positions, Dictionary<string, string> connection, Dictionary<string, bool> accepted)
     {
         companyResponses = companies;
         validApplications = application;
         positionByCompany = positions;
         connectionFeedback = connection;
+        acceptedTo = accepted;
     }
 }
 
@@ -25,7 +27,9 @@ public class Grader : MonoBehaviour
     public List<string> feedback = new List<string>();
     public List<string> companiesAppliedTo = new List<string>();
     public List<string> positionsAppliedTo = new List<string>();
+    private List<bool> positionsAcceptedTo = new List<bool>();
     int Totalpoints = 0;
+    int gradingRequiredPoints = 0;
     public int prioritizationMismatchPenalty;
     Resume currentResume;
     JobPosting currentPosting;
@@ -53,6 +57,7 @@ public class Grader : MonoBehaviour
         skillPoints.Clear();
         prioritization.Clear();
         Totalpoints = 0;
+        gradingRequiredPoints = posting.gradingProfile.skillGroup.TotalSum();
         companiesAppliedCount +=1;
 
         // Access the selected skill list from the Resume instance
@@ -185,36 +190,46 @@ public class Grader : MonoBehaviour
     {
         float chanceToGetGhosted = ghostingRange;
         string message = "";
-        if (Totalpoints < 15)
+        bool wasAccepted = false;
+        if (Totalpoints < gradingRequiredPoints * 0.5f)
         {
             message = "Thank you for interest in this position. After careful consideration, we will not be moving forward with your candidacy for this position.";
             canGhost = true;
             provideGradingFeedback = true;
 
         }
-        else if (Totalpoints >= 15 && Totalpoints <= 25)
+        else if (Totalpoints >= gradingRequiredPoints * 0.5f && Totalpoints < gradingRequiredPoints * 0.75f)
         {
             message = "We have reviewed your application and regret to inform you that you have not been selected for the position. We wish you the best of luck in your professional career.";
             canGhost = true;
             chanceToGetGhosted = ghostingRange * 0.5f;
             provideGradingFeedback = true;      
-        }
-        else if (Totalpoints >= 25 && Totalpoints <= 35)
+        } else
         {
-            message = "Your application has been reviwed by our Human Resources team but due to the competitive nature of this position, we are unable to proceed in this process with you. Thank you for considering applying to our company.";
-            canGhost = true;
-            chanceToGetGhosted = ghostingRange * 0.25f;
-            provideGradingFeedback = true;
-        }
-        else
-        {
-            message = "Congratulations! Our team is impressed with your work and skills, and would like to discuss the next steps. \n\n You have achieved the main objective in this build";
-            canGhost = false;
-            chanceToGetGhosted = 0.0f;
-            provideGradingFeedback = false;
+            // We are above minimum hiring threshold.
+            // So now we add competition into the mix
+            float competitionRate = Random.Range(0.1f, 0.3f);
+            float successLikelihood = Totalpoints / (float) gradingRequiredPoints;
+            successLikelihood = Mathf.Clamp(successLikelihood - competitionRate, 0, 1);
 
+            float dieRoll = Random.Range(0.0f, 1.0f);
+            if (dieRoll < successLikelihood)
+            {
+                // You did it, you are big kahuna, congratz
+                message = "Congratulations! Our team is impressed with your work and skills, and would like to discuss the next steps. \n\n You have achieved the main objective in this build";
+                canGhost = false;
+                chanceToGetGhosted = 0.0f;
+                provideGradingFeedback = false;
+                wasAccepted = true;
+            } else
+            {
+                message = "Your application has been reviwed by our Human Resources team but due to the competitive nature of this position, we are unable to proceed in this process with you. Thank you for considering applying to our company.";
+                canGhost = true;
+                chanceToGetGhosted = ghostingRange * 0.25f;
+                provideGradingFeedback = true;
+            }
         }
-
+        positionsAcceptedTo.Add(wasAccepted);
         bool ghosted = toGhost(canGhost, chanceToGetGhosted);
         if(ghosted == false)
         {
@@ -274,10 +289,12 @@ Unfortunately, your application was not successful this time. However, don't be 
         Dictionary<string, bool> validApplications = new Dictionary<string, bool>();
         Dictionary<string, string> companyResponses = new Dictionary<string, string>();
         Dictionary<string, string> positionByCompany = new Dictionary<string, string>();
+        Dictionary<string, bool> acceptedToPositions = new Dictionary<string, bool>();
         for (int i = 0; i < companiesAppliedTo.Count; i++)
         {
             bool receivedThisFeedback = companiesReceivedFeedback.Contains(companiesAppliedTo[i]);
             validApplications.Add(companiesAppliedTo[i], receivedThisFeedback);
+            acceptedToPositions.Add(companiesAppliedTo[i], positionsAcceptedTo[i]);
             if (receivedThisFeedback)
             {
                 int indexOf = companiesReceivedFeedback.IndexOf(companiesAppliedTo[i]);
@@ -285,7 +302,7 @@ Unfortunately, your application was not successful this time. However, don't be 
                 positionByCompany.Add(companiesAppliedTo[i], positionsAppliedTo[i]);
             }
         }
-        return new FeedbackData(companyResponses, validApplications, positionByCompany, connectionFeedback);
+        return new FeedbackData(companyResponses, validApplications, positionByCompany, connectionFeedback, acceptedToPositions);
     }
 
     public bool toGhost(bool ghosting, float range){
@@ -319,6 +336,7 @@ Unfortunately, your application was not successful this time. However, don't be 
         connectionFeedback.Clear();
         positionsReceivedFeedback.Clear();
         companiesReceivedFeedback.Clear();
+        positionsAcceptedTo.Clear();
     }
 
     public void ConstructAndSaveData(bool ghosted)
