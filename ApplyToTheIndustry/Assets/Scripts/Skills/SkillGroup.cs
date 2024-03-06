@@ -65,6 +65,11 @@ public struct SkillGroup
         return listOfSkills;
     }
 
+    public int TotalSum()
+    {
+        return programming.value + design.value + graphic_art.value + production.value + sound_and_music.value + foreign_lang.value + leadership.value;
+    }
+
     public Skill GetSkill(SkillType type)
     {
         switch (type)

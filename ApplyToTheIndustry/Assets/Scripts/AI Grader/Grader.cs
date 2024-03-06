@@ -26,6 +26,7 @@ public class Grader : MonoBehaviour
     public List<string> companiesAppliedTo = new List<string>();
     public List<string> positionsAppliedTo = new List<string>();
     int Totalpoints = 0;
+    int gradingRequiredPoints = 0;
     public int prioritizationMismatchPenalty;
     Resume currentResume;
     JobPosting currentPosting;
@@ -53,6 +54,7 @@ public class Grader : MonoBehaviour
         skillPoints.Clear();
         prioritization.Clear();
         Totalpoints = 0;
+        gradingRequiredPoints = posting.gradingProfile.skillGroup.TotalSum();
         companiesAppliedCount +=1;
 
         // Access the selected skill list from the Resume instance
@@ -185,34 +187,42 @@ public class Grader : MonoBehaviour
     {
         float chanceToGetGhosted = ghostingRange;
         string message = "";
-        if (Totalpoints < 15)
+        if (Totalpoints < gradingRequiredPoints * 0.5f)
         {
             message = "Thank you for interest in this position. After careful consideration, we will not be moving forward with your candidacy for this position.";
             canGhost = true;
             provideGradingFeedback = true;
 
         }
-        else if (Totalpoints >= 15 && Totalpoints <= 25)
+        else if (Totalpoints >= gradingRequiredPoints * 0.5f && Totalpoints < gradingRequiredPoints * 0.75f)
         {
             message = "We have reviewed your application and regret to inform you that you have not been selected for the position. We wish you the best of luck in your professional career.";
             canGhost = true;
             chanceToGetGhosted = ghostingRange * 0.5f;
             provideGradingFeedback = true;      
-        }
-        else if (Totalpoints >= 25 && Totalpoints <= 35)
+        } else
         {
-            message = "Your application has been reviwed by our Human Resources team but due to the competitive nature of this position, we are unable to proceed in this process with you. Thank you for considering applying to our company.";
-            canGhost = true;
-            chanceToGetGhosted = ghostingRange * 0.25f;
-            provideGradingFeedback = true;
-        }
-        else
-        {
-            message = "Congratulations! Our team is impressed with your work and skills, and would like to discuss the next steps. \n\n You have achieved the main objective in this build";
-            canGhost = false;
-            chanceToGetGhosted = 0.0f;
-            provideGradingFeedback = false;
+            // We are above minimum hiring threshold.
+            // So now we add competition into the mix
+            float competitionRate = Random.Range(0.1f, 0.3f);
+            float successLikelihood = Totalpoints / (float) gradingRequiredPoints;
+            successLikelihood = Mathf.Clamp(successLikelihood - competitionRate, 0, 1);
 
+            float dieRoll = Random.Range(0.0f, 1.0f);
+            if (dieRoll < successLikelihood)
+            {
+                // You did it, you are big kahuna, congratz
+                message = "Congratulations! Our team is impressed with your work and skills, and would like to discuss the next steps. \n\n You have achieved the main objective in this build";
+                canGhost = false;
+                chanceToGetGhosted = 0.0f;
+                provideGradingFeedback = false;
+            } else
+            {
+                message = "Your application has been reviwed by our Human Resources team but due to the competitive nature of this position, we are unable to proceed in this process with you. Thank you for considering applying to our company.";
+                canGhost = true;
+                chanceToGetGhosted = ghostingRange * 0.25f;
+                provideGradingFeedback = true;
+            }
         }
 
         bool ghosted = toGhost(canGhost, chanceToGetGhosted);
