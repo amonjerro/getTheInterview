@@ -2029,6 +2029,10 @@ PrefabInstance:
       propertyPath: postingsByDayContainer.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: b72531d17652f9b46a431f369f759bf7, type: 2}
+    - target: {fileID: 1381273784386568887, guid: 808ad219a6e66e149951326f06427e21, type: 3}
+      propertyPath: postingsByDayContainer.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b72531d17652f9b46a431f369f759bf7, type: 2}
     - target: {fileID: 6446084908888477179, guid: 808ad219a6e66e149951326f06427e21, type: 3}
       propertyPath: m_Name
       value: JobsManager
@@ -2100,8 +2104,12 @@ PrefabInstance:
       value: Grader
       objectReference: {fileID: 0}
     - target: {fileID: 3561429014054555676, guid: ff30b13b5906c418987a11491cecfcb6, type: 3}
+      propertyPath: ghostingRange
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561429014054555676, guid: ff30b13b5906c418987a11491cecfcb6, type: 3}
       propertyPath: prioritizationMismatchPenalty
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5533744950116227386, guid: ff30b13b5906c418987a11491cecfcb6, type: 3}
       propertyPath: m_RootOrder
@@ -3033,7 +3041,7 @@ PrefabInstance:
       objectReference: {fileID: 427726119}
     - target: {fileID: 3203118160797080778, guid: 6c06d1e0ad557f14081764f43e325672, type: 3}
       propertyPath: weeklyCosts
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3203118160797080778, guid: 6c06d1e0ad557f14081764f43e325672, type: 3}
       propertyPath: maxTime.value
@@ -3041,7 +3049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203118160797080778, guid: 6c06d1e0ad557f14081764f43e325672, type: 3}
       propertyPath: maxMoney.value
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3896351984946447143, guid: 6c06d1e0ad557f14081764f43e325672, type: 3}
       propertyPath: m_RootOrder
@@ -4197,6 +4205,22 @@ PrefabInstance:
       propertyPath: dependentUI
       value: 
       objectReference: {fileID: 417433141}
+    - target: {fileID: 2577774822107862829, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
+      propertyPath: news.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577774822107862829, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
+      propertyPath: news.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 06ee12f4a710bb54590b3d809010f940, type: 2}
+    - target: {fileID: 2577774822107862829, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
+      propertyPath: news.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ad979e3ea0c09d549bd568a8ae3d0aa9, type: 2}
+    - target: {fileID: 2577774822107862829, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
+      propertyPath: news.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c29aab6f077b1c4e9f0830c458249ff, type: 2}
     - target: {fileID: 3474085776265440027, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
       propertyPath: dependentUI
       value: 

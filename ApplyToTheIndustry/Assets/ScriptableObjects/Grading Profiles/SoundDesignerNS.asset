@@ -23,7 +23,7 @@ MonoBehaviour:
       skillType: 1
     graphic_art:
       name: Graphics and Art
-      value: 10
+      value: 20
       skillType: 2
     production:
       name: Production
@@ -31,7 +31,7 @@ MonoBehaviour:
       skillType: 5
     sound_and_music:
       name: Sound and Music
-      value: 20
+      value: 35
       skillType: 4
     leadership:
       name: Leadership
@@ -39,6 +39,6 @@ MonoBehaviour:
       skillType: 3
     foreign_lang:
       name: Foreign Lang
-      value: 15
+      value: 20
       skillType: 6
   expectedSkillOrdering: 00000000040000000600000002000000
