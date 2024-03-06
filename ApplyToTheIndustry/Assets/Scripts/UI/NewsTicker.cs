@@ -51,8 +51,6 @@ public class NewsTicker : MonoBehaviour
 
     public void LoadTicker()
     {
-        Debug.Log(currentNewsDay);
-        Debug.Log(news.Count);
         // Destroy any news children in the ticker;
         ClearNewsItems();
 
