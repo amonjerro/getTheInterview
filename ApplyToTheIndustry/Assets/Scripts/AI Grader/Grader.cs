@@ -8,13 +8,15 @@ public struct FeedbackData
     public Dictionary<string, bool> validApplications;
     public Dictionary<string, string> positionByCompany;
     public Dictionary<string, string> connectionFeedback;
+    public Dictionary<string, bool> acceptedTo;
 
-    public FeedbackData(Dictionary<string, string> companies, Dictionary<string, bool> application, Dictionary<string, string> positions, Dictionary<string, string> connection)
+    public FeedbackData(Dictionary<string, string> companies, Dictionary<string, bool> application, Dictionary<string, string> positions, Dictionary<string, string> connection, Dictionary<string, bool> accepted)
     {
         companyResponses = companies;
         validApplications = application;
         positionByCompany = positions;
         connectionFeedback = connection;
+        acceptedTo = accepted;
     }
 }
 
@@ -25,6 +27,7 @@ public class Grader : MonoBehaviour
     public List<string> feedback = new List<string>();
     public List<string> companiesAppliedTo = new List<string>();
     public List<string> positionsAppliedTo = new List<string>();
+    private List<bool> positionsAcceptedTo = new List<bool>();
     int Totalpoints = 0;
     int gradingRequiredPoints = 0;
     public int prioritizationMismatchPenalty;
@@ -187,6 +190,7 @@ public class Grader : MonoBehaviour
     {
         float chanceToGetGhosted = ghostingRange;
         string message = "";
+        bool wasAccepted = false;
         if (Totalpoints < gradingRequiredPoints * 0.5f)
         {
             message = "Thank you for interest in this position. After careful consideration, we will not be moving forward with your candidacy for this position.";
@@ -216,6 +220,7 @@ public class Grader : MonoBehaviour
                 canGhost = false;
                 chanceToGetGhosted = 0.0f;
                 provideGradingFeedback = false;
+                wasAccepted = true;
             } else
             {
                 message = "Your application has been reviwed by our Human Resources team but due to the competitive nature of this position, we are unable to proceed in this process with you. Thank you for considering applying to our company.";
@@ -224,7 +229,7 @@ public class Grader : MonoBehaviour
                 provideGradingFeedback = true;
             }
         }
-
+        positionsAcceptedTo.Add(wasAccepted);
         bool ghosted = toGhost(canGhost, chanceToGetGhosted);
         if(ghosted == false)
         {
@@ -284,10 +289,12 @@ Unfortunately, your application was not successful this time. However, don't be 
         Dictionary<string, bool> validApplications = new Dictionary<string, bool>();
         Dictionary<string, string> companyResponses = new Dictionary<string, string>();
         Dictionary<string, string> positionByCompany = new Dictionary<string, string>();
+        Dictionary<string, bool> acceptedToPositions = new Dictionary<string, bool>();
         for (int i = 0; i < companiesAppliedTo.Count; i++)
         {
             bool receivedThisFeedback = companiesReceivedFeedback.Contains(companiesAppliedTo[i]);
             validApplications.Add(companiesAppliedTo[i], receivedThisFeedback);
+            acceptedToPositions.Add(companiesAppliedTo[i], positionsAcceptedTo[i]);
             if (receivedThisFeedback)
             {
                 int indexOf = companiesReceivedFeedback.IndexOf(companiesAppliedTo[i]);
@@ -295,7 +302,7 @@ Unfortunately, your application was not successful this time. However, don't be 
                 positionByCompany.Add(companiesAppliedTo[i], positionsAppliedTo[i]);
             }
         }
-        return new FeedbackData(companyResponses, validApplications, positionByCompany, connectionFeedback);
+        return new FeedbackData(companyResponses, validApplications, positionByCompany, connectionFeedback, acceptedToPositions);
     }
 
     public bool toGhost(bool ghosting, float range){
@@ -329,6 +336,7 @@ Unfortunately, your application was not successful this time. However, don't be 
         connectionFeedback.Clear();
         positionsReceivedFeedback.Clear();
         companiesReceivedFeedback.Clear();
+        positionsAcceptedTo.Clear();
     }
 
     public void ConstructAndSaveData(bool ghosted)
