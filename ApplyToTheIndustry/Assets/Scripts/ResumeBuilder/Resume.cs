@@ -70,6 +70,7 @@ public class Resume : ResumeComponent
         indexOffset = 3;
         SkillContainer skillCont = containers[index];
         containers.RemoveAt(index);
+        selectedSkillsList.RemoveAt(index);
         Destroy(skillCont.gameObject);
 
         // Re-index the list
