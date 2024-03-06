@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerSkillsManager : MonoBehaviour
 {
@@ -8,14 +9,13 @@ public class PlayerSkillsManager : MonoBehaviour
     [SerializeField]
     private int studyRate =  10;
     private bool courseIsBooked = false;
-    public UIBar progressBar;
+    public TextMeshProUGUI progressText;
     CourseData bookedCourse;
     SkillGroup playerSkills;
 
     private void Awake()
     {
         playerSkills = new SkillGroup(0,0,0,0,0,0,0);
-        progressBar.Setup();
     }
 
     public void AddToSkills(SkillGroup trainingReward)
@@ -42,7 +42,12 @@ public class PlayerSkillsManager : MonoBehaviour
     {
         bookedCourse = data;
         courseIsBooked = true;
-        progressBar.SetFullness(0);
+
+        // Set text for total number of sessions in course
+        float sessions = Mathf.Ceil(data.timeCost.value / (float)studyRate);
+        progressText.text = "Sessions Left: " + sessions;
+
+
         ServiceLocator.Instance.GetService<UIGeneralManager>().SetProgressPanelStatus(courseIsBooked);
         ServiceLocator.Instance.GetService<UIGeneralManager>().UpdateCourseUI();
     }
@@ -61,7 +66,11 @@ public class PlayerSkillsManager : MonoBehaviour
 
         bookedCourse.AddProgress(studyRate);
         float proportion = bookedCourse.GetProgressPercent();
-        progressBar.SetFullness(proportion);
+
+        // Update text with number of sessions left for course
+        float sessions = Mathf.Ceil(((1 - proportion) * bookedCourse.timeCost.value) / studyRate);
+        progressText.text = "Sessions Left: " + sessions;
+
         if (bookedCourse.isComplete())
         {
             int bonus = bookedCourse.certification ? 2 : 1;
