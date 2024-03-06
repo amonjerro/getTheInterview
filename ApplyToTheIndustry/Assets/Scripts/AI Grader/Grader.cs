@@ -70,17 +70,23 @@ public class Grader : MonoBehaviour
         // Evaluate priorities
         for (int i = 0; i < posting.gradingProfile.expectedSkillOrdering.Length; i++)
         {
+            bool matchFound = false;
             for (int j = 0; j < prioritization.Count; j++)
             {
                 // We have found a match
                 if (prioritization[j] == posting.gradingProfile.expectedSkillOrdering[i])
                 {
                     Totalpoints -= prioritizationMismatchPenalty * Mathf.Abs(i - j);
+                    matchFound = true;
                     break;
                 }
             }
-            // No match has been found
-            Totalpoints -= prioritizationMismatchPenalty*3;
+            if (!matchFound)
+            {
+                // No match has been found
+                Totalpoints -= prioritizationMismatchPenalty * 3;
+            }
+            
         }
 
         // Evaluate skill thresholds
