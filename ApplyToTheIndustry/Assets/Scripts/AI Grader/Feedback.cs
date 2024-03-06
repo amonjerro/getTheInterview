@@ -114,10 +114,10 @@ public class Feedback : MonoBehaviour
                 feedbackItems.Add(new FeedbackTexts("", "", "", feedbackData.connectionFeedback[kvp.Key], "Next Message"));
             }
         }
-
+        int weeklyCostValue = ServiceLocator.Instance.GetService<ResourceManager>().weeklyCosts;
         feedbackItems.Add(new FeedbackTexts(
         "", "",
-        "You have been charged for your weekly costs of rent, food and utilities.",
+        $"You have been charged a total of {weeklyCostValue} for your weekly costs of rent, food and utilities.",
         "", "Move on to next week"
         ));
     }
