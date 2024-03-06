@@ -15,6 +15,7 @@ public class UIGeneralManager : MonoBehaviour
     public Button bookCourseBtn;
     public Button studyCourseBtn;
     private bool isErrorShowing = false;
+    public GameObject hoverTipRef;
 
     private void Start()
     {

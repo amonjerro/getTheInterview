@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Action : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class Action : MonoBehaviour
     public InterfaceGroup dependentUI;
     public ActionCost cost;
     public ActionCost undoCost;
+    GameObject hoverTip;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +63,28 @@ public class Action : MonoBehaviour
     {
         // Call upon resource manager to undo the cost
         ServiceLocator.Instance.GetService<ResourceManager>().UndoCost(undoCost);
+    }
+
+    public void ShowActionCost()
+    {
+        // Get where mouse is currently located
+        Vector3 hoverLoc = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+
+        // Get the UI manager
+        UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
+
+        // Create instance of hover tip and set its position to hover location
+        hoverTip = Instantiate(uiMngr.hoverTipRef, transform);
+        hoverTip.transform.SetParent(transform, false);
+        hoverTip.transform.localPosition = hoverLoc;
+
+        // Also set text to be relative to action cost
+        hoverTip.GetComponentInChildren<TextMeshProUGUI>().text = "Time Cost: " + cost.time.value + "\tMoney Cost: " + cost.money.value;
+    }
+
+    public void HideActionCost()
+    {
+        Destroy(hoverTip);
     }
 
 }
