@@ -73,10 +73,13 @@ public class Action : MonoBehaviour
         // Get the UI manager
         UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
 
+        // Hover position offset
+        Vector3 posOffset = new Vector3(-gameObject.GetComponentInChildren<RectTransform>().rect.size.x, 0.0f, 0.0f);
+
         // Create instance of hover tip and set its position to hover location
         hoverTip = Instantiate(uiMngr.hoverTipRef, transform);
         hoverTip.transform.SetParent(transform, false);
-        hoverTip.transform.localPosition = hoverLoc;
+        hoverTip.transform.localPosition = hoverLoc + posOffset;
 
         // Also set text to be relative to action cost
         hoverTip.GetComponentInChildren<TextMeshProUGUI>().text = "Time Cost: " + cost.time.value + "\tMoney Cost: " + cost.money.value;
