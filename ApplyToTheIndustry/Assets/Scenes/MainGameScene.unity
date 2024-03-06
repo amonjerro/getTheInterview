@@ -4128,7 +4128,7 @@ PrefabInstance:
     - target: {fileID: 8253014927543654021, guid: 13275ed9f593bac43a63fd8c39720af4, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1743424195}
+      objectReference: {fileID: 0}
     - target: {fileID: 8253014927543654021, guid: 13275ed9f593bac43a63fd8c39720af4, type: 3}
       propertyPath: progressText
       value: 
@@ -4419,7 +4419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461805546863522383, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7296493633456638404, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
       propertyPath: m_RootOrder
@@ -4510,7 +4510,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2367964962293350250, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7534197283383012430, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
       insertIndex: -1
@@ -4536,17 +4537,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3018949147045192051, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
   m_PrefabInstance: {fileID: 1743424192}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1743424195 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5900275941483372832, guid: 54754537adfa3e845aedd7ce24842624, type: 3}
-  m_PrefabInstance: {fileID: 1743424192}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c92d70d8c8043c147962605ded56ef4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1758036459 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1710787254708550450, guid: 19f9e12b6933ab848a93674565f562f0, type: 3}
