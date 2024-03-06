@@ -34,6 +34,7 @@ public class PauseScreenBehavior : MonoBehaviour
         else
         {
             ServiceLocator.Instance.GetService<UIGeneralManager>().MoveAwayFromPauseScreen();
+            ServiceLocator.Instance.GetService<UIGeneralManager>().CloseHoverTips();
             //Toggle pause UI off and game UI on
             pauseScreen.gameObject.SetActive(false);
             Time.timeScale = 1.0f;

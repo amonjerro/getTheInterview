@@ -15,6 +15,7 @@ public class UIGeneralManager : MonoBehaviour
     public Button bookCourseBtn;
     public Button studyCourseBtn;
     private bool isErrorShowing = false;
+    public GameObject hoverTipRef;
 
     private void Start()
     {
@@ -162,5 +163,14 @@ public class UIGeneralManager : MonoBehaviour
             studyCourseBtn.gameObject.SetActive(false);
         }
         
+    }
+
+    public void CloseHoverTips()
+    {
+        // Iterate through timer panel buttons
+        foreach (Action action in timerPanel.GetComponentsInChildren<Action>())
+        {
+            action.HideActionCost();
+        }
     }
 }
