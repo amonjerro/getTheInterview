@@ -19,8 +19,8 @@ MonoBehaviour:
   - 'Requirements and qualifications:'
   jobReqLines:
   - '>Knowledge of equitable and usable UI design'
-  - '>Ability to brainstorm and formulate concepts for rapid-prototyping'
-  - '>Ability to communicate with our internal researchers'
-  - '>Strong social skills, being able to interview testers for desired feedbacks'
+  - '>Ability to brainstorm and formulate concepts for rapid prototyping'
+  - '>Ability to communicate with cross-diciplinary teams'
+  - '>Strong social skills, being able to interview testers for desired feedback'
   - '>Knowledge of foreign languages is a plus'
   gradingProfile: {fileID: 11400000, guid: 00428477cdcc0d94fbbebd84eb678cf8, type: 2}

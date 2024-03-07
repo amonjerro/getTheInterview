@@ -20,7 +20,7 @@ MonoBehaviour:
   jobReqLines:
   - '>Strong understanding of level design in video games'
   - '>Passion for video game development'
-  - '>Experienced working in game development process'
-  - '>Familarity with scrum meeting and workflow'
+  - '>Experience working in game development process'
+  - '>Familarity with Scrum meetings and workflow'
   - '>3-4 minimum portfolio pieces to show your skill'
   gradingProfile: {fileID: 11400000, guid: 7a8d5f6fff4b2964cb667d1d6cd78b3a, type: 2}

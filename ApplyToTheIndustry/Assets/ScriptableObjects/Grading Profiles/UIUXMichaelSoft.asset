@@ -23,7 +23,7 @@ MonoBehaviour:
       skillType: 1
     graphic_art:
       name: Graphics and Art
-      value: 0
+      value: 30
       skillType: 2
     production:
       name: Production
@@ -41,4 +41,4 @@ MonoBehaviour:
       name: Foreign Lang
       value: 20
       skillType: 6
-  expectedSkillOrdering: 010000000500000006000000
+  expectedSkillOrdering: 01000000050000000200000006000000

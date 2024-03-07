@@ -19,8 +19,8 @@ MonoBehaviour:
   - 'Expectations:'
   jobReqLines:
   - '>Create a believable space that fits in the context of gameplay'
-  - '>Ability to evaluate and apply feedbacks'
+  - '>Ability to evaluate and apply feedback'
   - '>Keen eye for details'
-  - '>Some programming skills in C++, C#, or Java'
-  - '>Knowledge of sound design is not required, but will be a plus'
+  - '>Some programming skills in commonly used coding languages'
+  - '>Knowledge of sound design will be a plus'
   gradingProfile: {fileID: 11400000, guid: 21d62a59fe25b8c47b7c8d97b0a35715, type: 2}

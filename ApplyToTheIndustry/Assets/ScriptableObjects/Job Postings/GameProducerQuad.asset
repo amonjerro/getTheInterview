@@ -15,12 +15,12 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 9cfc23b03c89faa4fa9248e30f7d815a, type: 2}
   positionName: Game Producer
   jobSummaryLines:
-  - We are urgently looking for a game producer!
+  - We are urgently looking for a game producer
   - 'Skills required:'
   jobReqLines:
-  - '>5-10 years of working in the gaming industry'
-  - '>In-depth knowledge of game development process'
+  - '>5-10 years of experience working in the video games industry'
+  - '>In-depth knowledge of game development processes'
   - '>Efficient skills in problem-solving and arranging schedules'
   - '>Ability to work and communicate with other team leads'
-  - '>Ability to receive and apply feedbacks critically'
+  - '>Ability to receive and apply feedback critically'
   gradingProfile: {fileID: 11400000, guid: 5b171ddfc0ca9504cba861ab80dee9a3, type: 2}

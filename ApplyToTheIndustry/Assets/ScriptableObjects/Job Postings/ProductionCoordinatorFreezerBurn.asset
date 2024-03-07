@@ -15,10 +15,11 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: d0ddb5a02bb3d9a4f86d3ef8fd732359, type: 2}
   positionName: Production Coordinator
   jobSummaryLines:
-  - Our company is looking for someone willing to take a lead in our production.
+  - Our company is looking for someone willing to take a leading role in our production
+    team.
   - 'Required skills:'
   jobReqLines:
-  - '>Ability to work in fast-paced environment under pressure'
+  - '>Ability to work in a fast-paced environment under pressure'
   - '>Strong organizational and problem-solving skills'
   - '>Communication in foreign languages'
   gradingProfile: {fileID: 11400000, guid: 5f4caf55086486c4cb2d2263d6bc987a, type: 2}

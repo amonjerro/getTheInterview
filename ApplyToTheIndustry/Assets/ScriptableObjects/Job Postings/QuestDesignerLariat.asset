@@ -15,10 +15,10 @@ MonoBehaviour:
   company: {fileID: 11400000, guid: 10299a39b72aab747a9b16ceee7f8742, type: 2}
   positionName: Quest Narrative Designer
   jobSummaryLines:
-  - We are looking for a passionate narrative designer!
+  - We are looking for a passionate narrative designer
   - 'Requirements for this position:'
   jobReqLines:
-  - '>Passion in video games'' narrative and storytelling'
+  - '>Passion for narratives and storytelling in video games'
   - '>Familarity with RPG mechanics'
   - '>Game design knowledge'
   - '>Experience in working in 2-4 AAA titles'
