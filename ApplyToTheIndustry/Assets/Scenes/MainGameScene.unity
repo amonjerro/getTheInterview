@@ -924,6 +924,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243247a4bdbd6c549afaf7167f33ae15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &521470393 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7996093605649301769, guid: 1161a44ba9d33424996b15d666e67aea, type: 3}
+  m_PrefabInstance: {fileID: 6675494216194522896}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &521470394 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5532069727257591051, guid: 1161a44ba9d33424996b15d666e67aea, type: 3}
+  m_PrefabInstance: {fileID: 6675494216194522896}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa25e88bc878a3e469a8b771c5dee5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &536023318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 385535159121544521, guid: 550c6e87755665a41adefb015c75f201, type: 3}
@@ -2582,7 +2598,7 @@ MonoBehaviour:
   feedbackScreen: {fileID: 1569107314}
   timerPanel: {fileID: 1743424193}
   gameOverScreen: {fileID: 172867076}
-  gameWinScreen: {fileID: 143944418949265591}
+  gameWinScreen: {fileID: 521470394}
   progressPanel: {fileID: 1077795205}
   popUp: {fileID: 496761018}
   bookCourseBtn: {fileID: 961087551}
@@ -4959,7 +4975,6 @@ RectTransform:
   - {fileID: 163780304}
   - {fileID: 377338833}
   - {fileID: 172867077}
-  - {fileID: 1426917469753444457}
   - {fileID: 542449955}
   - {fileID: 1690169724}
   - {fileID: 870112302}
@@ -4972,6 +4987,7 @@ RectTransform:
   - {fileID: 2035725671}
   - {fileID: 1267231367}
   - {fileID: 417433140}
+  - {fileID: 521470393}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
