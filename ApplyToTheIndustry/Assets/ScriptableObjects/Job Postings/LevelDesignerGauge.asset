@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
+  m_Name: LevelDesignerGauge
+  m_EditorClassIdentifier: 
+  company: {fileID: 11400000, guid: f7d62fe3dc4190e4d92cb57728dfc5b7, type: 2}
+  positionName: Junior Level Designer
+  jobSummaryLines:
+  - Our company is looking for junior level designers.
+  - 'Requirements:'
+  jobReqLines:
+  - '>Strong understanding of level design in video games'
+  - '>Passion for video game development'
+  - '>Experienced working in game development process'
+  - '>Familarity with scrum meeting and workflow'
+  - '>3-4 minimum portfolio pieces to show your skill'
+  gradingProfile: {fileID: 11400000, guid: 7a8d5f6fff4b2964cb667d1d6cd78b3a, type: 2}
