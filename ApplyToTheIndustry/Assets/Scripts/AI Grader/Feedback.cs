@@ -28,6 +28,7 @@ public class Feedback : MonoBehaviour
 
     public TextMeshProUGUI feedbackMessage;
     public TextMeshProUGUI companyName;
+    string prevCompanyName = "";
     public TextMeshProUGUI positionName;
     public TextMeshProUGUI buttonText;
     public TextMeshProUGUI connectionFeedback;
@@ -92,6 +93,15 @@ public class Feedback : MonoBehaviour
         buttonText.text = feedbackItems[messageIndex].buttonText;
         connectionFeedback.text = feedbackItems[messageIndex].connectionMessage;
         messageIndex++;
+
+        // Check if the application for the prev feedback message
+        // was accepted and if it was, move to the win screen
+        UIGeneralManager uiMngr = ServiceLocator.Instance.GetService<UIGeneralManager>();
+        if(feedbackData.acceptedTo.ContainsKey(prevCompanyName))
+            if (feedbackData.acceptedTo[prevCompanyName])
+                uiMngr.MoveToGameWinScreen();
+
+        prevCompanyName = companyName.text;
     }
 
     private void PreProcessFeedback()
