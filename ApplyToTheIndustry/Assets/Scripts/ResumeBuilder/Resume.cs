@@ -26,7 +26,7 @@ public class Resume : ResumeComponent
     // Start is called before the first frame update
     void Start()
     {
-        indexOffset = 5;
+        indexOffset = 3;
         // Init fields here
         selectedSkillsList = new List<Skill>();
         containers = new List<SkillContainer>();
@@ -51,7 +51,7 @@ public class Resume : ResumeComponent
 
         // Add the skill data
         SkillContainer skillCont = container.GetComponent<SkillContainer>();
-        skillCont.SetIndex(indexOffset - 5);
+        skillCont.SetIndex(indexOffset - 3);
         skillCont.skill = skill;
         skillCont.SetTarget(target);
         skillCont.SetParent(this);
@@ -67,7 +67,7 @@ public class Resume : ResumeComponent
 
     public override void PopSkill(int index)
     {
-        indexOffset = 5;
+        indexOffset = 3;
         SkillContainer skillCont = containers[index];
         containers.RemoveAt(index);
         selectedSkillsList.RemoveAt(index);
@@ -76,7 +76,7 @@ public class Resume : ResumeComponent
         // Re-index the list
         foreach (SkillContainer container in containers)
         {
-            container.SetIndex(indexOffset - 5);
+            container.SetIndex(indexOffset - 3);
             RectTransform rt = container.gameObject.GetComponent<RectTransform>();
             rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, leftPadding, rt.rect.width);
             rt.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, indexOffset * rt.rect.height + insetPadding, rt.rect.height);
@@ -102,7 +102,7 @@ public class Resume : ResumeComponent
             Destroy(container.gameObject);
         }
         containers.Clear();
-        indexOffset = 5;
+        indexOffset = 3;
         resumeTMPSkillList.text = resumeMessageDefault;
     }
 }
