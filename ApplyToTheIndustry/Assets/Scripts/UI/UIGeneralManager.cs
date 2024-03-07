@@ -9,7 +9,6 @@ public class UIGeneralManager : MonoBehaviour
     public InterfaceGroup feedbackScreen;
     public InterfaceGroup timerPanel;
     public InterfaceGroup gameOverScreen;
-    public InterfaceGroup gameWinScreen;
     private InterfaceGroup wasActive;
     public InterfaceGroup progressPanel;
     public ConfirmationPopup popUp;
@@ -84,17 +83,6 @@ public class UIGeneralManager : MonoBehaviour
         }
 
         gameOverScreen.gameObject.SetActive(true);
-        ClosePopup();
-    }
-
-    public void MoveToGameWinScreen()
-    {
-        foreach (InterfaceGroup ig in interfaceGroups)
-        {
-            ig.gameObject.SetActive(false);
-        }
-
-        gameWinScreen.gameObject.SetActive(true);
         ClosePopup();
     }
 
