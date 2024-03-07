@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 91b37a49656a7944fb552aa7d360546a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31451892f13c8944e9440caefe3ab4d3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -93,7 +93,7 @@ MonoBehaviour:
   tutorialClicks: 0
   selectedSkillsList: []
   skillContainerPrefab: {fileID: 4101682849604088539, guid: 134663556fb029947ada5b84e274b789, type: 3}
-  leftPadding: 250
+  leftPadding: 275
   insetPadding: 0
   resumeTMPSkillList: {fileID: 3862070603718420672}
   resumeMessageDefault: No skills listed.. choose some!
@@ -172,10 +172,10 @@ RectTransform:
   m_Father: {fileID: 8443536918649064666}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.9649, y: 283.9909}
-  m_SizeDelta: {x: 839.93, y: 52.0183}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 202.5}
+  m_SizeDelta: {x: -100, y: -795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &777286805803631243
 CanvasRenderer:
@@ -1232,10 +1232,10 @@ RectTransform:
   m_Father: {fileID: 8443536918649064666}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.964905, y: -81.282}
-  m_SizeDelta: {x: 839.93, y: 640.56}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -107.5}
+  m_SizeDelta: {x: -100, y: -265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5577296312535276090
 CanvasRenderer:
@@ -1371,10 +1371,10 @@ RectTransform:
   m_Father: {fileID: 8443536918649064666}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 346.68}
-  m_SizeDelta: {x: 860, y: 42}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 255}
+  m_SizeDelta: {x: -100, y: -780}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &831629822595243101
 CanvasRenderer:
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
