@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cfffae36be18b40b59e8e84d47a6ad, type: 3}
+  m_Name: LevelDesignerLatus
+  m_EditorClassIdentifier: 
+  company: {fileID: 11400000, guid: d735f67bc9e8f0c488ca3389c6702cde, type: 2}
+  positionName: Level Designer
+  jobSummaryLines:
+  - Our team is looking for a level designer for our game.
+  - 'Expectations:'
+  jobReqLines:
+  - '>Create a believable space that fits in the context of gameplay'
+  - '>Ability to evaluate and apply feedback'
+  - '>Keen eye for details'
+  - '>Some programming skills in commonly used coding languages'
+  - '>Knowledge of sound design will be a plus'
+  gradingProfile: {fileID: 11400000, guid: 21d62a59fe25b8c47b7c8d97b0a35715, type: 2}
