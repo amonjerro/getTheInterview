@@ -33,7 +33,7 @@ public class PlayerSkillsManager : MonoBehaviour
         int index = day;
         if (day >= courseGroupings.Length)
         {
-            index = 0;
+            index = day % courseGroupings.Length;
         }
         return courseGroupings[index];
     }

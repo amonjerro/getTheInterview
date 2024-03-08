@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8879d28da8ed724498e775b42ea818cf
+guid: 45f925b3e872a494bb82aea36316300e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,10 +9,10 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Tahoma
+  - Open Sans
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 3
+  fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
