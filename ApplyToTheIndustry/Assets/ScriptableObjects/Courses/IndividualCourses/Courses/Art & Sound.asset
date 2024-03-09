@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Art & Sound
   m_EditorClassIdentifier: 
   data:
-    typeFilter: 0
+    typeFilter: 4
     reward:
       programming:
         name: Programming

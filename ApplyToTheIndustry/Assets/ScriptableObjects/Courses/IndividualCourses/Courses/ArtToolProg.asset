@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
+  m_Name: ArtToolProg
+  m_EditorClassIdentifier: 
+  data:
+    typeFilter: 0
+    reward:
+      programming:
+        name: Programming
+        value: 15
+        skillType: 0
+      design:
+        name: Design
+        value: 0
+        skillType: 1
+      graphic_art:
+        name: Graphics and Art
+        value: 10
+        skillType: 2
+      production:
+        name: Production
+        value: 0
+        skillType: 5
+      sound_and_music:
+        name: Sound and Music
+        value: 0
+        skillType: 4
+      leadership:
+        name: Leadership
+        value: 0
+        skillType: 3
+      foreign_lang:
+        name: Foreign Lang
+        value: 0
+        skillType: 6
+    timeCost:
+      value: 40
+    certification: 1
+  courseName: Art Tool Programming
+  description: 'This course teaches the fundamentals of programming for visual asset
+    design tools and applications. A brief seminar will be held discussing art and
+    graphic design best practices. Particular attention will be given to how these
+    practices shape the user stories of artists.
+
+
+    This course is certified.'

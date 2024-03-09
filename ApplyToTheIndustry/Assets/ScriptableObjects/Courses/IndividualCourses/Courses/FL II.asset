@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
-  m_Name: Sound I
+  m_Name: FL II
   m_EditorClassIdentifier: 
   data:
-    typeFilter: 4
+    typeFilter: 6
     reward:
       programming:
         name: Programming
@@ -33,7 +33,7 @@ MonoBehaviour:
         skillType: 5
       sound_and_music:
         name: Sound and Music
-        value: 10
+        value: 0
         skillType: 4
       leadership:
         name: Leadership
@@ -41,13 +41,12 @@ MonoBehaviour:
         skillType: 3
       foreign_lang:
         name: Foreign Lang
-        value: 0
+        value: 30
         skillType: 6
     timeCost:
-      value: 10
+      value: 25
     certification: 0
-  courseName: Sound Design Fundamentals
-  description: Games go a long way when they get added some bleeps and bloops to
-    provide feedback to players. This course will go over some tools you might want
-    to become familiar with along with how to integrate them with your engine of
-    choice
+  courseName: Immersive Japanese
+  description: Japan is one of the worlds largest economies and many would benefit
+    from developing the skills necessary to bridge any communication gaps that can
+    arise. This course hopes to provide you with real-world proficiency in Japanese.

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
-  m_Name: Intro Production
+  m_Name: AdvProg
   m_EditorClassIdentifier: 
   data:
-    typeFilter: 5
+    typeFilter: 0
     reward:
       programming:
         name: Programming
-        value: 0
+        value: 25
         skillType: 0
       design:
         name: Design
@@ -29,7 +29,7 @@ MonoBehaviour:
         skillType: 2
       production:
         name: Production
-        value: 15
+        value: 5
         skillType: 5
       sound_and_music:
         name: Sound and Music
@@ -44,10 +44,13 @@ MonoBehaviour:
         value: 0
         skillType: 6
     timeCost:
-      value: 15
-    certification: 0
-  courseName: Documentation and you
-  description: GDDs, task boards, technical documentation, artist visual briefs,
-    sprint goals, sprint retrospectives...Making games takes a lot of skill and hard
-    work but someone's gotta keep the team aligned. This course will help you understand
-    the basics of documentation to help the teams you manage achieve their goals.
+      value: 55
+    certification: 1
+  courseName: Advanced Programming
+  description: 'This course centers around advanced topics in system architecture,
+    with a brief overview of software development pipeline essentials. Participants
+    will be encouraged to work collaboratively to solve complex issues.
+
+
+    This
+    course is certified.'

@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fac0f3260a784a4c941f6b9a873223f, type: 3}
-  m_Name: Day 3
+  m_Name: Day3
   m_EditorClassIdentifier: 
   courses:
   - {fileID: 11400000, guid: 494e74e144afeb243bddfc6cedaebfb3, type: 2}
   - {fileID: 11400000, guid: c8868123d0586f244977b9277978eb3c, type: 2}
   - {fileID: 11400000, guid: 542d6adc43b435a41930ff56a9686636, type: 2}
   - {fileID: 11400000, guid: 1eab72259ffce1e4d966d46bc338e9ef, type: 2}
+  - {fileID: 11400000, guid: ada2cad0ed5b70e4fa819b93668a3b9f, type: 2}
+  - {fileID: 11400000, guid: 340b064816b68a942b3aaea5ea0d2381, type: 2}
+  - {fileID: 11400000, guid: bcbc758bab6d07c4c816182abaa666a2, type: 2}
+  - {fileID: 11400000, guid: 8646a369156545b4d8cee7359008a382, type: 2}
+  - {fileID: 11400000, guid: 0e429cb59d6732e46a217f6e06752a35, type: 2}

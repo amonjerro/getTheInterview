@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
-  m_Name: FL II
+  m_Name: ComprehensiveDesign
   m_EditorClassIdentifier: 
   data:
-    typeFilter: 0
+    typeFilter: 1
     reward:
       programming:
         name: Programming
@@ -21,11 +21,11 @@ MonoBehaviour:
         skillType: 0
       design:
         name: Design
-        value: 0
+        value: 15
         skillType: 1
       graphic_art:
         name: Graphics and Art
-        value: 0
+        value: 10
         skillType: 2
       production:
         name: Production
@@ -33,7 +33,7 @@ MonoBehaviour:
         skillType: 5
       sound_and_music:
         name: Sound and Music
-        value: 0
+        value: 10
         skillType: 4
       leadership:
         name: Leadership
@@ -41,12 +41,16 @@ MonoBehaviour:
         skillType: 3
       foreign_lang:
         name: Foreign Lang
-        value: 30
+        value: 0
         skillType: 6
     timeCost:
-      value: 25
-    certification: 0
-  courseName: Immersive Japanese
-  description: Japan is one of the worlds largest economies and many would benefit
-    from developing the skills necessary to bridge any communication gaps that can
-    arise. This course hopes to provide you with real-world proficiency in Japanese.
+      value: 60
+    certification: 1
+  courseName: Comprehensive Design
+  description: 'In this course, we offer those with a talent for creativity a comprehensive
+    look at all aspects of game asset development. We cover everything rom music
+    to ambience, from sprite sheets to 3D animations, from puzzles to open-world
+    map layouts.
+
+
+    This course is certified.'

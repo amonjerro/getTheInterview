@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c06a1a8d0b5c6b4492b62e2b4a5e763, type: 3}
+  m_Name: SoundDesignProd
+  m_EditorClassIdentifier: 
+  data:
+    typeFilter: 4
+    reward:
+      programming:
+        name: Programming
+        value: 0
+        skillType: 0
+      design:
+        name: Design
+        value: 10
+        skillType: 1
+      graphic_art:
+        name: Graphics and Art
+        value: 0
+        skillType: 2
+      production:
+        name: Production
+        value: 10
+        skillType: 5
+      sound_and_music:
+        name: Sound and Music
+        value: 10
+        skillType: 4
+      leadership:
+        name: Leadership
+        value: 0
+        skillType: 3
+      foreign_lang:
+        name: Foreign Lang
+        value: 0
+        skillType: 6
+    timeCost:
+      value: 40
+    certification: 1
+  courseName: Sound Design and Production
+  description: 'This course will help familiarize you with all things sound-related!
+    Audio production will be a major focus, as well as the impacts of sound design
+    on gameplay.
+
+
+    This course is certified.'
