@@ -24,26 +24,42 @@ public class Grader : MonoBehaviour
 {
     Dictionary<SkillType, int> skillPoints = new Dictionary<SkillType, int>();
     List<SkillType> prioritization = new List<SkillType>();
+
+
+    [Header("Possible Response Texts")]
+    [Space(5)]
+    public ApplicationResponseTexts veryPoorPerformanceResponses;
+    public ApplicationResponseTexts betterPerformanceResponses;
+    public ApplicationResponseTexts acceptancePerformanceResponses;
+    public ApplicationResponseTexts competitionResponses;
+
+    [HideInInspector]
     public List<string> feedback = new List<string>();
+    [HideInInspector]
     public List<string> companiesAppliedTo = new List<string>();
+    [HideInInspector]
     public List<string> positionsAppliedTo = new List<string>();
     private List<bool> positionsAcceptedTo = new List<bool>();
     int Totalpoints = 0;
     int gradingRequiredPoints = 0;
-    public int prioritizationMismatchPenalty;
+    [HideInInspector]
+    public int companiesAppliedCount;
     Resume currentResume;
     JobPosting currentPosting;
     bool isGhosted;
     bool canGhost;
     float randomGhosting;
+
+    [Header("Scoring Balance")]
+    [Space(5)]
+    public int prioritizationMismatchPenalty;
     public float ghostingRange;
-    public int companiesAppliedCount;
+    
 
     public List<string> companiesReceivedFeedback = new List<string>();
     public List<string> positionsReceivedFeedback = new List<string>();
     public Dictionary<string, string> connectionFeedback = new Dictionary<string, string>();
     public List<SkillType> companiesGradingFeedback = new List<SkillType>();
-
     private bool provideGradingFeedback;
 
     public void OnSubmit(Resume resume, JobPosting posting)
@@ -193,14 +209,16 @@ public class Grader : MonoBehaviour
         bool wasAccepted = false;
         if (Totalpoints < gradingRequiredPoints * 0.5f)
         {
-            message = "Thank you for interest in this position. After careful consideration, we will not be moving forward with your candidacy for this position.";
+            int index = Random.Range(0, veryPoorPerformanceResponses.responseCandidates.Length);
+            message = veryPoorPerformanceResponses.responseCandidates[index];
             canGhost = true;
             provideGradingFeedback = true;
 
         }
         else if (Totalpoints >= gradingRequiredPoints * 0.5f && Totalpoints < gradingRequiredPoints * 0.75f)
         {
-            message = "We have reviewed your application and regret to inform you that you have not been selected for the position. We wish you the best of luck in your professional career.";
+            int index = Random.Range(0, betterPerformanceResponses.responseCandidates.Length);
+            message = betterPerformanceResponses.responseCandidates[index];
             canGhost = true;
             chanceToGetGhosted = ghostingRange * 0.5f;
             provideGradingFeedback = true;      
@@ -216,14 +234,16 @@ public class Grader : MonoBehaviour
             if (dieRoll < successLikelihood)
             {
                 // You did it, you are big kahuna, congratz
-                message = "Congratulations! Our team is impressed with your work and skills, and would like to discuss the next steps. \n\n You have achieved the main objective in this build";
+                int index = Random.Range(0, acceptancePerformanceResponses.responseCandidates.Length);
+                message = acceptancePerformanceResponses.responseCandidates[index];
                 canGhost = false;
                 chanceToGetGhosted = 0.0f;
                 provideGradingFeedback = false;
                 wasAccepted = true;
             } else
             {
-                message = "Your application has been reviwed by our Human Resources team but due to the competitive nature of this position, we are unable to proceed in this process with you. Thank you for considering applying to our company.";
+                int index = Random.Range(0, competitionResponses.responseCandidates.Length);
+                message = competitionResponses.responseCandidates[index];
                 canGhost = true;
                 chanceToGetGhosted = ghostingRange * 0.25f;
                 provideGradingFeedback = true;
