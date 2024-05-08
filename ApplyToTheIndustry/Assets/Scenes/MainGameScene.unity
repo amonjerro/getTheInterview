@@ -2112,14 +2112,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grader
       objectReference: {fileID: 0}
-    - target: {fileID: 3561429014054555676, guid: ff30b13b5906c418987a11491cecfcb6, type: 3}
-      propertyPath: ghostingRange
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3561429014054555676, guid: ff30b13b5906c418987a11491cecfcb6, type: 3}
-      propertyPath: prioritizationMismatchPenalty
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5533744950116227386, guid: ff30b13b5906c418987a11491cecfcb6, type: 3}
       propertyPath: m_RootOrder
       value: -1

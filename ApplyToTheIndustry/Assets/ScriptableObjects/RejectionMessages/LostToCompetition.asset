@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d6844fae07c8e41ada03bdb6864c73, type: 3}
+  m_Name: LostToCompetition
+  m_EditorClassIdentifier: 
+  responseCandidates:
+  - Your application stood out from other applicants but we regret to inform you
+    that we have already hired someone for this position. We hope to hear from you
+    again in future processes.
+  - Your application has been reviwed by our Human Resources team but due to the
+    competitive nature of this position, we are unable to proceed in this process
+    with you. Thank you for considering applying to our company.
+  - We have received many applications by many accomplished professionals in the
+    field such as you. We would love to interview all candidates but the logistics
+    of the process forbid us from doing so. Because of that, we will not be moving
+    forward in this process with you. Thank you for your interest in our company.

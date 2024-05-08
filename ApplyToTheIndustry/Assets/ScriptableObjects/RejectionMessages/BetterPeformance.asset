@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d6844fae07c8e41ada03bdb6864c73, type: 3}
+  m_Name: BetterPeformance
+  m_EditorClassIdentifier: 
+  responseCandidates:
+  - We have reviewed your application and, while it is very competitive, we have
+    chosen to hire internally for this position. We wish you the best of luck in
+    your professional career.
+  - We're very excited to have amazing candidates like you apply for positions at
+    our company. However, we don't think this position would make a good fit for
+    your expertise. We hope to hear from you again in the future.
+  - We thank you for choosing to apply to this position. The skills you submitted
+    are appealing but we feel there is still a gap between your skills and what we're
+    looking for. We will keep your CV in our database in case a better fitting position
+    opens up in the future.

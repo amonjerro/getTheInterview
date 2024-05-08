@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3561429014054555676
 MonoBehaviour:
@@ -44,4 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b150d3ba93644022ac53731d4c9b1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prioritizationMismatchPenalty: 0
+  veryPoorPerformanceResponses: {fileID: 11400000, guid: 1839fddffe839344c84848ddea230388, type: 2}
+  betterPerformanceResponses: {fileID: 11400000, guid: 236b82e0b2832974b9b9a55cdd1512a9, type: 2}
+  acceptancePerformanceResponses: {fileID: 11400000, guid: 1ae23f0f57f50ad4ea2729db8a7d05a3, type: 2}
+  competitionResponses: {fileID: 11400000, guid: 37e77565e75738c4eb9abccc4a783504, type: 2}
+  feedback: []
+  companiesAppliedTo: []
+  positionsAppliedTo: []
+  companiesAppliedCount: 0
+  prioritizationMismatchPenalty: 4
+  ghostingRange: 0.4
+  companiesReceivedFeedback: []
+  positionsReceivedFeedback: []
+  companiesGradingFeedback: 

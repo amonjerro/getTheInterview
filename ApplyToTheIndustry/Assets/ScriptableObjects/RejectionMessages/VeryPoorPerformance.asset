@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d6844fae07c8e41ada03bdb6864c73, type: 3}
+  m_Name: VeryPoorPerformance
+  m_EditorClassIdentifier: 
+  responseCandidates:
+  - Thank you for interest in this position. After careful consideration, we will
+    not be moving forward with this process.
+  - We thank your interest in our company, nevertheless the position you've applied
+    for doesn't seem to be a good fit for your skills. We hope better luck for you
+    in the future.
+  - We appreciate you taking the time to apply to our company. However, we have determined
+    your application materials are not quite a match for the role. Thanks.
+  - We would like to thank you for your interest in applying to our company. After
+    careful review, the team did not feel there was a match at this time with the
+    current needs of our roles. Best of luck in the future.
